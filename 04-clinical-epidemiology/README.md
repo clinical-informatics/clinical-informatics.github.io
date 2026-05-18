@@ -4,6 +4,8 @@
 
 Clinical epidemiology for clinicians: the measures, biases, designs, and tests that show up in every clinical paper and every AI model writeup, with intuition built before vocabulary.
 
+Each track in this course pairs a written introduction with an interactive Marimo notebook. The intro frames the question and the vocabulary; the notebook is where you build intuition through interactive work.
+
 Written by **Mario David Felix, MD MHS**.
 
 This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. It is currently **scaffolded only**: the structure, file layout, and short per-track descriptions are in place; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for current progress.

@@ -1,28 +1,35 @@
 # Clinical Informatics Open Curriculum
 
-**An open-source course in clinical informatics, written for clinicians, trainees, and researchers who want a way into the field that doesn't feel like climbing a wall.**
+The source repository for the **Clinical Informatics Open Curriculum**, a free and open curriculum of twenty-one interactive courses in clinical informatics for clinicians, trainees, and clinical researchers.
 
-Written by **Mario David Felix, MD MHS**.
+The site lives at **[https://clinical-informatics.github.io/](https://clinical-informatics.github.io/)**. Every course runs in the browser. Nothing to install.
 
-The curriculum lives at **[https://clinical-informatics.github.io/](https://clinical-informatics.github.io/)**. Twenty-one interactive courses that run entirely in your browser. Nothing to install, no account required.
+Designed, written, and edited by **Mario David Felix, MD MHS**.
 
-## Repo structure
+## What this repository contains
 
-This repo holds both the curriculum content (one directory per course) and the static site that publishes it.
+- The full content of every course (one directory per course, plus `start-here/` for the home and shared components).
+- The static-site build pipeline that converts the course directories into the MkDocs site at the URL above.
+- Synthetic data for **Ms. Elena Reyes**, the running rheumatoid arthritis case used in every course.
+- The GitHub Actions workflow that builds and deploys the site on every push to `main`.
+
+## Repository layout
 
 ```
 clinical-informatics.github.io/
-├── README.md                        ← you are here
+├── README.md                        ← this file
 ├── mkdocs.yml                       ← site config
 ├── build_site.py                    ← generates docs/ from the course directories
 ├── pyproject.toml                   ← Python dependencies
 ├── .github/workflows/deploy.yml     ← CI: build + deploy on push to main
-├── start-here/                      ← orientation, shared components, Ms. Reyes data
+├── start-here/                      ← home page, learning paths, glossary, shared components, Ms. Reyes data
 ├── 00-foundations/                  ← course 00
 ├── 01-computational-thinking/       ← course 01
 ├── ...
 └── 20-bioinformatics/               ← course 20
 ```
+
+Each course directory contains a `README.md` (the course intro), a `track-XX-*` directory per track (each with its own intro plus a Marimo notebook), a `capstone/` directory, and a `go-deeper.md` per track listing the curated free resources for that topic.
 
 ## Building the site locally
 
@@ -32,11 +39,11 @@ python build_site.py            # generates docs/, exports notebooks to WASM
 mkdocs serve                    # preview at http://127.0.0.1:8000/
 ```
 
-For faster iteration during development:
+For faster iteration during prose work:
 
 ```bash
 python build_site.py --quick           # skip marimo exports (docs only, ~10 seconds)
-python build_site.py --limit 3         # only build first 3 courses
+python build_site.py --limit 3         # only build the first 3 courses
 ```
 
 ## License
@@ -44,4 +51,4 @@ python build_site.py --limit 3         # only build first 3 courses
 - **Course content:** Creative Commons BY 4.0.
 - **Code:** MIT.
 
-Single-author curriculum; pull requests are not being accepted. If you spot an error or want to suggest something, open an issue.
+Single-author curriculum. Pull requests are not accepted. To report an error or suggest content, email [fmario619@gmail.com](mailto:fmario619@gmail.com).

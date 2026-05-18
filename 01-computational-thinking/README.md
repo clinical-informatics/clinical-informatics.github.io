@@ -6,6 +6,8 @@ Computational thinking is the discipline of restating a clinical problem in term
 
 This is the entry-point course for the `clinical-informatics` curriculum. There are no formulas and no visible code. Every interaction is a slider, a checkbox, or a short prompt. After the five tracks and capstone, you can look at any clinical rule, alert, or model and ask the four questions that decide whether to trust it.
 
+Each track in this course pairs a written introduction with an interactive Marimo notebook. The intro frames the question and the vocabulary; the notebook is where you build intuition through interactive work.
+
 Written by **Mario David Felix, MD MHS**.
 
 ---
