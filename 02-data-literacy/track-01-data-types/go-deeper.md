@@ -1,0 +1,10 @@
+## Go deeper
+
+**If you want to understand the type system this track uses before moving on:**
+- The pandas "Essential basic functionality" user guide, specifically the dtypes section. Pandas is the library most clinical analyses in Python actually use, and `dtypes` is the attribute it puts the type information under. The guide walks each numeric, datetime, and categorical type with examples of how each one behaves under common operations. Read the dtypes section and then the section above it on `head` and `tail`; the two together are enough to start auditing any DataFrame for type correctness. [pandas.pydata.org/docs/user_guide/basics.html#dtypes](https://pandas.pydata.org/docs/user_guide/basics.html#dtypes)
+
+**If you want to see the type-and-quality problem in a real clinical informatics paper:**
+- Michael Kahn et al., "A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data," eGEMs 2016. The paper that named the three categories of EHR data quality problems still in use today: conformance (does the data match its declared format), completeness (is anything missing), and plausibility (does the value make clinical sense). Type errors live in conformance. The framework is short, free, and gives you a vocabulary for talking about messy clinical data in a meeting without sounding vague. [pmc.ncbi.nlm.nih.gov/articles/PMC5051581](https://pmc.ncbi.nlm.nih.gov/articles/PMC5051581/)
+
+**If you want to go significantly further into the same idea at a research-data-network scale:**
+- Chapter 15, "Data Quality," from *The Book of OHDSI*. Free online textbook chapter that takes the Kahn framework above and walks through how the OHDSI community operationalizes it: the Data Quality Dashboard (1,500-plus automated checks), the ACHILLES summary, code mapping verification. Reads as a worked example of what auditing types and quality looks like when you're responsible for a research network across dozens of institutions rather than one analysis. [ohdsi.github.io/TheBookOfOhdsi/DataQuality.html](https://ohdsi.github.io/TheBookOfOhdsi/DataQuality.html)

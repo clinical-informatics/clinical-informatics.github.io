@@ -1,0 +1,31 @@
+{
+  "name": "15-data-storytelling",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "postCreateCommand": "if [ ! -d /workspaces/start-here ]; then git clone --depth 1 https://github.com/clinical-informatics/start-here /workspaces/start-here; fi && pip install -e '.[dev]'",
+  "forwardPorts": [
+    2718
+  ],
+  "portsAttributes": {
+    "2718": {
+      "label": "Marimo",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postStartCommand": "marimo run home.py --host 0.0.0.0 --port 2718 --no-token",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

@@ -1,0 +1,347 @@
+================================================================================
+SYNTHETIC CLINICAL NOTES — Ms. Elena Reyes (ER-001)
+Not a real patient. For educational use in clinical-informatics-open.
+================================================================================
+
+--------------------------------------------------------------------------------
+Note 1 of 8
+Date of service: 2022-02-14
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: New patient consultation
+--------------------------------------------------------------------------------
+
+CHIEF COMPLAINT
+Bilateral hand and wrist pain with morning stiffness, 4 months.
+
+HISTORY OF PRESENT ILLNESS
+Ms. Reyes is a 48-year-old accountant referred by her PCP for evaluation
+of polyarticular joint pain. She reports symmetric pain and swelling of
+the MCP and PIP joints bilaterally, starting in October 2021, gradually
+worsening. Morning stiffness lasts approximately 90 minutes most days. She
+denies psoriasis, IBD, recent rash, sicca symptoms, or Raynaud phenomenon.
+No history of low back pain or enthesitis. No fevers. She has been taking
+ibuprofen 400-600 mg up to 3 times daily with partial relief.
+
+She works as an accountant and has been struggling to type during tax
+season. No tobacco use. Occasional wine, 2-3 drinks/week. Family history
+notable for a maternal aunt with "arthritis" of unspecified type.
+
+PHYSICAL EXAM
+Vitals: BP 124/78, HR 72, T 36.8C, weight 68 kg, BMI 24.6.
+General: well-appearing, no acute distress.
+Joints: tenderness and synovial swelling at bilateral MCP 2-3, PIP 2-3,
+both wrists. No joint deformity. Grip strength reduced bilaterally.
+Tender joint count 8, swollen joint count 6. No active synovitis at knees,
+shoulders, ankles, or feet on this exam.
+Skin: no rash, no psoriatic plaques, no nail changes.
+Remainder of exam unremarkable.
+
+ASSESSMENT
+1. Inflammatory polyarthritis, suspect rheumatoid arthritis given symmetric
+small joint involvement, prolonged morning stiffness, and gradual onset.
+Differential includes psoriatic arthritis (no skin findings, low
+probability), polyarticular gout (atypical pattern, will check uric acid),
+and viral arthropathy (resolving timeline argues against).
+
+PLAN
+- Labs today: CRP, ESR, CBC with diff, comprehensive metabolic panel,
+  rheumatoid factor, anti-CCP antibody, ANA, hepatitis B and C screening,
+  uric acid, TSH.
+- Hand x-rays bilaterally.
+- Start naproxen 500 mg BID with food for symptomatic relief.
+- Follow up in 2-3 weeks to review results and discuss DMARD initiation.
+- Patient counseled on the chronic nature of inflammatory arthritis and
+  the importance of early aggressive treatment if RA is confirmed.
+
+Maya Bennett, MD
+
+
+--------------------------------------------------------------------------------
+Note 2 of 8
+Date of service: 2022-03-07
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: Follow-up
+--------------------------------------------------------------------------------
+
+INTERVAL HISTORY
+Returns to review labs. Joint pain persists, modest improvement on
+naproxen. Morning stiffness now ~60-75 minutes. Has continued working,
+though she finds the second half of the workday difficult.
+
+LABS
+CRP 42.1 (H), ESR 58 (H), anti-CCP 178 (markedly elevated, H), RF 84 (H),
+ANA negative, Hep B and C negative, uric acid 4.2, TSH 2.1, Hgb 11.6 (L),
+WBC 8.1, plt 389, ALT 22, Cr 0.78. Hand films show periarticular
+osteopenia and very early erosive changes at MCP 2 and the right wrist.
+
+ASSESSMENT
+Seropositive erosive rheumatoid arthritis. Anti-CCP markedly positive,
+RF positive, elevated acute phase reactants, x-ray evidence of erosive
+disease. Meets 2010 ACR/EULAR classification criteria.
+
+PLAN
+- Initiate methotrexate 10 mg PO weekly, with folic acid 1 mg daily.
+- Plan to escalate methotrexate over 4-6 weeks toward 20-25 mg weekly
+  based on tolerance and response.
+- Will recheck CBC and LFTs in 4 weeks, then monthly for 3 months.
+- Discussed risk of hepatotoxicity, marrow suppression, teratogenicity
+  (she reports completed childbearing). Advised to limit alcohol while
+  on MTX.
+- Continue naproxen as needed for breakthrough symptoms.
+- Plan follow-up in 6 weeks. If inadequate response to MTX at 3 months,
+  will consider adding a biologic DMARD.
+- Provided patient education materials on RA and the methotrexate.
+
+Maya Bennett, MD
+
+
+--------------------------------------------------------------------------------
+Note 3 of 8
+Date of service: 2023-11-13
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: Follow-up
+--------------------------------------------------------------------------------
+
+INTERVAL HISTORY
+Has been on methotrexate 25 mg SC weekly for the past 14 months. Reports
+ongoing joint pain and stiffness, currently affecting both wrists and the
+MCP joints of both hands. Morning stiffness 45-60 minutes most days. She
+has had two clear flares this year — one in May and one this month — each
+lasting 2-3 weeks and not fully resolved with prednisone bridges. Tolerates
+methotrexate well, no nausea, no mouth sores. Compliant with folic acid.
+
+She reports that the disease is impacting her work — typing fatigues her
+hands by midafternoon. Her hobbies include gardening, which she has
+largely given up due to grip strength loss.
+
+PHYSICAL EXAM
+Tender joint count 7, swollen joint count 5 (MCP 2-3 bilaterally, both
+wrists, right PIP 2). No new deformity. DAS28-CRP estimated at 4.4 today —
+moderate disease activity, unchanged from prior visit.
+
+LABS (today)
+CRP 33.4 (H), ESR 48 (H), Hgb 11.8 (L), ALT 33, Cr 0.79.
+
+ASSESSMENT
+1. Seropositive erosive RA, inadequate response to maximum-tolerated
+methotrexate monotherapy over 18 months. Persistent moderate disease
+activity despite optimal csDMARD therapy.
+
+PLAN
+- Add adalimumab 40 mg SC every other week to current methotrexate.
+- Pre-biologic screening: hepatitis B and C, QuantiFERON-TB Gold, CBC,
+  CMP, lipid panel. Will obtain at next visit.
+- Discussed adalimumab risks (infection, particularly serious bacterial
+  infection and reactivation TB, malignancy including lymphoma, infusion
+  reactions, demyelinating disease, heart failure exacerbation). Reviewed
+  vaccination status: up to date on Tdap, influenza, pneumococcal series
+  due to age 50+, has had shingles series. No live vaccines while on
+  biologic.
+- Will obtain insurance prior authorization. Will discuss cost and
+  copay assistance programs.
+- Plan to start adalimumab once screening labs return reassuring.
+- Continue MTX 25 mg SC weekly, folic acid 1 mg daily.
+- Follow up 8-10 weeks after biologic initiation.
+
+Maya Bennett, MD
+
+
+--------------------------------------------------------------------------------
+Note 4 of 8
+Date of service: 2024-01-08
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: Follow-up / biologic initiation visit
+--------------------------------------------------------------------------------
+
+INTERVAL HISTORY
+Pre-biologic screening labs today reviewed. Hep B surface antigen negative,
+Hep C antibody negative, QuantiFERON-TB Gold negative. Cleared to start
+adalimumab. Insurance prior authorization approved.
+
+Joint symptoms unchanged from November visit. Moderate disease activity
+persists.
+
+PHYSICAL EXAM
+Tender joint count 8, swollen joint count 6. Hand involvement predominates.
+
+DAS28-CRP today: calculated as 4.1 (moderate disease activity).
+
+PLAN
+- Initiate adalimumab 40 mg SC q2 weeks. Patient education on injection
+  technique completed today by infusion nursing.
+- First injection administered in clinic today.
+- Continue methotrexate 25 mg SC weekly + folic acid 1 mg daily.
+- Patient counseled on signs of serious infection requiring urgent
+  evaluation: fever, productive cough, dysuria, cellulitis, abscess.
+- Avoid live vaccines while on biologic.
+- Follow up in 3 months for clinical and lab reassessment.
+
+Maya Bennett, MD
+
+
+--------------------------------------------------------------------------------
+Note 5 of 8
+Date of service: 2024-04-17
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: Follow-up
+--------------------------------------------------------------------------------
+
+INTERVAL HISTORY
+Three months on adalimumab plus methotrexate. Patient reports significant
+improvement. Morning stiffness now 15-20 minutes most days. She has
+returned to light gardening on weekends. Typing at work is no longer
+fatiguing. No injection site reactions, no infections, no concerning
+symptoms.
+
+PHYSICAL EXAM
+Tender joint count 3, swollen joint count 2 (left MCP 3, right wrist mild
+synovitis). Grip strength improved bilaterally.
+
+LABS
+CRP 18.7 (improving), ESR 29, ALT 38, Cr 0.82.
+
+ASSESSMENT
+1. Seropositive RA with significant clinical and laboratory improvement
+on combination methotrexate + adalimumab. DAS28-CRP today: 2.9 (low
+disease activity). Approaching remission criteria.
+
+PLAN
+- Continue current regimen.
+- Repeat CBC, CMP, CRP, ESR in 3 months.
+- Continue adalimumab 40 mg SC q2 weeks.
+- Continue methotrexate 25 mg SC weekly + folic acid 1 mg daily.
+- Patient is delighted with response, asks whether MTX dose can be
+  reduced given how she feels. Discussed that current guidelines favor
+  maintaining combination therapy to preserve response; will revisit
+  at 12-month mark if sustained low disease activity.
+- Follow up in 3 months.
+
+Maya Bennett, MD
+
+
+--------------------------------------------------------------------------------
+Note 6 of 8
+Date of service: 2025-05-12
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: Annual review
+--------------------------------------------------------------------------------
+
+ANNUAL REVIEW
+Ms. Reyes is now 16 months into combination MTX + adalimumab. She has
+maintained low disease activity throughout this period with two minor
+flares responsive to short prednisone bursts.
+
+INTERVAL HISTORY
+Currently feels well. Morning stiffness 20 minutes. No active synovitis
+on patient self-report. She has resumed gardening fully and is taking
+an adult ballet class with her daughter. Adherent to MTX and adalimumab.
+No infections requiring antibiotics this year. Annual influenza and
+COVID booster received in October 2024.
+
+PHYSICAL EXAM
+Tender joint count 2, swollen joint count 1. DAS28-CRP today: 2.6 (low
+disease activity).
+
+LABS
+CRP 16.5, ESR 28. Stable from prior.
+
+ASSESSMENT
+1. Seropositive RA with sustained low disease activity on combination
+therapy.
+2. Mild iron-deficiency anemia of chronic disease, stable, monitoring.
+3. Up to date on age-appropriate cancer screening (mammogram 2024,
+colonoscopy 2023, Pap 2024).
+
+PLAN
+- Continue current regimen.
+- Discuss possibility of MTX dose reduction at 24-month mark if
+  remission sustained.
+- Annual eye exam recommendation (no ocular meds, routine).
+- DEXA scan considered given age 51 and post-menopausal status. Will
+  order.
+- Follow up in 6 months.
+
+Maya Bennett, MD
+
+
+--------------------------------------------------------------------------------
+Note 7 of 8
+Date of service: 2025-11-21
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: Follow-up — interval flare
+--------------------------------------------------------------------------------
+
+INTERVAL HISTORY
+Patient seen today for evaluation of a flare that began about 3 weeks
+ago. She reports recurrence of wrist pain and stiffness bilaterally with
+morning stiffness now lasting 60 minutes. The flare followed an upper
+respiratory illness in mid-October. No active joint swelling appreciated
+at home but pain is limiting. She has been taking ibuprofen with partial
+relief and has remained on her DMARDs.
+
+She denies fever, productive cough, urinary symptoms, skin or soft tissue
+infection. No recent travel.
+
+PHYSICAL EXAM
+Tender joint count 6 (both wrists, MCP 2-3 bilaterally), swollen joint
+count 3 (left wrist with synovitis, right MCP 2 with synovitis). No
+extra-articular findings.
+
+LABS
+CRP 18.2, ESR 31, Hgb 12.1, ALT 34, Cr 0.86.
+
+ASSESSMENT
+Mild flare of RA after intercurrent illness, on background of previously
+sustained low disease activity on combination methotrexate + adalimumab.
+
+PLAN
+- Short prednisone bridge: 15 mg daily x 5 days, then 10 mg daily x 5 days,
+  then 5 mg daily x 5 days, then stop.
+- Continue current DMARDs at current doses.
+- Avoid live vaccines.
+- If symptoms recur or fail to settle by mid-December, will consider
+  cycling to a different biologic or adding a JAKi pending insurance
+  coverage and discussion of risk profile.
+- Follow up in 6-8 weeks.
+
+Maya Bennett, MD
+
+
+--------------------------------------------------------------------------------
+Note 8 of 8
+Date of service: 2026-02-10
+Author: Maya Bennett, MD — Rheumatology
+Encounter type: Follow-up
+--------------------------------------------------------------------------------
+
+INTERVAL HISTORY
+Returns 11 weeks after the prednisone bridge. The flare resolved
+completely by early January. She has remained on MTX 25 mg SC weekly +
+adalimumab 40 mg SC q2 weeks throughout. Morning stiffness is back to
+~15-20 minutes. No new joint involvement.
+
+PHYSICAL EXAM
+Tender joint count 2 (right MCP 2 residual), swollen joint count 1.
+DAS28-CRP today: 2.8 (low disease activity).
+
+LABS
+CRP 21.4 (mildly elevated but trending down from late November peak),
+ESR 33, Hgb 12.0, ALT 37, Cr 0.86.
+
+ASSESSMENT
+1. Seropositive RA, post-flare, returning to low disease activity. No
+indication for change in regimen at this time.
+
+PLAN
+- Continue current combination therapy.
+- Standard quarterly labs.
+- Patient declines DEXA at this visit, will reschedule with primary
+  care. Will follow up regarding bone health planning.
+- Follow up 3 months.
+
+Maya Bennett, MD
+
+
+================================================================================
+END OF SYNTHETIC NOTES
+================================================================================

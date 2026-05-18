@@ -1,0 +1,76 @@
+patient_id,specimen_date,test_name,loinc,value,unit,reference_low,reference_high,interpretation
+ER-001,2022-02-14,C-reactive protein,1988-5,42.1,mg/L,0,5,H
+ER-001,2022-02-14,Erythrocyte sedimentation rate,4537-7,58,mm/h,0,20,H
+ER-001,2022-02-14,Anti-cyclic citrullinated peptide antibody,32218-7,178,U/mL,0,20,H
+ER-001,2022-02-14,Rheumatoid factor,11572-5,84,IU/mL,0,14,H
+ER-001,2022-02-14,Hemoglobin,718-7,11.6,g/dL,12,15.5,L
+ER-001,2022-02-14,White blood cell count,6690-2,8.1,10*3/uL,4.5,11,N
+ER-001,2022-02-14,Platelet count,777-3,389,10*3/uL,150,450,N
+ER-001,2022-02-14,Alanine aminotransferase,1742-6,22,U/L,7,52,N
+ER-001,2022-02-14,Creatinine,2160-0,0.78,mg/dL,0.6,1.1,N
+ER-001,2022-05-22,C-reactive protein,1988-5,28.4,mg/L,0,5,H
+ER-001,2022-05-22,Erythrocyte sedimentation rate,4537-7,42,mm/h,0,20,H
+ER-001,2022-05-22,Hemoglobin,718-7,11.9,g/dL,12,15.5,L
+ER-001,2022-05-22,Alanine aminotransferase,1742-6,28,U/L,7,52,N
+ER-001,2022-05-22,Creatinine,2160-0,0.81,mg/dL,0.6,1.1,N
+ER-001,2022-08-18,C-reactive protein,1988-5,19.2,mg/L,0,5,H
+ER-001,2022-08-18,Erythrocyte sedimentation rate,4537-7,31,mm/h,0,20,H
+ER-001,2022-08-18,Hemoglobin,718-7,12.2,g/dL,12,15.5,N
+ER-001,2022-08-18,Alanine aminotransferase,1742-6,31,U/L,7,52,N
+ER-001,2022-11-09,C-reactive protein,1988-5,16.8,mg/L,0,5,H
+ER-001,2022-11-09,Erythrocyte sedimentation rate,4537-7,28,mm/h,0,20,H
+ER-001,2022-11-09,Anti-cyclic citrullinated peptide antibody,32218-7,165,U/mL,0,20,H
+ER-001,2023-02-15,C-reactive protein,1988-5,22.5,mg/L,0,5,H
+ER-001,2023-02-15,Erythrocyte sedimentation rate,4537-7,34,mm/h,0,20,H
+ER-001,2023-02-15,Hemoglobin,718-7,12.4,g/dL,12,15.5,N
+ER-001,2023-02-15,Alanine aminotransferase,1742-6,35,U/L,7,52,N
+ER-001,2023-02-15,Creatinine,2160-0,0.84,mg/dL,0.6,1.1,N
+ER-001,2023-05-23,C-reactive protein,1988-5,31.6,mg/L,0,5,H
+ER-001,2023-05-23,Erythrocyte sedimentation rate,4537-7,46,mm/h,0,20,H
+ER-001,2023-08-21,C-reactive protein,1988-5,26.9,mg/L,0,5,H
+ER-001,2023-08-21,Erythrocyte sedimentation rate,4537-7,39,mm/h,0,20,H
+ER-001,2023-08-21,Alanine aminotransferase,1742-6,29,U/L,7,52,N
+ER-001,2023-11-13,C-reactive protein,1988-5,33.4,mg/L,0,5,H
+ER-001,2023-11-13,Erythrocyte sedimentation rate,4537-7,48,mm/h,0,20,H
+ER-001,2023-11-13,Hemoglobin,718-7,11.8,g/dL,12,15.5,L
+ER-001,2023-11-13,Alanine aminotransferase,1742-6,33,U/L,7,52,N
+ER-001,2023-11-13,Creatinine,2160-0,0.79,mg/dL,0.6,1.1,N
+ER-001,2024-01-08,C-reactive protein,1988-5,36.2,mg/L,0,5,H
+ER-001,2024-01-08,Erythrocyte sedimentation rate,4537-7,51,mm/h,0,20,H
+ER-001,2024-01-08,Anti-cyclic citrullinated peptide antibody,32218-7,154,U/mL,0,20,H
+ER-001,2024-01-08,Hemoglobin,718-7,11.7,g/dL,12,15.5,L
+ER-001,2024-01-08,Hepatitis B surface antigen,5195-3,0,index,0,1,N
+ER-001,2024-01-08,Hepatitis C antibody,16128-1,0,index,0,1,N
+ER-001,2024-01-08,QuantiFERON-TB Gold,71773-9,0,index,0,1,N
+ER-001,2024-04-17,C-reactive protein,1988-5,18.7,mg/L,0,5,H
+ER-001,2024-04-17,Erythrocyte sedimentation rate,4537-7,29,mm/h,0,20,H
+ER-001,2024-04-17,Alanine aminotransferase,1742-6,38,U/L,7,52,N
+ER-001,2024-04-17,Creatinine,2160-0,0.82,mg/dL,0.6,1.1,N
+ER-001,2024-07-22,C-reactive protein,1988-5,14.1,mg/L,0,5,H
+ER-001,2024-07-22,Erythrocyte sedimentation rate,4537-7,24,mm/h,0,20,H
+ER-001,2024-07-22,Hemoglobin,718-7,12.3,g/dL,12,15.5,N
+ER-001,2024-10-30,C-reactive protein,1988-5,11.4,mg/L,0,5,H
+ER-001,2024-10-30,Erythrocyte sedimentation rate,4537-7,22,mm/h,0,20,H
+ER-001,2024-10-30,Alanine aminotransferase,1742-6,32,U/L,7,52,N
+ER-001,2024-10-30,Creatinine,2160-0,0.83,mg/dL,0.6,1.1,N
+ER-001,2025-02-04,C-reactive protein,1988-5,13.8,mg/L,0,5,H
+ER-001,2025-02-04,Erythrocyte sedimentation rate,4537-7,25,mm/h,0,20,H
+ER-001,2025-02-04,Hemoglobin,718-7,12.6,g/dL,12,15.5,N
+ER-001,2025-02-04,Alanine aminotransferase,1742-6,30,U/L,7,52,N
+ER-001,2025-05-12,C-reactive protein,1988-5,16.5,mg/L,0,5,H
+ER-001,2025-05-12,Erythrocyte sedimentation rate,4537-7,28,mm/h,0,20,H
+ER-001,2025-08-19,C-reactive protein,1988-5,14.9,mg/L,0,5,H
+ER-001,2025-08-19,Erythrocyte sedimentation rate,4537-7,24,mm/h,0,20,H
+ER-001,2025-08-19,Alanine aminotransferase,1742-6,36,U/L,7,52,N
+ER-001,2025-08-19,Creatinine,2160-0,0.85,mg/dL,0.6,1.1,N
+ER-001,2025-11-21,C-reactive protein,1988-5,18.2,mg/L,0,5,H
+ER-001,2025-11-21,Erythrocyte sedimentation rate,4537-7,31,mm/h,0,20,H
+ER-001,2025-11-21,Hemoglobin,718-7,12.1,g/dL,12,15.5,N
+ER-001,2025-11-21,Alanine aminotransferase,1742-6,34,U/L,7,52,N
+ER-001,2026-02-10,C-reactive protein,1988-5,21.4,mg/L,0,5,H
+ER-001,2026-02-10,Erythrocyte sedimentation rate,4537-7,33,mm/h,0,20,H
+ER-001,2026-02-10,Hemoglobin,718-7,12.0,g/dL,12,15.5,N
+ER-001,2026-02-10,Alanine aminotransferase,1742-6,37,U/L,7,52,N
+ER-001,2026-02-10,Creatinine,2160-0,0.86,mg/dL,0.6,1.1,N
+ER-001,2026-04-28,C-reactive protein,1988-5,19.8,mg/L,0,5,H
+ER-001,2026-04-28,Erythrocyte sedimentation rate,4537-7,29,mm/h,0,20,H

@@ -1,0 +1,10 @@
+## Go deeper
+
+**The four questions systematically applied to hundreds of real prediction models:**
+- Wynants L, Van Calster B, Collins GS, et al. *Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal.* BMJ 2020; 369: m1328. The single most useful empirical paper on this material. The authors applied a structured appraisal (a longer form of the four questions) to the first wave of COVID prediction models and found almost all of them had at least one fatal methodological flaw. Reads as a worked catalogue of how Q1 through Q4 fail in practice. The living review has been updated several times since (de Jong et al., 2022, BMJ, PMID 35820692) and the failure pattern persists. [pubmed.ncbi.nlm.nih.gov/32265220](https://pubmed.ncbi.nlm.nih.gov/32265220/)
+
+**What passing the four questions looks like in practice:**
+- Sendak MP, Ratliff W, Sarro D, et al. *Real-World Integration of a Sepsis Deep Learning Technology Into Routine Clinical Care: Implementation Study.* JMIR Medical Informatics 2020; 8(7): e15182. Duke's deployment of Sepsis Watch. The paper is unusually honest about what local validation, recalibration, workflow integration, subgroup monitoring, and ongoing surveillance look like as operational work. Worth contrasting against the vendor pitch deck in this track's notebook. [pubmed.ncbi.nlm.nih.gov/32673244](https://pubmed.ncbi.nlm.nih.gov/32673244/)
+
+**The reporting standard for answering the four questions from a published paper:**
+- Collins GS, Moons KGM, Dhiman P, et al. *TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods.* BMJ 2024; 385: e078378. The updated TRIPOD checklist for AI prediction models. If a paper does not report against TRIPOD+AI (or its predecessor, TRIPOD), the four questions cannot be answered from the paper alone, and the authors should be asked directly. The checklist is what a model paper looks like when it is written to be appraised. [pubmed.ncbi.nlm.nih.gov/38626948](https://pubmed.ncbi.nlm.nih.gov/38626948/)

@@ -1,0 +1,225 @@
+{
+  "exportMetadata": {
+    "vendor": "Cerner-style synthetic",
+    "exportedAt": "2026-05-12T14:00:00-05:00",
+    "schemaVersion": "millennium-2025.q1",
+    "note": "This is a synthetic export shaped like a Cerner Millennium extract. Same patient as ehr-export-epic.json. Notice how the same facts are stored in a different structure. This is exactly the problem FHIR and OMOP exist to solve."
+  },
+  "person": {
+    "person_id": 78463921,
+    "name_last": "Reyes",
+    "name_first": "Elena",
+    "name_middle": "Maria",
+    "birth_dt_tm": "1974-02-09T00:00:00",
+    "deceased_dt_tm": null,
+    "sex_cd": 362,
+    "sex_disp": "Female",
+    "race_cd": 819,
+    "race_disp": "White",
+    "ethnicity_cd": 38,
+    "ethnicity_disp": "Hispanic or Latino",
+    "marital_type_cd": 309,
+    "marital_type_disp": "Married",
+    "language_cd": 151,
+    "language_disp": "English"
+  },
+  "person_alias": [
+    {
+      "alias_pool_disp": "MRN",
+      "alias": "ER-001"
+    },
+    {
+      "alias_pool_disp": "Person ID",
+      "alias": "78463921"
+    }
+  ],
+  "address": [
+    {
+      "address_type_disp": "Home",
+      "street_addr": "742 Elm Street",
+      "city": "Springfield",
+      "state": "MA",
+      "zipcode": "01103",
+      "country_cd_disp": "United States"
+    }
+  ],
+  "phone": [
+    {
+      "phone_type_disp": "Home",
+      "phone_num": "555-0142"
+    }
+  ],
+  "problem": [
+    {
+      "problem_id": 9912001,
+      "person_id": 78463921,
+      "nomenclature_disp": "Rheumatoid arthritis, seropositive",
+      "source_string": "Seropositive erosive RA",
+      "source_vocabulary_disp": "SNOMED CT",
+      "source_identifier": "239791008",
+      "icd10": "M05.79",
+      "annotated_display": "Seropositive erosive rheumatoid arthritis",
+      "onset_dt_tm": "2022-03-07T00:00:00",
+      "active_status_disp": "Active",
+      "confirmation_status_disp": "Confirmed",
+      "severity_disp": "Moderate"
+    },
+    {
+      "problem_id": 9912002,
+      "person_id": 78463921,
+      "nomenclature_disp": "Anemia in chronic disease",
+      "source_vocabulary_disp": "SNOMED CT",
+      "source_identifier": "234356003",
+      "icd10": "D63.8",
+      "onset_dt_tm": "2022-02-14T00:00:00",
+      "active_status_disp": "Active"
+    }
+  ],
+  "allergy": [
+    {
+      "allergy_id": 7700001,
+      "person_id": 78463921,
+      "substance_disp": "Penicillin G",
+      "substance_vocabulary": "Multum",
+      "reaction_disp": "Rash",
+      "severity_disp": "Mild",
+      "onset_dt_tm": "2003-06-12T00:00:00",
+      "active_status_disp": "Active"
+    }
+  ],
+  "med_admin": [
+    {
+      "med_admin_id": 8810001,
+      "person_id": 78463921,
+      "encntr_id": 5550101,
+      "drug_synonym_disp": "Methotrexate Sodium 25 MG/ML Inj Soln",
+      "ingredient": "Methotrexate",
+      "dose": 25,
+      "dose_unit_disp": "mg",
+      "route_disp": "Subcutaneous",
+      "frequency_disp": "Once weekly",
+      "start_dt_tm": "2022-03-07T00:00:00",
+      "stop_dt_tm": null,
+      "rxnorm_code": "1156665",
+      "order_status_disp": "Active"
+    },
+    {
+      "med_admin_id": 8810002,
+      "person_id": 78463921,
+      "drug_synonym_disp": "Adalimumab 40 mg/0.8 mL Pen Inj",
+      "ingredient": "Adalimumab",
+      "dose": 40,
+      "dose_unit_disp": "mg",
+      "route_disp": "Subcutaneous",
+      "frequency_disp": "Every 14 days",
+      "start_dt_tm": "2024-01-08T00:00:00",
+      "stop_dt_tm": null,
+      "rxnorm_code": "327361",
+      "order_status_disp": "Active"
+    },
+    {
+      "med_admin_id": 8810003,
+      "person_id": 78463921,
+      "drug_synonym_disp": "Folic Acid 1 MG Oral Tab",
+      "ingredient": "Folic acid",
+      "dose": 1,
+      "dose_unit_disp": "mg",
+      "route_disp": "Oral",
+      "frequency_disp": "Daily",
+      "start_dt_tm": "2022-03-07T00:00:00",
+      "stop_dt_tm": null,
+      "rxnorm_code": "315966",
+      "order_status_disp": "Active"
+    }
+  ],
+  "encounter": [
+    {
+      "encntr_id": 5550101,
+      "person_id": 78463921,
+      "reg_dt_tm": "2022-02-14T09:30:00",
+      "disch_dt_tm": "2022-02-14T10:30:00",
+      "encntr_type_disp": "Outpatient",
+      "med_service_disp": "Rheumatology",
+      "location_disp": "Bay Rheumatology Clinic",
+      "primary_provider_disp": "Bennett, Maya, MD"
+    },
+    {
+      "encntr_id": 5550120,
+      "person_id": 78463921,
+      "reg_dt_tm": "2024-01-08T08:00:00",
+      "disch_dt_tm": "2024-01-08T10:00:00",
+      "encntr_type_disp": "Outpatient",
+      "med_service_disp": "Rheumatology",
+      "location_disp": "Bay Rheumatology Clinic",
+      "primary_provider_disp": "Bennett, Maya, MD"
+    },
+    {
+      "encntr_id": 5550148,
+      "person_id": 78463921,
+      "reg_dt_tm": "2026-02-10T08:30:00",
+      "disch_dt_tm": "2026-02-10T09:30:00",
+      "encntr_type_disp": "Outpatient",
+      "med_service_disp": "Rheumatology",
+      "location_disp": "Bay Rheumatology Clinic",
+      "primary_provider_disp": "Bennett, Maya, MD"
+    }
+  ],
+  "clinical_event": [
+    {
+      "clinical_event_id": 99100001,
+      "encntr_id": 5550148,
+      "person_id": 78463921,
+      "event_cd_disp": "C-Reactive Protein",
+      "event_cd_source_vocab": "LOINC",
+      "event_cd_source_identifier": "1988-5",
+      "result_val": "21.4",
+      "result_units_disp": "mg/L",
+      "normal_low": 0,
+      "normal_high": 5,
+      "normalcy_method_disp": "Above high normal",
+      "event_end_dt_tm": "2026-02-10T08:30:00"
+    },
+    {
+      "clinical_event_id": 99100002,
+      "encntr_id": 5550148,
+      "person_id": 78463921,
+      "event_cd_disp": "ESR (Sed Rate, Westergren)",
+      "event_cd_source_vocab": "LOINC",
+      "event_cd_source_identifier": "4537-7",
+      "result_val": "33",
+      "result_units_disp": "mm/hr",
+      "normal_high": 20,
+      "normalcy_method_disp": "Above high normal",
+      "event_end_dt_tm": "2026-02-10T08:30:00"
+    },
+    {
+      "clinical_event_id": 99100148,
+      "encntr_id": 5550148,
+      "person_id": 78463921,
+      "event_cd_disp": "DAS28-CRP",
+      "event_cd_source_vocab": "LOINC",
+      "event_cd_source_identifier": "76374-2",
+      "result_val": "2.8",
+      "result_units_disp": "score",
+      "event_end_dt_tm": "2026-02-10T09:00:00"
+    },
+    {
+      "clinical_event_id": 99100149,
+      "encntr_id": 5550148,
+      "person_id": 78463921,
+      "event_cd_disp": "Systolic BP",
+      "result_val": "122",
+      "result_units_disp": "mmHg",
+      "event_end_dt_tm": "2026-02-10T08:50:00"
+    },
+    {
+      "clinical_event_id": 99100150,
+      "encntr_id": 5550148,
+      "person_id": 78463921,
+      "event_cd_disp": "Diastolic BP",
+      "result_val": "76",
+      "result_units_disp": "mmHg",
+      "event_end_dt_tm": "2026-02-10T08:50:00"
+    }
+  ]
+}

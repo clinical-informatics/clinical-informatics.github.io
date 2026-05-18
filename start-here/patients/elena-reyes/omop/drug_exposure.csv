@@ -1,0 +1,5 @@
+drug_exposure_id,person_id,drug_concept_id,drug_exposure_start_date,drug_exposure_end_date,drug_type_concept_id,refills,quantity,days_supply,provider_id,visit_occurrence_id,drug_source_value,drug_source_concept_id,route_concept_id,route_source_value
+7001,1001,1503297,2022-03-07,,38000177,11,4,28,3001,5002,methotrexate 25 mg/mL SC weekly,1156665,4142048,Subcutaneous
+7002,1001,1119119,2024-01-08,,38000177,11,2,28,3001,5010,adalimumab 40 mg SC q14d,327361,4142048,Subcutaneous
+7003,1001,1714165,2022-03-07,,38000177,11,30,30,3001,5002,folic acid 1 mg PO daily,315966,4132161,Oral
+7004,1001,975125,2025-11-21,2025-12-06,38000177,0,15,15,3001,5017,prednisone 15-10-5 mg PO taper x15 days,1551097,4132161,Oral

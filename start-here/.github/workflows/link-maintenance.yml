@@ -1,0 +1,46 @@
+name: go-deeper link maintenance
+
+# Opens a maintenance issue every six months to review go-deeper.md
+# links across this repository. The link check itself runs at the same
+# cadence so a fresh broken-link list is included in the issue.
+#
+# This workflow does not consume any user-supplied event input (no PR
+# titles, comment bodies, branch names, etc.), so injection of untrusted
+# strings into run: steps is not a concern here.
+
+on:
+  schedule:
+    - cron: "0 13 1 1,7 *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit-go-deeper-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run lychee link checker on go-deeper files
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-redirects 5
+            --accept 200..=299,301,302
+            --exclude-mail
+            --include "**/go-deeper.md"
+          fail: false
+
+      - name: Open maintenance issue with the audit results
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Six-month go-deeper.md link audit
+          content-filepath: ./lychee/out.md
+          labels: |
+            maintenance
+            documentation

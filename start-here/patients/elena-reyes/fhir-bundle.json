@@ -1,0 +1,763 @@
+{
+  "resourceType": "Bundle",
+  "id": "elena-reyes-bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-05-12T10:00:00-05:00",
+    "tag": [
+      {
+        "system": "http://clinical-informatics.example/tags",
+        "code": "synthetic",
+        "display": "Synthetic teaching data. Not a real patient."
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-elena-reyes",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "elena-reyes",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "system": "http://clinical-informatics.example/mrn",
+            "value": "ER-001"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Reyes",
+            "given": ["Elena", "Maria"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-0142",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "synthetic.elena.reyes@example.invalid",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1974-02-09",
+        "address": [
+          {
+            "use": "home",
+            "line": ["742 Elm Street"],
+            "city": "Springfield",
+            "state": "MA",
+            "postalCode": "01103",
+            "country": "US"
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (United States)"
+                }
+              ]
+            },
+            "preferred": true
+          },
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "es",
+                  "display": "Spanish"
+                }
+              ]
+            }
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:practitioner-bennett",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "maya-bennett",
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1234567890"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Bennett",
+            "given": ["Maya"],
+            "suffix": ["MD"]
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0360",
+                  "code": "MD",
+                  "display": "Doctor of Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:organization-bayrheum",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "bay-rheumatology",
+        "active": true,
+        "name": "Bay Rheumatology Associates",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-0100"
+          }
+        ],
+        "address": [
+          {
+            "line": ["101 Main Street"],
+            "city": "Springfield",
+            "state": "MA",
+            "postalCode": "01103",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-ra",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "ra-condition",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "6736007",
+              "display": "Moderate"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "M05.79",
+              "display": "Rheumatoid arthritis with rheumatoid factor of multiple sites without organ or systems involvement"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "239791008",
+              "display": "Seropositive rheumatoid arthritis"
+            }
+          ],
+          "text": "Seropositive erosive rheumatoid arthritis"
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-elena-reyes",
+          "display": "Elena Reyes"
+        },
+        "onsetDateTime": "2022-03-07",
+        "recordedDate": "2022-03-07",
+        "recorder": {
+          "reference": "urn:uuid:practitioner-bennett"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-anemia",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "anemia-condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "D63.8",
+              "display": "Anemia in other chronic diseases classified elsewhere"
+            }
+          ],
+          "text": "Anemia of chronic disease"
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-elena-reyes"
+        },
+        "onsetDateTime": "2022-02-14"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medication-mtx",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "methotrexate-statement",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1156665",
+              "display": "methotrexate sodium 25 MG/ML Injectable Solution"
+            }
+          ],
+          "text": "Methotrexate 25 mg subcutaneous weekly"
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-elena-reyes"
+        },
+        "effectivePeriod": {
+          "start": "2022-03-07"
+        },
+        "dateAsserted": "2026-02-10",
+        "informationSource": {
+          "reference": "urn:uuid:practitioner-bennett"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:condition-ra"
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Methotrexate 25 mg subcutaneously once weekly. Co-administered with folic acid 1 mg PO daily.",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "wk"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "34206005",
+                  "display": "Subcutaneous route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 25,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medication-ada",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "adalimumab-statement",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "327361",
+              "display": "adalimumab 40 MG/0.8 ML Injection"
+            }
+          ],
+          "text": "Adalimumab 40 mg subcutaneous every two weeks"
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-elena-reyes"
+        },
+        "effectivePeriod": {
+          "start": "2024-01-08"
+        },
+        "dateAsserted": "2026-02-10",
+        "informationSource": {
+          "reference": "urn:uuid:practitioner-bennett"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:condition-ra"
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Adalimumab 40 mg subcutaneously every 14 days.",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 14,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "34206005",
+                  "display": "Subcutaneous route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 40,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medication-folate",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "folate-statement",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "315966",
+              "display": "folic acid 1 MG Oral Tablet"
+            }
+          ],
+          "text": "Folic acid 1 mg PO daily"
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-elena-reyes"
+        },
+        "effectivePeriod": {
+          "start": "2022-03-07"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:allergy-pcn",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "penicillin-allergy",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": ["medication"],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "7980",
+              "display": "Penicillin G"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:patient-elena-reyes"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "271807003",
+                    "display": "Skin rash"
+                  }
+                ],
+                "text": "Rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-initial-eval",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-2022-02-14",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0004",
+                "code": "OUTPATIENT",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "New patient consultation"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:patient-elena-reyes"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:practitioner-bennett"
+            }
+          }
+        ],
+        "period": {
+          "start": "2022-02-14T09:30:00-05:00",
+          "end": "2022-02-14T10:30:00-05:00"
+        },
+        "reasonCode": [
+          {
+            "text": "Polyarticular joint pain, evaluation for inflammatory arthritis"
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:organization-bayrheum"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-crp-2024-01-08",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-crp-20240108",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C reactive protein [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "C-reactive protein"
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-elena-reyes"
+        },
+        "effectiveDateTime": "2024-01-08T08:45:00-05:00",
+        "valueQuantity": {
+          "value": 36.2,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "referenceRange": [
+          {
+            "low": {"value": 0, "unit": "mg/L"},
+            "high": {"value": 5, "unit": "mg/L"}
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-crp-2026-02-10",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-crp-20260210",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C reactive protein [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {"reference": "urn:uuid:patient-elena-reyes"},
+        "effectiveDateTime": "2026-02-10T08:30:00-05:00",
+        "valueQuantity": {
+          "value": 21.4,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "interpretation": [
+          {"coding": [{"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "H"}]}
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-esr-2026-02-10",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-esr-20260210",
+        "status": "final",
+        "category": [{"coding": [{"system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory"}]}],
+        "code": {"coding": [{"system": "http://loinc.org", "code": "4537-7", "display": "Erythrocyte sedimentation rate"}]},
+        "subject": {"reference": "urn:uuid:patient-elena-reyes"},
+        "effectiveDateTime": "2026-02-10T08:30:00-05:00",
+        "valueQuantity": {"value": 33, "unit": "mm/h", "system": "http://unitsofmeasure.org", "code": "mm/h"},
+        "interpretation": [{"coding": [{"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "H"}]}]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-antiCCP",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-antiCCP-20220214",
+        "status": "final",
+        "category": [{"coding": [{"system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory"}]}],
+        "code": {"coding": [{"system": "http://loinc.org", "code": "32218-7", "display": "Cyclic citrullinated peptide IgG Ab [Units/volume] in Serum"}]},
+        "subject": {"reference": "urn:uuid:patient-elena-reyes"},
+        "effectiveDateTime": "2022-02-14T09:15:00-05:00",
+        "valueQuantity": {"value": 178, "unit": "U/mL", "system": "http://unitsofmeasure.org", "code": "[arb'U]/mL"},
+        "interpretation": [{"coding": [{"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "H"}]}]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-das28",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-das28-20260210",
+        "status": "final",
+        "category": [{"coding": [{"system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "exam", "display": "Exam"}]}],
+        "code": {
+          "coding": [
+            {"system": "http://loinc.org", "code": "76374-2", "display": "DAS28-CRP score"}
+          ],
+          "text": "DAS28-CRP composite disease activity score"
+        },
+        "subject": {"reference": "urn:uuid:patient-elena-reyes"},
+        "effectiveDateTime": "2026-02-10T09:00:00-05:00",
+        "valueQuantity": {"value": 2.8, "unit": "score", "system": "http://unitsofmeasure.org", "code": "{score}"},
+        "note": [{"text": "Low disease activity. Calculated from TJC 2, SJC 1, CRP 21.4 mg/L, patient global VAS 32."}]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-bp",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bp-20260210",
+        "status": "final",
+        "category": [{"coding": [{"system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "vital-signs"}]}],
+        "code": {"coding": [{"system": "http://loinc.org", "code": "85354-9", "display": "Blood pressure panel"}]},
+        "subject": {"reference": "urn:uuid:patient-elena-reyes"},
+        "effectiveDateTime": "2026-02-10T08:50:00-05:00",
+        "component": [
+          {
+            "code": {"coding": [{"system": "http://loinc.org", "code": "8480-6", "display": "Systolic blood pressure"}]},
+            "valueQuantity": {"value": 122, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]"}
+          },
+          {
+            "code": {"coding": [{"system": "http://loinc.org", "code": "8462-4", "display": "Diastolic blood pressure"}]},
+            "valueQuantity": {"value": 76, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]"}
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:immun-flu",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "flu-2024-10",
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {"system": "http://hl7.org/fhir/sid/cvx", "code": "150", "display": "Influenza, injectable, quadrivalent"}
+          ],
+          "text": "Influenza vaccine (inactivated, quadrivalent)"
+        },
+        "patient": {"reference": "urn:uuid:patient-elena-reyes"},
+        "occurrenceDateTime": "2024-10-15"
+      }
+    }
+  ]
+}

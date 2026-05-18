@@ -1,0 +1,11 @@
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhcHAtNDIiLCJpYXQiOjE3MDAwMDAwMDAsImV4cCI6MTcwMDAwMzYwMH0.SAMPLE_SIGNATURE_OPAQUE_TO_CLIENT",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": "REFRESH_TOKEN_PLACEHOLDER_OPAQUE",
+  "scope": "launch/patient patient/Observation.read patient/Condition.read patient/MedicationRequest.read openid fhirUser offline_access",
+  "patient": "elena-reyes",
+  "encounter": "encounter-2026-08-15",
+  "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.SAMPLE_ID_TOKEN_PAYLOAD.SAMPLE_SIGNATURE",
+  "_note": "This is a representative example, not a live response. The patient and encounter values would be server-assigned IDs the app uses to scope its FHIR queries. The access_token is an opaque bearer the app passes back in subsequent requests as Authorization: Bearer <token>. The id_token (OpenID Connect) carries identity claims about the launching user (the clinician). The refresh_token can be exchanged at the token endpoint for a new access_token when this one expires."
+}

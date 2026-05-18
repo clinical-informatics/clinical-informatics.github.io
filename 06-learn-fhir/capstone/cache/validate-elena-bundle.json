@@ -1,0 +1,1416 @@
+{
+  "resourceType": "OperationOutcome",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[0].fullUrl, Line[1] Col[397]]</td><td>UUIDs must be valid and lowercase (patient-elena-reyes)</td></tr><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[Bundle.entry[0].resource/*Patient/elena-reyes*/.extension[0], Line[1] Col[2909]]</td><td>Unknown extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</td></tr><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[Bundle.entry[0].resource/*Patient/elena-reyes*/.extension[1], Line[1] Col[3432]]</td><td>Unknown extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[0].resource/*Patient/elena-reyes*/, Line[1] Col[3448]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[0].resource/*Patient/elena-reyes*/.meta.profile[0], Line[1] Col[3448]]</td><td>Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[1].fullUrl, Line[1] Col[3507]]</td><td>UUIDs must be valid and lowercase (practitioner-bennett)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[1].resource/*Practitioner/maya-bennett*/.qualification[0].code, Line[1] Col[4231]]</td><td>CodeSystem is unknown and can't be validated: http://terminology.hl7.org/CodeSystem/v2-0360 for 'http://terminology.hl7.org/CodeSystem/v2-0360#MD'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[1].resource/*Practitioner/maya-bennett*/, Line[1] Col[4258]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[2].fullUrl, Line[1] Col[4318]]</td><td>UUIDs must be valid and lowercase (organization-bayrheum)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[2].resource/*Organization/bay-rheumatology*/, Line[1] Col[4811]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[3].fullUrl, Line[1] Col[4862]]</td><td>UUIDs must be valid and lowercase (condition-ra)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[3].resource/*Condition/ra-condition*/.code, Line[1] Col[6638]]</td><td>CodeSystem is unknown and can't be validated: http://hl7.org/fhir/sid/icd-10-cm for 'http://hl7.org/fhir/sid/icd-10-cm#M05.79'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[3].resource/*Condition/ra-condition*/, Line[1] Col[6923]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[3].resource/*Condition/ra-condition*/.meta.profile[0], Line[1] Col[6923]]</td><td>Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[4].fullUrl, Line[1] Col[6978]]</td><td>UUIDs must be valid and lowercase (condition-anemia)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[4].resource/*Condition/anemia-condition*/.code, Line[1] Col[8073]]</td><td>CodeSystem is unknown and can't be validated: http://hl7.org/fhir/sid/icd-10-cm for 'http://hl7.org/fhir/sid/icd-10-cm#D63.8'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[4].resource/*Condition/anemia-condition*/, Line[1] Col[8201]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[5].fullUrl, Line[1] Col[8254]]</td><td>UUIDs must be valid and lowercase (medication-mtx)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[5].resource/*MedicationStatement/methotrexate-statement*/.medication.ofType(CodeableConcept), Line[1] Col[8727]]</td><td>CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#1156665'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[5].resource/*MedicationStatement/methotrexate-statement*/, Line[1] Col[9979]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[6].fullUrl, Line[1] Col[10032]]</td><td>UUIDs must be valid and lowercase (medication-ada)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[6].resource/*MedicationStatement/adalimumab-statement*/.medication.ofType(CodeableConcept), Line[1] Col[10494]]</td><td>CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#327361'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[6].resource/*MedicationStatement/adalimumab-statement*/, Line[1] Col[11699]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[7].fullUrl, Line[1] Col[11755]]</td><td>UUIDs must be valid and lowercase (medication-folate)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[7].resource/*MedicationStatement/folate-statement*/.medication.ofType(CodeableConcept), Line[1] Col[12186]]</td><td>CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#315966'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[7].resource/*MedicationStatement/folate-statement*/, Line[1] Col[12345]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[8].fullUrl, Line[1] Col[12395]]</td><td>UUIDs must be valid and lowercase (allergy-pcn)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[8].resource/*AllergyIntolerance/penicillin-allergy*/.code, Line[1] Col[13283]]</td><td>CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#7980'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[8].resource/*AllergyIntolerance/penicillin-allergy*/, Line[1] Col[13780]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[9].fullUrl, Line[1] Col[13841]]</td><td>UUIDs must be valid and lowercase (encounter-initial-eval)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[9].resource/*Encounter/encounter-2022-02-14*/.type[0], Line[1] Col[14421]]</td><td>Unknown code 'http://terminology.hl7.org/CodeSystem/v2-0004#OUTPATIENT'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[9].resource/*Encounter/encounter-2022-02-14*/, Line[1] Col[15027]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[10].fullUrl, Line[1] Col[15084]]</td><td>UUIDs must be valid and lowercase (obs-crp-2024-01-08)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[10].resource/*Observation/obs-crp-20240108*/, Line[1] Col[16643]]</td><td>Best Practice Recommendation: In general, all observations should have a performer</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[10].resource/*Observation/obs-crp-20240108*/.code, Line[1] Col[15903]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#1988-5'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[10].resource/*Observation/obs-crp-20240108*/, Line[1] Col[16643]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[10].resource/*Observation/obs-crp-20240108*/.meta.profile[0], Line[1] Col[16643]]</td><td>Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[11].fullUrl, Line[1] Col[16700]]</td><td>UUIDs must be valid and lowercase (obs-crp-2026-02-10)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[11].resource/*Observation/obs-crp-20260210*/, Line[1] Col[17880]]</td><td>Best Practice Recommendation: In general, all observations should have a performer</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[11].resource/*Observation/obs-crp-20260210*/.code, Line[1] Col[17440]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#1988-5'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[11].resource/*Observation/obs-crp-20260210*/, Line[1] Col[17880]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[11].resource/*Observation/obs-crp-20260210*/.meta.profile[0], Line[1] Col[17880]]</td><td>Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[12].fullUrl, Line[1] Col[17937]]</td><td>UUIDs must be valid and lowercase (obs-esr-2026-02-10)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[12].resource/*Observation/obs-esr-20260210*/, Line[1] Col[18683]]</td><td>Best Practice Recommendation: In general, all observations should have a performer</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[12].resource/*Observation/obs-esr-20260210*/.code, Line[1] Col[18308]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#4537-7'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[12].resource/*Observation/obs-esr-20260210*/, Line[1] Col[18683]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[13].fullUrl, Line[1] Col[18733]]</td><td>UUIDs must be valid and lowercase (obs-antiCCP)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/, Line[1] Col[19520]]</td><td>Best Practice Recommendation: In general, all observations should have a performer</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/.code, Line[1] Col[19138]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#32218-7'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/, Line[1] Col[19520]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[14].fullUrl, Line[1] Col[19568]]</td><td>UUIDs must be valid and lowercase (obs-das28)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[14].resource/*Observation/obs-das28-20260210*/, Line[1] Col[20407]]</td><td>Best Practice Recommendation: In general, all observations should have a performer</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[14].resource/*Observation/obs-das28-20260210*/.code, Line[1] Col[20043]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#76374-2'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[14].resource/*Observation/obs-das28-20260210*/.value.ofType(Quantity), Line[1] Col[20280]]</td><td>UCUM Codes that contain human readable annotations like {score} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[14].resource/*Observation/obs-das28-20260210*/, Line[1] Col[20407]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[15].fullUrl, Line[1] Col[20452]]</td><td>UUIDs must be valid and lowercase (obs-bp)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[15].resource/*Observation/obs-bp-20260210*/, Line[1] Col[21494]]</td><td>Best Practice Recommendation: In general, all observations should have a performer</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.code, Line[1] Col[20814]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#85354-9'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.component[0].code, Line[1] Col[21090]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#8480-6'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.component[1].code, Line[1] Col[21351]]</td><td>CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#8462-4'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[15].resource/*Observation/obs-bp-20260210*/, Line[1] Col[21494]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Bundle.entry[16].fullUrl, Line[1] Col[21542]]</td><td>UUIDs must be valid and lowercase (immun-flu)</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[16].resource/*Immunization/flu-2024-10*/.vaccineCode, Line[1] Col[21908]]</td><td>CodeSystem is unknown and can't be validated: http://hl7.org/fhir/sid/cvx for 'http://hl7.org/fhir/sid/cvx#150'</td></tr><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Bundle.entry[16].resource/*Immunization/flu-2024-10*/, Line[1] Col[22023]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr></table></div>"
+  },
+  "issue": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 397
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (patient-elena-reyes)",
+    "location": [ "Bundle.entry[0].fullUrl", "Line[1] Col[397]" ],
+    "expression": [ "Bundle.entry[0].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 2909
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Extension_EXT_Unknown"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Extension_EXT_Unknown"
+      } ]
+    },
+    "diagnostics": "Unknown extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+    "location": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/.extension[0]", "Line[1] Col[2909]" ],
+    "expression": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/.extension[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 3432
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Extension_EXT_Unknown"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Extension_EXT_Unknown"
+      } ]
+    },
+    "diagnostics": "Unknown extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+    "location": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/.extension[1]", "Line[1] Col[3432]" ],
+    "expression": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/.extension[1]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 3448
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/", "Line[1] Col[3448]" ],
+    "expression": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 3448
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+      } ]
+    },
+    "diagnostics": "Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles",
+    "location": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/.meta.profile[0]", "Line[1] Col[3448]" ],
+    "expression": [ "Bundle.entry[0].resource/*Patient/elena-reyes*/.meta.profile[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 3507
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (practitioner-bennett)",
+    "location": [ "Bundle.entry[1].fullUrl", "Line[1] Col[3507]" ],
+    "expression": [ "Bundle.entry[1].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 4231
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://terminology.hl7.org/CodeSystem/v2-0360 for 'http://terminology.hl7.org/CodeSystem/v2-0360#MD'",
+    "location": [ "Bundle.entry[1].resource/*Practitioner/maya-bennett*/.qualification[0].code", "Line[1] Col[4231]" ],
+    "expression": [ "Bundle.entry[1].resource/*Practitioner/maya-bennett*/.qualification[0].code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 4258
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[1].resource/*Practitioner/maya-bennett*/", "Line[1] Col[4258]" ],
+    "expression": [ "Bundle.entry[1].resource/*Practitioner/maya-bennett*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 4318
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (organization-bayrheum)",
+    "location": [ "Bundle.entry[2].fullUrl", "Line[1] Col[4318]" ],
+    "expression": [ "Bundle.entry[2].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 4811
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[2].resource/*Organization/bay-rheumatology*/", "Line[1] Col[4811]" ],
+    "expression": [ "Bundle.entry[2].resource/*Organization/bay-rheumatology*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 4862
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (condition-ra)",
+    "location": [ "Bundle.entry[3].fullUrl", "Line[1] Col[4862]" ],
+    "expression": [ "Bundle.entry[3].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 6638
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://hl7.org/fhir/sid/icd-10-cm for 'http://hl7.org/fhir/sid/icd-10-cm#M05.79'",
+    "location": [ "Bundle.entry[3].resource/*Condition/ra-condition*/.code", "Line[1] Col[6638]" ],
+    "expression": [ "Bundle.entry[3].resource/*Condition/ra-condition*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 6923
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[3].resource/*Condition/ra-condition*/", "Line[1] Col[6923]" ],
+    "expression": [ "Bundle.entry[3].resource/*Condition/ra-condition*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 6923
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+      } ]
+    },
+    "diagnostics": "Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles",
+    "location": [ "Bundle.entry[3].resource/*Condition/ra-condition*/.meta.profile[0]", "Line[1] Col[6923]" ],
+    "expression": [ "Bundle.entry[3].resource/*Condition/ra-condition*/.meta.profile[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 6978
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (condition-anemia)",
+    "location": [ "Bundle.entry[4].fullUrl", "Line[1] Col[6978]" ],
+    "expression": [ "Bundle.entry[4].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 8073
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://hl7.org/fhir/sid/icd-10-cm for 'http://hl7.org/fhir/sid/icd-10-cm#D63.8'",
+    "location": [ "Bundle.entry[4].resource/*Condition/anemia-condition*/.code", "Line[1] Col[8073]" ],
+    "expression": [ "Bundle.entry[4].resource/*Condition/anemia-condition*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 8201
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[4].resource/*Condition/anemia-condition*/", "Line[1] Col[8201]" ],
+    "expression": [ "Bundle.entry[4].resource/*Condition/anemia-condition*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 8254
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (medication-mtx)",
+    "location": [ "Bundle.entry[5].fullUrl", "Line[1] Col[8254]" ],
+    "expression": [ "Bundle.entry[5].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 8727
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#1156665'",
+    "location": [ "Bundle.entry[5].resource/*MedicationStatement/methotrexate-statement*/.medication.ofType(CodeableConcept)", "Line[1] Col[8727]" ],
+    "expression": [ "Bundle.entry[5].resource/*MedicationStatement/methotrexate-statement*/.medication.ofType(CodeableConcept)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 9979
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[5].resource/*MedicationStatement/methotrexate-statement*/", "Line[1] Col[9979]" ],
+    "expression": [ "Bundle.entry[5].resource/*MedicationStatement/methotrexate-statement*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 10032
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (medication-ada)",
+    "location": [ "Bundle.entry[6].fullUrl", "Line[1] Col[10032]" ],
+    "expression": [ "Bundle.entry[6].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 10494
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#327361'",
+    "location": [ "Bundle.entry[6].resource/*MedicationStatement/adalimumab-statement*/.medication.ofType(CodeableConcept)", "Line[1] Col[10494]" ],
+    "expression": [ "Bundle.entry[6].resource/*MedicationStatement/adalimumab-statement*/.medication.ofType(CodeableConcept)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 11699
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[6].resource/*MedicationStatement/adalimumab-statement*/", "Line[1] Col[11699]" ],
+    "expression": [ "Bundle.entry[6].resource/*MedicationStatement/adalimumab-statement*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 11755
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (medication-folate)",
+    "location": [ "Bundle.entry[7].fullUrl", "Line[1] Col[11755]" ],
+    "expression": [ "Bundle.entry[7].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 12186
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#315966'",
+    "location": [ "Bundle.entry[7].resource/*MedicationStatement/folate-statement*/.medication.ofType(CodeableConcept)", "Line[1] Col[12186]" ],
+    "expression": [ "Bundle.entry[7].resource/*MedicationStatement/folate-statement*/.medication.ofType(CodeableConcept)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 12345
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[7].resource/*MedicationStatement/folate-statement*/", "Line[1] Col[12345]" ],
+    "expression": [ "Bundle.entry[7].resource/*MedicationStatement/folate-statement*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 12395
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (allergy-pcn)",
+    "location": [ "Bundle.entry[8].fullUrl", "Line[1] Col[12395]" ],
+    "expression": [ "Bundle.entry[8].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 13283
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://www.nlm.nih.gov/research/umls/rxnorm for 'http://www.nlm.nih.gov/research/umls/rxnorm#7980'",
+    "location": [ "Bundle.entry[8].resource/*AllergyIntolerance/penicillin-allergy*/.code", "Line[1] Col[13283]" ],
+    "expression": [ "Bundle.entry[8].resource/*AllergyIntolerance/penicillin-allergy*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 13780
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[8].resource/*AllergyIntolerance/penicillin-allergy*/", "Line[1] Col[13780]" ],
+    "expression": [ "Bundle.entry[8].resource/*AllergyIntolerance/penicillin-allergy*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 13841
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (encounter-initial-eval)",
+    "location": [ "Bundle.entry[9].fullUrl", "Line[1] Col[13841]" ],
+    "expression": [ "Bundle.entry[9].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 14421
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "Unknown code 'http://terminology.hl7.org/CodeSystem/v2-0004#OUTPATIENT'",
+    "location": [ "Bundle.entry[9].resource/*Encounter/encounter-2022-02-14*/.type[0]", "Line[1] Col[14421]" ],
+    "expression": [ "Bundle.entry[9].resource/*Encounter/encounter-2022-02-14*/.type[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 15027
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[9].resource/*Encounter/encounter-2022-02-14*/", "Line[1] Col[15027]" ],
+    "expression": [ "Bundle.entry[9].resource/*Encounter/encounter-2022-02-14*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 15084
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (obs-crp-2024-01-08)",
+    "location": [ "Bundle.entry[10].fullUrl", "Line[1] Col[15084]" ],
+    "expression": [ "Bundle.entry[10].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 16643
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "All_observations_should_have_a_performer"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "All_observations_should_have_a_performer"
+      } ]
+    },
+    "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+    "location": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/", "Line[1] Col[16643]" ],
+    "expression": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 15903
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#1988-5'",
+    "location": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/.code", "Line[1] Col[15903]" ],
+    "expression": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 16643
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/", "Line[1] Col[16643]" ],
+    "expression": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 16643
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+      } ]
+    },
+    "diagnostics": "Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles",
+    "location": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/.meta.profile[0]", "Line[1] Col[16643]" ],
+    "expression": [ "Bundle.entry[10].resource/*Observation/obs-crp-20240108*/.meta.profile[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 16700
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (obs-crp-2026-02-10)",
+    "location": [ "Bundle.entry[11].fullUrl", "Line[1] Col[16700]" ],
+    "expression": [ "Bundle.entry[11].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 17880
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "All_observations_should_have_a_performer"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "All_observations_should_have_a_performer"
+      } ]
+    },
+    "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+    "location": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/", "Line[1] Col[17880]" ],
+    "expression": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 17440
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#1988-5'",
+    "location": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/.code", "Line[1] Col[17440]" ],
+    "expression": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 17880
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/", "Line[1] Col[17880]" ],
+    "expression": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 17880
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+      } ]
+    },
+    "diagnostics": "Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles",
+    "location": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/.meta.profile[0]", "Line[1] Col[17880]" ],
+    "expression": [ "Bundle.entry[11].resource/*Observation/obs-crp-20260210*/.meta.profile[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 17937
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (obs-esr-2026-02-10)",
+    "location": [ "Bundle.entry[12].fullUrl", "Line[1] Col[17937]" ],
+    "expression": [ "Bundle.entry[12].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 18683
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "All_observations_should_have_a_performer"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "All_observations_should_have_a_performer"
+      } ]
+    },
+    "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+    "location": [ "Bundle.entry[12].resource/*Observation/obs-esr-20260210*/", "Line[1] Col[18683]" ],
+    "expression": [ "Bundle.entry[12].resource/*Observation/obs-esr-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 18308
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#4537-7'",
+    "location": [ "Bundle.entry[12].resource/*Observation/obs-esr-20260210*/.code", "Line[1] Col[18308]" ],
+    "expression": [ "Bundle.entry[12].resource/*Observation/obs-esr-20260210*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 18683
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[12].resource/*Observation/obs-esr-20260210*/", "Line[1] Col[18683]" ],
+    "expression": [ "Bundle.entry[12].resource/*Observation/obs-esr-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 18733
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (obs-antiCCP)",
+    "location": [ "Bundle.entry[13].fullUrl", "Line[1] Col[18733]" ],
+    "expression": [ "Bundle.entry[13].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 19520
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "All_observations_should_have_a_performer"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "All_observations_should_have_a_performer"
+      } ]
+    },
+    "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+    "location": [ "Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/", "Line[1] Col[19520]" ],
+    "expression": [ "Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 19138
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#32218-7'",
+    "location": [ "Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/.code", "Line[1] Col[19138]" ],
+    "expression": [ "Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 19520
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/", "Line[1] Col[19520]" ],
+    "expression": [ "Bundle.entry[13].resource/*Observation/obs-antiCCP-20220214*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 19568
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (obs-das28)",
+    "location": [ "Bundle.entry[14].fullUrl", "Line[1] Col[19568]" ],
+    "expression": [ "Bundle.entry[14].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 20407
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "All_observations_should_have_a_performer"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "All_observations_should_have_a_performer"
+      } ]
+    },
+    "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+    "location": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/", "Line[1] Col[20407]" ],
+    "expression": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 20043
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#76374-2'",
+    "location": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/.code", "Line[1] Col[20043]" ],
+    "expression": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 20280
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS"
+      } ]
+    },
+    "diagnostics": "UCUM Codes that contain human readable annotations like {score} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked",
+    "location": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/.value.ofType(Quantity)", "Line[1] Col[20280]" ],
+    "expression": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/.value.ofType(Quantity)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 20407
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/", "Line[1] Col[20407]" ],
+    "expression": [ "Bundle.entry[14].resource/*Observation/obs-das28-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 20452
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (obs-bp)",
+    "location": [ "Bundle.entry[15].fullUrl", "Line[1] Col[20452]" ],
+    "expression": [ "Bundle.entry[15].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 21494
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "All_observations_should_have_a_performer"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "All_observations_should_have_a_performer"
+      } ]
+    },
+    "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+    "location": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/", "Line[1] Col[21494]" ],
+    "expression": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 20814
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#85354-9'",
+    "location": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.code", "Line[1] Col[20814]" ],
+    "expression": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 21090
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#8480-6'",
+    "location": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.component[0].code", "Line[1] Col[21090]" ],
+    "expression": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.component[0].code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 21351
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://loinc.org for 'http://loinc.org#8462-4'",
+    "location": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.component[1].code", "Line[1] Col[21351]" ],
+    "expression": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/.component[1].code" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 21494
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/", "Line[1] Col[21494]" ],
+    "expression": [ "Bundle.entry[15].resource/*Observation/obs-bp-20260210*/" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 21542
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Type_Specific_Checks_DT_UUID_Valid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Type_Specific_Checks_DT_UUID_Valid"
+      } ]
+    },
+    "diagnostics": "UUIDs must be valid and lowercase (immun-flu)",
+    "location": [ "Bundle.entry[16].fullUrl", "Line[1] Col[21542]" ],
+    "expression": [ "Bundle.entry[16].fullUrl" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 21908
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://hl7.org/fhir/sid/cvx for 'http://hl7.org/fhir/sid/cvx#150'",
+    "location": [ "Bundle.entry[16].resource/*Immunization/flu-2024-10*/.vaccineCode", "Line[1] Col[21908]" ],
+    "expression": [ "Bundle.entry[16].resource/*Immunization/flu-2024-10*/.vaccineCode" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 22023
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Bundle.entry[16].resource/*Immunization/flu-2024-10*/", "Line[1] Col[22023]" ],
+    "expression": [ "Bundle.entry[16].resource/*Immunization/flu-2024-10*/" ]
+  } ]
+}

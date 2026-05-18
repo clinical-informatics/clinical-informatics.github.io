@@ -1,0 +1,101 @@
+claim_id,patient_id,service_date,place_of_service,provider_npi,cpt_or_hcpcs,procedure_description,icd10,diagnosis_description,units,allowed_amount,patient_responsibility,paid_amount
+CL-1001,ER-001,2024-01-08,11,1234567890,99214,Office visit established patient moderate complexity,M05.79,"Rheumatoid arthritis with rheumatoid factor of other organ involvement",1,158.00,30.00,128.00
+CL-1002,ER-001,2024-01-08,11,1234567890,80061,Lipid panel,Z00.00,General medical exam,1,28.00,0.00,28.00
+CL-1003,ER-001,2024-01-08,11,1234567890,86200,Anti-CCP antibody,M05.79,Seropositive RA,1,32.00,0.00,32.00
+CL-1004,ER-001,2024-01-08,11,1234567890,85025,Complete blood count with differential,M05.79,Seropositive RA,1,18.00,0.00,18.00
+CL-1005,ER-001,2024-01-08,11,1234567890,80048,Basic metabolic panel,M05.79,Seropositive RA,1,22.00,0.00,22.00
+CL-1006,ER-001,2024-01-08,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1007,ER-001,2024-01-08,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1008,ER-001,2024-01-08,11,1234567890,87340,Hepatitis B surface antigen,M05.79,RA screening pre-biologic,1,38.00,0.00,38.00
+CL-1009,ER-001,2024-01-15,11,9988776655,99213,Office visit established patient low complexity,M05.79,RA biologic initiation visit,1,118.00,30.00,88.00
+CL-1010,ER-001,2024-01-22,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,250.00,4662.00
+CL-1011,ER-001,2024-02-05,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1012,ER-001,2024-02-19,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1013,ER-001,2024-03-04,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1014,ER-001,2024-03-18,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1015,ER-001,2024-04-01,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1016,ER-001,2024-04-15,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1017,ER-001,2024-04-17,11,1234567890,99213,Office visit established patient low complexity,M05.79,RA follow-up,1,118.00,30.00,88.00
+CL-1018,ER-001,2024-04-17,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1019,ER-001,2024-04-17,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1020,ER-001,2024-04-17,11,1234567890,80076,Hepatic function panel,M05.79,Methotrexate monitoring,1,24.00,0.00,24.00
+CL-1021,ER-001,2024-04-29,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1022,ER-001,2024-05-13,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1023,ER-001,2024-05-27,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1024,ER-001,2024-06-10,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1025,ER-001,2024-06-24,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1026,ER-001,2024-07-08,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1027,ER-001,2024-07-22,11,1234567890,99213,Office visit established patient low complexity,M05.79,RA follow-up improved disease activity,1,118.00,30.00,88.00
+CL-1028,ER-001,2024-07-22,11,1234567890,85025,Complete blood count with differential,M05.79,Seropositive RA,1,18.00,0.00,18.00
+CL-1029,ER-001,2024-07-22,11,1234567890,80076,Hepatic function panel,M05.79,Methotrexate monitoring,1,24.00,0.00,24.00
+CL-1030,ER-001,2024-08-05,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1031,ER-001,2024-08-19,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1032,ER-001,2024-09-02,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1033,ER-001,2024-09-16,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1034,ER-001,2024-09-30,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1035,ER-001,2024-10-14,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1036,ER-001,2024-10-28,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1037,ER-001,2024-10-30,11,1234567890,99214,Office visit established patient moderate complexity,M05.79,RA stable on combination DMARD,1,158.00,30.00,128.00
+CL-1038,ER-001,2024-10-30,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1039,ER-001,2024-10-30,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1040,ER-001,2024-10-30,11,1234567890,80076,Hepatic function panel,M05.79,Methotrexate monitoring,1,24.00,0.00,24.00
+CL-1041,ER-001,2024-11-11,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1042,ER-001,2024-11-25,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1043,ER-001,2024-12-09,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1044,ER-001,2024-12-23,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1045,ER-001,2025-01-06,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1046,ER-001,2025-01-20,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1047,ER-001,2025-02-03,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1048,ER-001,2025-02-04,11,1234567890,99213,Office visit established patient low complexity,M05.79,RA follow-up,1,118.00,30.00,88.00
+CL-1049,ER-001,2025-02-04,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1050,ER-001,2025-02-04,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1051,ER-001,2025-02-17,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1052,ER-001,2025-03-03,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1053,ER-001,2025-03-17,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1054,ER-001,2025-03-31,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1055,ER-001,2025-04-14,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1056,ER-001,2025-04-28,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1057,ER-001,2025-05-12,11,1234567890,99213,Office visit established patient low complexity,M05.79,RA follow-up,1,118.00,30.00,88.00
+CL-1058,ER-001,2025-05-12,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1059,ER-001,2025-05-12,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1060,ER-001,2025-05-12,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1061,ER-001,2025-05-26,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1062,ER-001,2025-06-09,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1063,ER-001,2025-06-23,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1064,ER-001,2025-07-07,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1065,ER-001,2025-07-21,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1066,ER-001,2025-08-04,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1067,ER-001,2025-08-19,11,1234567890,99213,Office visit established patient low complexity,M05.79,RA follow-up,1,118.00,30.00,88.00
+CL-1068,ER-001,2025-08-19,11,1234567890,85025,Complete blood count with differential,M05.79,Seropositive RA,1,18.00,0.00,18.00
+CL-1069,ER-001,2025-08-19,11,1234567890,80076,Hepatic function panel,M05.79,Methotrexate monitoring,1,24.00,0.00,24.00
+CL-1070,ER-001,2025-08-19,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1071,ER-001,2025-09-02,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1072,ER-001,2025-09-16,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1073,ER-001,2025-09-30,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1074,ER-001,2025-10-14,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1075,ER-001,2025-10-28,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1076,ER-001,2025-11-11,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1077,ER-001,2025-11-21,11,1234567890,99214,Office visit established patient moderate complexity,M05.79,RA follow-up flare,1,158.00,30.00,128.00
+CL-1078,ER-001,2025-11-21,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1079,ER-001,2025-11-21,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1080,ER-001,2025-11-21,11,1234567890,80076,Hepatic function panel,M05.79,Methotrexate monitoring,1,24.00,0.00,24.00
+CL-1081,ER-001,2025-11-25,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1082,ER-001,2025-12-09,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1083,ER-001,2025-12-23,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1084,ER-001,2026-01-06,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1085,ER-001,2026-01-20,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1086,ER-001,2026-02-03,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1087,ER-001,2026-02-10,11,1234567890,99214,Office visit established patient moderate complexity,M05.79,RA follow-up,1,158.00,30.00,128.00
+CL-1088,ER-001,2026-02-10,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1089,ER-001,2026-02-10,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1090,ER-001,2026-02-10,11,1234567890,80076,Hepatic function panel,M05.79,Methotrexate monitoring,1,24.00,0.00,24.00
+CL-1091,ER-001,2026-02-17,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1092,ER-001,2026-03-03,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1093,ER-001,2026-03-17,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1094,ER-001,2026-03-31,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1095,ER-001,2026-04-14,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1096,ER-001,2026-04-28,11,1234567890,99213,Office visit established patient low complexity,M05.79,RA follow-up,1,118.00,30.00,88.00
+CL-1097,ER-001,2026-04-28,11,1234567890,85652,ESR Westergren,M05.79,Seropositive RA,1,14.00,0.00,14.00
+CL-1098,ER-001,2026-04-28,11,1234567890,86140,C-reactive protein,M05.79,Seropositive RA,1,16.00,0.00,16.00
+CL-1099,ER-001,2026-04-28,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00
+CL-1100,ER-001,2026-05-12,12,4455667788,J0135,Adalimumab injection 40 mg subcutaneous,M05.79,Seropositive RA,1,4912.00,0.00,4912.00

@@ -1,0 +1,272 @@
+{
+  "exportMetadata": {
+    "vendor": "Epic-style synthetic",
+    "exportedAt": "2026-05-12T14:00:00-05:00",
+    "exportedBy": "synthetic-export-process",
+    "schemaVersion": "epic-clarity-2025.r1",
+    "note": "This is a synthetic export shaped like an Epic Clarity extract. Field names approximate the Clarity schema. Do not use for any clinical purpose."
+  },
+  "PAT_ENC": {
+    "PAT_ID": "Z9847562",
+    "PAT_MRN_ID": "ER-001",
+    "PAT_NAME": "Reyes, Elena Maria",
+    "PAT_FIRST_NAME": "Elena",
+    "PAT_LAST_NAME": "Reyes",
+    "PAT_MIDDLE_NAME": "Maria",
+    "PAT_PREFERRED_NAME": "Elena",
+    "BIRTH_DATE": "1974-02-09",
+    "SEX_C": 2,
+    "SEX_C_NAME": "Female",
+    "MARITAL_STATUS_C_NAME": "Married",
+    "LANGUAGE_C_NAME": "English",
+    "RACE_C_NAME": "White",
+    "ETHNIC_GROUP_C_NAME": "Hispanic or Latino",
+    "ADD_LINE_1": "742 Elm Street",
+    "CITY": "Springfield",
+    "STATE_C_NAME": "MA",
+    "ZIP": "01103",
+    "HOME_PHONE": "555-0142",
+    "EMAIL_ADDRESS": "synthetic.elena.reyes@example.invalid",
+    "DEATH_DATE": null,
+    "PCP_PROV_ID": "DOC0011223"
+  },
+  "PROBLEM_LIST": [
+    {
+      "PROBLEM_LIST_ID": "PL-100001",
+      "PAT_ID": "Z9847562",
+      "DX_ID": "DX-RA-001",
+      "DX_NAME": "Seropositive erosive rheumatoid arthritis",
+      "ICD10_LIST": "M05.79",
+      "PROBLEM_STATUS_C_NAME": "Active",
+      "NOTED_DATE": "2022-03-07",
+      "RESOLVED_DATE": null,
+      "PROBLEM_CMT": "Symmetric polyarthritis, anti-CCP+, RF+, erosive on x-ray. On combination MTX + adalimumab since Jan 2024."
+    },
+    {
+      "PROBLEM_LIST_ID": "PL-100002",
+      "PAT_ID": "Z9847562",
+      "DX_ID": "DX-ACD-001",
+      "DX_NAME": "Anemia of chronic disease",
+      "ICD10_LIST": "D63.8",
+      "PROBLEM_STATUS_C_NAME": "Active",
+      "NOTED_DATE": "2022-02-14",
+      "RESOLVED_DATE": null
+    },
+    {
+      "PROBLEM_LIST_ID": "PL-100003",
+      "PAT_ID": "Z9847562",
+      "DX_ID": "DX-PCN-ALG",
+      "DX_NAME": "Penicillin allergy",
+      "ICD10_LIST": "Z88.0",
+      "PROBLEM_STATUS_C_NAME": "Active",
+      "NOTED_DATE": "2003-06-12"
+    }
+  ],
+  "ALLERGIES": [
+    {
+      "PAT_ID": "Z9847562",
+      "ALG_ID": "ALG-100001",
+      "ALLERGEN_NAME": "Penicillin G",
+      "REACTION": "Rash",
+      "SEVERITY_C_NAME": "Mild",
+      "STATUS_C_NAME": "Active",
+      "NOTED_DATE": "2003-06-12"
+    }
+  ],
+  "MEDICATIONS": [
+    {
+      "ORDER_MED_ID": "RX-200001",
+      "PAT_ID": "Z9847562",
+      "MEDICATION_NAME": "Methotrexate 25 mg/mL Inj Soln",
+      "GENERIC_NAME": "methotrexate",
+      "SIG": "Inject 1 mL (25 mg) subcutaneously once weekly",
+      "DOSE": "25",
+      "DOSE_UNIT_C_NAME": "mg",
+      "ROUTE_C_NAME": "Subcutaneous",
+      "FREQUENCY_C_NAME": "Once weekly",
+      "START_DATE": "2022-03-07",
+      "END_DATE": null,
+      "ORDER_STATUS_C_NAME": "Active",
+      "RXNORM_CODE": "1156665"
+    },
+    {
+      "ORDER_MED_ID": "RX-200002",
+      "PAT_ID": "Z9847562",
+      "MEDICATION_NAME": "Adalimumab 40 mg/0.8 mL Pen Inj",
+      "GENERIC_NAME": "adalimumab",
+      "SIG": "Inject 40 mg (0.8 mL) subcutaneously every 14 days",
+      "DOSE": "40",
+      "DOSE_UNIT_C_NAME": "mg",
+      "ROUTE_C_NAME": "Subcutaneous",
+      "FREQUENCY_C_NAME": "Every 14 days",
+      "START_DATE": "2024-01-08",
+      "END_DATE": null,
+      "ORDER_STATUS_C_NAME": "Active",
+      "RXNORM_CODE": "327361"
+    },
+    {
+      "ORDER_MED_ID": "RX-200003",
+      "PAT_ID": "Z9847562",
+      "MEDICATION_NAME": "Folic Acid 1 mg Tablet",
+      "GENERIC_NAME": "folic acid",
+      "SIG": "Take 1 tablet by mouth once daily",
+      "DOSE": "1",
+      "DOSE_UNIT_C_NAME": "mg",
+      "ROUTE_C_NAME": "Oral",
+      "FREQUENCY_C_NAME": "Daily",
+      "START_DATE": "2022-03-07",
+      "END_DATE": null,
+      "ORDER_STATUS_C_NAME": "Active",
+      "RXNORM_CODE": "315966"
+    }
+  ],
+  "ENCOUNTERS": [
+    {
+      "PAT_ENC_CSN_ID": "ENC-300101",
+      "PAT_ID": "Z9847562",
+      "CONTACT_DATE": "2022-02-14",
+      "ENC_TYPE_C_NAME": "New patient",
+      "DEPARTMENT_NAME": "Rheumatology Clinic",
+      "VISIT_PROV_ID": "DOC0044556",
+      "VISIT_PROV_NAME": "Bennett, Maya, MD",
+      "PRIMARY_DX_ICD10": "M79.7",
+      "PRIMARY_DX_NAME": "Polyarthralgia, unspecified"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300102",
+      "PAT_ID": "Z9847562",
+      "CONTACT_DATE": "2022-03-07",
+      "ENC_TYPE_C_NAME": "Office visit",
+      "DEPARTMENT_NAME": "Rheumatology Clinic",
+      "VISIT_PROV_ID": "DOC0044556",
+      "VISIT_PROV_NAME": "Bennett, Maya, MD",
+      "PRIMARY_DX_ICD10": "M05.79"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300120",
+      "PAT_ID": "Z9847562",
+      "CONTACT_DATE": "2024-01-08",
+      "ENC_TYPE_C_NAME": "Office visit",
+      "DEPARTMENT_NAME": "Rheumatology Clinic",
+      "VISIT_PROV_ID": "DOC0044556",
+      "VISIT_PROV_NAME": "Bennett, Maya, MD",
+      "PRIMARY_DX_ICD10": "M05.79"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300148",
+      "PAT_ID": "Z9847562",
+      "CONTACT_DATE": "2026-02-10",
+      "ENC_TYPE_C_NAME": "Office visit",
+      "DEPARTMENT_NAME": "Rheumatology Clinic",
+      "VISIT_PROV_ID": "DOC0044556",
+      "VISIT_PROV_NAME": "Bennett, Maya, MD",
+      "PRIMARY_DX_ICD10": "M05.79"
+    }
+  ],
+  "LAB_RESULTS": [
+    {
+      "ORDER_PROC_ID": "LAB-400001",
+      "PAT_ID": "Z9847562",
+      "RESULT_TIME": "2024-01-08T09:15:00-05:00",
+      "COMPONENT_NAME": "CRP",
+      "COMPONENT_ID": "LP_1988-5",
+      "ORD_VALUE": "36.2",
+      "REFERENCE_UNIT": "mg/L",
+      "REFERENCE_LOW": "0",
+      "REFERENCE_HIGH": "5",
+      "RESULT_FLAG_C_NAME": "High",
+      "LOINC_CODE": "1988-5"
+    },
+    {
+      "ORDER_PROC_ID": "LAB-400002",
+      "PAT_ID": "Z9847562",
+      "RESULT_TIME": "2024-01-08T09:15:00-05:00",
+      "COMPONENT_NAME": "ESR",
+      "COMPONENT_ID": "LP_4537-7",
+      "ORD_VALUE": "51",
+      "REFERENCE_UNIT": "mm/h",
+      "REFERENCE_LOW": "0",
+      "REFERENCE_HIGH": "20",
+      "RESULT_FLAG_C_NAME": "High",
+      "LOINC_CODE": "4537-7"
+    },
+    {
+      "ORDER_PROC_ID": "LAB-400003",
+      "PAT_ID": "Z9847562",
+      "RESULT_TIME": "2024-01-08T09:15:00-05:00",
+      "COMPONENT_NAME": "Anti-CCP",
+      "ORD_VALUE": "154",
+      "REFERENCE_UNIT": "U/mL",
+      "REFERENCE_HIGH": "20",
+      "RESULT_FLAG_C_NAME": "High",
+      "LOINC_CODE": "32218-7"
+    },
+    {
+      "ORDER_PROC_ID": "LAB-400048",
+      "PAT_ID": "Z9847562",
+      "RESULT_TIME": "2026-02-10T08:30:00-05:00",
+      "COMPONENT_NAME": "CRP",
+      "ORD_VALUE": "21.4",
+      "REFERENCE_UNIT": "mg/L",
+      "REFERENCE_HIGH": "5",
+      "RESULT_FLAG_C_NAME": "High",
+      "LOINC_CODE": "1988-5"
+    },
+    {
+      "ORDER_PROC_ID": "LAB-400049",
+      "PAT_ID": "Z9847562",
+      "RESULT_TIME": "2026-02-10T08:30:00-05:00",
+      "COMPONENT_NAME": "ESR",
+      "ORD_VALUE": "33",
+      "REFERENCE_UNIT": "mm/h",
+      "REFERENCE_HIGH": "20",
+      "RESULT_FLAG_C_NAME": "High",
+      "LOINC_CODE": "4537-7"
+    }
+  ],
+  "FLOWSHEET_VALUES": [
+    {
+      "PAT_ENC_CSN_ID": "ENC-300148",
+      "FLO_MEAS_ID": "FLO-DAS28",
+      "FLO_MEAS_NAME": "DAS28-CRP",
+      "MEAS_VALUE": "2.8",
+      "RECORDED_TIME": "2026-02-10T09:00:00-05:00",
+      "RECORDED_BY": "Bennett, Maya, MD"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300148",
+      "FLO_MEAS_ID": "FLO-TJC",
+      "FLO_MEAS_NAME": "Tender joint count (28)",
+      "MEAS_VALUE": "2",
+      "RECORDED_TIME": "2026-02-10T09:00:00-05:00"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300148",
+      "FLO_MEAS_ID": "FLO-SJC",
+      "FLO_MEAS_NAME": "Swollen joint count (28)",
+      "MEAS_VALUE": "1",
+      "RECORDED_TIME": "2026-02-10T09:00:00-05:00"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300148",
+      "FLO_MEAS_ID": "FLO-VAS",
+      "FLO_MEAS_NAME": "Patient global VAS",
+      "MEAS_VALUE": "32",
+      "RECORDED_TIME": "2026-02-10T09:00:00-05:00"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300148",
+      "FLO_MEAS_ID": "FLO-BP-SYS",
+      "FLO_MEAS_NAME": "BP - Systolic",
+      "MEAS_VALUE": "122",
+      "RECORDED_TIME": "2026-02-10T08:50:00-05:00"
+    },
+    {
+      "PAT_ENC_CSN_ID": "ENC-300148",
+      "FLO_MEAS_ID": "FLO-BP-DIA",
+      "FLO_MEAS_NAME": "BP - Diastolic",
+      "MEAS_VALUE": "76",
+      "RECORDED_TIME": "2026-02-10T08:50:00-05:00"
+    }
+  ]
+}

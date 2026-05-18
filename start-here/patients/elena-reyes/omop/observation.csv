@@ -1,0 +1,7 @@
+observation_id,person_id,observation_concept_id,observation_date,observation_datetime,observation_type_concept_id,value_as_number,value_as_string,value_as_concept_id,qualifier_concept_id,unit_concept_id,provider_id,visit_occurrence_id,observation_source_value,observation_source_concept_id,unit_source_value
+9001,1001,40766949,2026-02-10,2026-02-10T09:00:00,38000280,2.8,,,,,3001,5018,DAS28-CRP,40766949,score
+9002,1001,40766949,2025-05-12,2025-05-12T09:00:00,38000280,2.6,,,,,3001,5015,DAS28-CRP,40766949,score
+9003,1001,40766949,2024-04-17,2024-04-17T09:00:00,38000280,2.9,,,,,3001,5011,DAS28-CRP,40766949,score
+9004,1001,40766949,2024-01-08,2024-01-08T09:00:00,38000280,4.1,,,,,3001,5010,DAS28-CRP,40766949,score
+9005,1001,4099506,2003-06-12,,38000280,,Rash,,,,,,Penicillin allergy: rash,
+9006,1001,4222303,2026-02-10,2026-02-10T09:00:00,38000280,,Accountant,,,,,5018,Occupation,

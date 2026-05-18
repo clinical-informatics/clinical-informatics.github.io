@@ -1,0 +1,10 @@
+## Go deeper
+
+**If you want to understand joins before moving on:**
+- The pandas user guide chapter on "Merge, join, concatenate and compare." Walks every `merge` flavor (inner, left, right, outer, cross) with diagrams, plus the harder operations (`merge_asof` for nearest-key joins on timestamps, `merge_ordered` for ordered data with fill, `combine_first` for null-aware updates). The clinical examples in this track use the simple `merge` calls; the pandas guide is where you go when you need a temporal join or a many-to-many resolution. [pandas.pydata.org/docs/user_guide/merging.html](https://pandas.pydata.org/docs/user_guide/merging.html)
+
+**If you want to see joins as a relational-data concept rather than a pandas operation:**
+- Chapter 13, "Relational data," of *R for Data Science* (first edition) by Hadley Wickham and Garrett Grolemund, free online. The chapter develops the join intuition using the `nycflights13` package (flights, airlines, airports, planes): domain-clean examples that make the keys and join behaviors visible. The R code is not the point; the point is seeing the same four join types in a different syntax cements the underlying concept. The "filtering joins" section is the cleanest treatment of semi-joins and anti-joins in any free resource. [r4ds.had.co.nz/relational-data.html](https://r4ds.had.co.nz/relational-data.html)
+
+**If you want to go significantly further on the clinical-data-engineering version of joins:**
+- Chapter 15 of *The Book of OHDSI*, "Data Quality." Free online textbook chapter. The relevant section for this track is the discussion of cohort attrition checks: how OHDSI tools (`checkCohortSourceCodes`, `findOrphanSourceCodes`) operationalize the "silent patient loss" anti-join move across a research network. Reading it walks you from "I should anti-join before publishing" to "this is what mature data engineering does about it at scale." [ohdsi.github.io/TheBookOfOhdsi/DataQuality.html](https://ohdsi.github.io/TheBookOfOhdsi/DataQuality.html)
