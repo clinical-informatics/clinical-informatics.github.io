@@ -1,8 +1,7 @@
-"""Course 00: foundations of clinical informatics.
+"""Course 00: Foundations of clinical informatics.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. The six tracks and the capstone are the orientation
+to the field that every later course assumes.
 """
 
 import marimo
@@ -23,13 +22,29 @@ def _(mo):
         r"""
         # 00: Foundations of clinical informatics
 
-        ## The orientation course. What clinical informatics is as a field, how clinical data flows through systems, and where the actors sit in US healthcare. The course every later course assumes.
+        ## The orientation course.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        What clinical informatics is as a field, how clinical data flows through systems, and where the actors sit in U.S. healthcare. Six tracks and a Socratic capstone. No coding. Plain English throughout.
 
-        ### Tracks
+        This is the course every later course assumes. Most learning paths in the curriculum route through here before `01-computational-thinking`. Roughly two to three hours end to end.
 
-        | # | Track | What it will cover |
+        You will meet **Ms. Elena Reyes** in Track 01. She is the synthetic patient who appears in every subsequent course. Her data lives in `start-here/patients/elena-reyes/` and is accessible from inside every course through the `patients/` symlink.
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md("## The six tracks")
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+        | # | Track | What it covers |
         |---|---|---|
         | 01 | **What clinical informatics is and how it got here** | Definition, brief history (Weed's POMR, the NLM, HITECH 2009, FHIR, AI), and Ms. Reyes introduced as the running patient. |
         | 02 | **DIKW and the lifecycle of clinical data** | Data, information, knowledge, wisdom with Reyes's CRP walked through each layer. The capture-store-use-share-retire lifecycle. |
@@ -38,13 +53,75 @@ def _(mo):
         | 05 | **The American health system and its parts** | Providers, payers, EHR vendors, regulators, research infrastructure, public health, standards bodies. Where informatics lives within each. |
         | 06 | **Informatics field: roles, ethics, and where the literature lives** | CMIO/CNIO/CRIO/analyst distinctions. The AMIA pathway. Where the field publishes. |
 
-        ### Capstone
+        Each track is one notebook with a paired short intro page. Open them from the file tree on the left in order: `track-01-what-is-informatics/notebook.py`, then `track-02-dikw-lifecycle/`, and so on.
+        """
+    )
+    return
 
-        **A community hospital wants to share readmission predictions with its ACO. Walk the problem through DIKW, CS plumbing, network, stakeholders, and governance (Socratic).**
 
+@app.cell
+def _(mo):
+    mo.md("## The capstone")
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+        **Walden Community Hospital wants to share its readmission predictions with its ACO.**
+
+        A Socratic walkthrough of one scenario in which every track in this course is in play. Four committed answers across DIKW, plumbing, stakeholders, and governance, each with a reveal. The notebook lives at `capstone/notebook.py`. Orientation capstone, not technical depth; the goal is to verify you can see the whole system at once.
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md("## How to start")
+    return
+
+
+@app.cell
+def _(mo):
+    start_button = mo.ui.button(
+        label="I'm ready. Start with Track 01.",
+        kind="success",
+    )
+    start_button
+    return (start_button,)
+
+
+@app.cell
+def _(mo, start_button):
+    if start_button.value:
+        next_md = mo.md(
+            r"""
+            **Open `track-01-what-is-informatics/notebook.py`** from the file tree on the left. Marimo will load it in app mode. Come back to this menu any time by reopening `home.py`.
+            """
+        )
+    else:
+        next_md = mo.md("_Click the button above when you're ready to begin._")
+    next_md
+    return (next_md,)
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Concepts you build here return in:
+
+        - **01: Computational thinking**, immediately, where every move (decomposition, abstraction, algorithms) sits on top of the DIKW and lifecycle vocabulary from here.
+        - **02: Data literacy**, where the file-types and data-types ideas from Track 03 become hands-on work.
+        - **03: Privacy, ethics, and governance**, where Track 04's security boundaries and Track 06's ethical premise get treated seriously.
+        - **05: EHR systems**, where Track 03's OLTP vs OLAP becomes a deep look at clinical data warehouses.
+        - **06: Learn FHIR**, where Track 04's HTTP/REST/APIs sketch becomes a working knowledge of the field's main interoperability standard.
+
+        Each later course flags when it picks up a thread from here. If a term throws you, the [GLOSSARY](GLOSSARY.md) defines every one of them in plain English.
         """
     )
     return

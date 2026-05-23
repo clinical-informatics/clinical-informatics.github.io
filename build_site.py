@@ -20,9 +20,11 @@ After build, run `mkdocs serve` to preview locally at http://127.0.0.1:8000/.
 from __future__ import annotations
 
 import argparse
+import ast
 import re
 import shutil
 import subprocess
+import textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -379,6 +381,47 @@ def export_notebook(notebook_path: Path, output_dir: Path) -> bool:
     return True
 
 
+# Notebooks reference data files relative to their own directory. The local
+# Marimo runtime reads them off disk via __file__; the WASM runtime cannot.
+# This helper mirrors a notebook's adjacent data directories into the WASM
+# export so the served notebook can fetch them over HTTP at a sibling URL.
+NOTEBOOK_DATA_DIRS = ("cache", "fixtures")
+
+
+def copy_notebook_data(notebook_src_dir: Path, app_out_dir: Path) -> None:
+    """Mirror data files alongside a notebook into the WASM export dir.
+
+    Copies ``cache/*`` and ``fixtures/*.json`` from the notebook's source
+    directory into the export's ``app/`` directory so the notebook can fetch
+    them via a relative URL (``./cache/foo.json``) in WASM. Skips Python
+    sources, compiled caches, and any non-JSON content under fixtures/ since
+    those are build-time helpers rather than runtime data.
+    """
+    if not notebook_src_dir.is_dir():
+        return
+    for sub in NOTEBOOK_DATA_DIRS:
+        src = notebook_src_dir / sub
+        if not src.is_dir():
+            continue
+        dest = app_out_dir / sub
+        dest.mkdir(parents=True, exist_ok=True)
+        for entry in src.iterdir():
+            if entry.is_dir():
+                if entry.name == "__pycache__":
+                    continue
+                # nested data dirs are unusual; recurse just for JSON files
+                for nested in entry.rglob("*.json"):
+                    rel = nested.relative_to(src)
+                    target = dest / rel
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(nested, target)
+                continue
+            # files
+            if entry.suffix.lower() in {".py", ".pyc"}:
+                continue  # build-helpers (e.g. fixtures/build_cohort.py)
+            shutil.copy2(entry, dest / entry.name)
+
+
 def dedupe_assets(notebook_dirs: list[Path]) -> None:
     """Move the first notebook's assets/ to a shared location, delete other copies, rewrite paths.
 
@@ -533,6 +576,7 @@ def build_course(course_id: str, skip_export: bool = False) -> list[Path]:
             if export_notebook(notebook_py, out_dir):
                 notebook_dirs.append(out_dir)
                 has_notebook = True
+                copy_notebook_data(track_dir, out_dir)
         elif notebook_py.exists() and skip_export and out_dir.exists():
             notebook_dirs.append(out_dir)
             has_notebook = True
@@ -576,6 +620,7 @@ def build_course(course_id: str, skip_export: bool = False) -> list[Path]:
             if export_notebook(notebook_py, out_dir):
                 notebook_dirs.append(out_dir)
                 has_notebook = True
+                copy_notebook_data(capstone_dir, out_dir)
         elif notebook_py.exists() and skip_export and out_dir.exists():
             notebook_dirs.append(out_dir)
             has_notebook = True
@@ -696,6 +741,28 @@ def build_status_admonition() -> str:
     return "\n".join(lines) + "\n"
 
 
+def fill_course_map_status(text: str) -> str:
+    """Replace the `_status_` placeholder in each course-map row with the
+    auto-detected status from classify_course(). Rows are matched by the
+    two-digit number in the first cell.
+    """
+    status_word = {"built": "Built", "partial": "Partial", "scaffolded": "Scaffolded"}
+
+    def _replace(match: re.Match) -> str:
+        course_num = match.group("num")
+        course_id = next((c for c in COURSES if c.startswith(course_num + "-")), None)
+        if course_id is None:
+            return match.group(0)
+        status, _b, _t, _cap = classify_course(course_id)
+        return f"{match.group('pre')}{status_word.get(status, status)}{match.group('post')}"
+
+    return re.sub(
+        r"(?P<pre>\|\s*(?P<num>\d{2})\s*\|[^|\n]+\|\s*)_status_(?P<post>\s*\|)",
+        _replace,
+        text,
+    )
+
+
 def write_top_level_pages() -> None:
     """Copy start-here landing content into docs/ if not already present."""
     start_here = ROOT / "start-here"
@@ -705,6 +772,7 @@ def write_top_level_pages() -> None:
     if sh_readme.exists():
         text = sh_readme.read_text()
         text = strip_site_cruft(text)
+        text = fill_course_map_status(text)
         # Inject build status + how-to-use admonitions right after the byline.
         # The byline currently reads "Designed, written, and edited by ..." on
         # the home page; the per-course READMEs still use "Written by ...".
@@ -798,11 +866,519 @@ def write_top_level_pages_yaml(course_ids: list[str]) -> None:
     (DOCS / ".pages").write_text("\n".join(nav_lines) + "\n")
 
 
+AUDIT_SKIP_PARTS = {"__pycache__", ".venv", "site", "node_modules"}
+
+
+def _find_curriculum_notebooks():
+    """Yield every `notebook.py` under the curriculum (skips shared/, build dirs)."""
+    for p in ROOT.rglob("notebook.py"):
+        if any(seg in AUDIT_SKIP_PARTS for seg in p.parts):
+            continue
+        if "start-here/shared" in str(p):
+            continue
+        yield p
+
+
+def audit_rule_14_violations() -> list[dict]:
+    """Audit every curriculum notebook for marimo gotchas rule 14: multi-line
+    variables interpolated into indented `mo.md(rf'''...''')` bodies where
+    `textwrap.dedent` cannot strip the surrounding indent (because the
+    interpolated lines have less leading whitespace than the rest of the body),
+    leaving >=4 leading spaces on at least one line in the result. Markdown
+    then renders those lines as a code block. See `feedback_marimo_gotchas.md`
+    rule 14 in the project memory for the full failure-mode and the fix.
+
+    Returns a list of violation dicts: {file, line, interp, sample_bad_line}.
+    The list is empty when the curriculum is clean.
+    """
+    def _joinedstr_template(node: ast.JoinedStr) -> tuple[str, list[str]]:
+        parts, var_names = [], []
+        for v in node.values:
+            if isinstance(v, ast.Constant) and isinstance(v.value, str):
+                parts.append(v.value.replace("{", "{{").replace("}", "}}"))
+            elif isinstance(v, ast.FormattedValue):
+                i = len(var_names)
+                parts.append("{" + str(i) + "}")
+                try:
+                    var_names.append(ast.unparse(v.value))
+                except Exception:
+                    var_names.append(f"_interp_{i}")
+        return "".join(parts), var_names
+
+    def _first_str(js: ast.JoinedStr) -> str:
+        out = []
+        for v in js.values:
+            if isinstance(v, ast.Constant) and isinstance(v.value, str):
+                out.append(v.value)
+            else:
+                out.append("X")
+        return "".join(out)
+
+    def _multi_line_assigns(cell: ast.FunctionDef) -> dict[str, str | None]:
+        """Map cell-scope variable name -> representative rendered value if
+        the RHS is `<sep>.join(<gen>)` with a static elt, else None (unknown
+        multi-line: caller substitutes a worst-case placeholder).
+        """
+        out: dict[str, str | None] = {}
+        for stmt in ast.walk(cell):
+            if not isinstance(stmt, ast.Assign):
+                continue
+            rhs = stmt.value
+            rep: str | None = None
+            if (isinstance(rhs, ast.Call) and isinstance(rhs.func, ast.Attribute)
+                    and rhs.func.attr == "join"
+                    and isinstance(rhs.func.value, ast.Constant)
+                    and isinstance(rhs.func.value.value, str)
+                    and rhs.args
+                    and isinstance(rhs.args[0], (ast.GeneratorExp, ast.ListComp))):
+                sep = rhs.func.value.value
+                elt = rhs.args[0].elt
+                inner = None
+                if isinstance(elt, ast.JoinedStr):
+                    inner = _first_str(elt)
+                elif isinstance(elt, ast.Constant) and isinstance(elt.value, str):
+                    inner = elt.value
+                if inner is not None and "\n" in sep:
+                    rep = sep.join([inner, inner, inner])
+                elif inner is None and "\n" in sep:
+                    rep = None  # multi-line builder with opaque elements
+                else:
+                    continue  # single-line join, not a multi-line variable
+            else:
+                try:
+                    rhs_src = ast.unparse(rhs)
+                except Exception:
+                    continue
+                if r"\n" not in rhs_src and ".join(" not in rhs_src:
+                    continue
+            for tgt in stmt.targets:
+                if isinstance(tgt, ast.Name):
+                    out[tgt.id] = rep
+        return out
+
+    violations: list[dict] = []
+    for nb in sorted(_find_curriculum_notebooks()):
+        try:
+            tree = ast.parse(nb.read_text())
+        except SyntaxError:
+            continue
+        for fn in ast.walk(tree):
+            if not (isinstance(fn, ast.FunctionDef) and fn.name == "_"):
+                continue
+            multi = _multi_line_assigns(fn)
+            if not multi:
+                continue
+            for call in ast.walk(fn):
+                if not (isinstance(call, ast.Call)
+                        and isinstance(call.func, ast.Attribute)
+                        and isinstance(call.func.value, ast.Name)
+                        and call.func.value.id == "mo"
+                        and call.func.attr == "md"):
+                    continue
+                if not call.args or not isinstance(call.args[0], ast.JoinedStr):
+                    continue
+                tmpl, varnames = _joinedstr_template(call.args[0])
+                interp_multi = [(i, n) for i, n in enumerate(varnames) if n in multi]
+                if not interp_multi:
+                    continue
+                sub = ["_x_"] * len(varnames)
+                for i, n in interp_multi:
+                    rep = multi.get(n)
+                    sub[i] = rep if rep is not None else "_line1_\n_line2_\n_line3_"
+                try:
+                    rendered = tmpl.format(*sub)
+                except Exception:
+                    continue
+                dedented = textwrap.dedent(rendered)
+                bad = [ln for ln in dedented.splitlines()
+                       if ln.strip() and len(ln) - len(ln.lstrip(" ")) >= 4]
+                if bad:
+                    violations.append({
+                        "file": str(nb.relative_to(ROOT)),
+                        "line": call.lineno,
+                        "interp": [n for _, n in interp_multi],
+                        "sample_bad_line": bad[0][:120],
+                    })
+    return violations
+
+
+def audit_no_shared_imports() -> list[dict]:
+    """Find any `import shared.X` or `from shared.X import Y` in curriculum
+    notebooks. Pyodide cannot import sibling modules from the source tree, so
+    these break the WASM build silently (every cell after the import shows
+    nothing). Inline the needed helpers from start-here/shared/ instead.
+    """
+    violations: list[dict] = []
+    for nb in _find_curriculum_notebooks():
+        try:
+            tree = ast.parse(nb.read_text())
+        except SyntaxError:
+            continue
+        for node in ast.walk(tree):
+            if isinstance(node, ast.ImportFrom):
+                if node.module and (node.module == "shared" or node.module.startswith("shared.")):
+                    violations.append({
+                        "file": str(nb.relative_to(ROOT)),
+                        "line": node.lineno,
+                        "import": f"from {node.module} import {', '.join(a.name for a in node.names)}",
+                    })
+            elif isinstance(node, ast.Import):
+                for alias in node.names:
+                    if alias.name == "shared" or alias.name.startswith("shared."):
+                        violations.append({
+                            "file": str(nb.relative_to(ROOT)),
+                            "line": node.lineno,
+                            "import": f"import {alias.name}",
+                        })
+    return violations
+
+
+def audit_no_notebook_location() -> list[dict]:
+    """Find any `mo.notebook_location()` calls. The documented marimo API is
+    broken under our shared-`_marimo_assets/` dedup (it computes from the
+    worker URL instead of the notebook URL). Use site-absolute paths.
+    """
+    violations: list[dict] = []
+    for nb in _find_curriculum_notebooks():
+        try:
+            tree = ast.parse(nb.read_text())
+        except SyntaxError:
+            continue
+        for call in ast.walk(tree):
+            if (isinstance(call, ast.Call)
+                    and isinstance(call.func, ast.Attribute)
+                    and isinstance(call.func.value, ast.Name)
+                    and call.func.value.id == "mo"
+                    and call.func.attr == "notebook_location"):
+                violations.append({
+                    "file": str(nb.relative_to(ROOT)),
+                    "line": call.lineno,
+                })
+    return violations
+
+
+def audit_no_patients_reach_up() -> list[dict]:
+    """Find any string Constants that look like a file path reaching into
+    `patients/elena-reyes/`. We only flag short, single-line strings (the
+    shape of a file path); markdown prose inside `mo.md(...)` bodies that
+    happens to mention the path is excluded by the length+newline heuristic.
+    Notebooks should symlink the needed patient files into their own `cache/`
+    instead of reaching up through `Path(__file__).parent.parent / "patients"`.
+    """
+    violations: list[dict] = []
+    for nb in _find_curriculum_notebooks():
+        try:
+            tree = ast.parse(nb.read_text())
+        except SyntaxError:
+            continue
+        docstring_ids: set[int] = set()
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef, ast.Module)):
+                body = getattr(node, "body", [])
+                if (body and isinstance(body[0], ast.Expr)
+                        and isinstance(body[0].value, ast.Constant)
+                        and isinstance(body[0].value.value, str)):
+                    docstring_ids.add(id(body[0].value))
+        for node in ast.walk(tree):
+            if not (isinstance(node, ast.Constant) and isinstance(node.value, str)):
+                continue
+            s = node.value
+            if "patients/elena-reyes" not in s:
+                continue
+            if id(node) in docstring_ids:
+                continue
+            # Skip prose: anything multi-line or longer than a plausible file path.
+            if "\n" in s or len(s) > 120:
+                continue
+            violations.append({
+                "file": str(nb.relative_to(ROOT)),
+                "line": node.lineno,
+                "snippet": s[:80],
+            })
+    return violations
+
+
+# Curriculum source files for em-dash audit: every .py and .md that is part
+# of the authored curriculum, excluding build outputs (docs/, site/) and
+# environments (.venv, __pycache__, node_modules).
+EM_DASH_SKIP_DIRS = {"docs", "site", ".venv", "__pycache__", "node_modules", ".git"}
+
+
+def _find_em_dash_audit_targets():
+    """Yield every .py and .md file under the repo that should be em-dash-free."""
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        if any(seg in EM_DASH_SKIP_DIRS for seg in path.relative_to(ROOT).parts):
+            continue
+        if path.suffix not in {".py", ".md"}:
+            continue
+        yield path
+
+
+def audit_em_dashes() -> list[dict]:
+    """Find any em-dash (U+2014) in source files across the curriculum.
+    Curriculum-wide voice rule: no em-dashes anywhere in any file.
+    """
+    violations: list[dict] = []
+    EMDASH = "\u2014"  # the literal char is written as an escape so this file passes its own audit
+    for path in _find_em_dash_audit_targets():
+        try:
+            content = path.read_text()
+        except (UnicodeDecodeError, OSError):
+            continue
+        if EMDASH not in content:
+            continue
+        count = content.count(EMDASH)
+        first_line = next(
+            (i for i, ln in enumerate(content.splitlines(), 1) if EMDASH in ln),
+            None,
+        )
+        violations.append({
+            "file": str(path.relative_to(ROOT)),
+            "count": count,
+            "first_line": first_line,
+        })
+    return violations
+
+
+def audit_no_md_widget_collapse() -> list[dict]:
+    """Find cells where `mo.md(...)` appears as a bare Expr statement that is
+    NOT the last top-level expression of the cell. Marimo displays only the
+    cell's last expression, so any earlier bare `mo.md(...)` is silently
+    discarded. See `feedback_marimo_gotchas.md` rule 3b.
+    """
+    violations: list[dict] = []
+    for nb in _find_curriculum_notebooks():
+        try:
+            tree = ast.parse(nb.read_text())
+        except SyntaxError:
+            continue
+        for fn in ast.walk(tree):
+            if not (isinstance(fn, ast.FunctionDef) and fn.name == "_"):
+                continue
+            md_expr_lines: list[int] = []
+            last_expr_line: int | None = None
+            for st in fn.body:
+                if isinstance(st, ast.Expr):
+                    last_expr_line = st.lineno
+                    if isinstance(st.value, ast.Call):
+                        f = st.value.func
+                        if (isinstance(f, ast.Attribute)
+                                and isinstance(f.value, ast.Name)
+                                and f.value.id == "mo"
+                                and f.attr == "md"):
+                            md_expr_lines.append(st.lineno)
+            for ln in md_expr_lines:
+                if ln != last_expr_line:
+                    violations.append({
+                        "file": str(nb.relative_to(ROOT)),
+                        "cell_line": fn.lineno,
+                        "md_line": ln,
+                    })
+    return violations
+
+
+def audit_no_underscore_cross_cell_helpers() -> list[dict]:
+    """Find cases where a cell returns a `_name` AND any downstream cell
+    consumes it via its argument list. Marimo treats `_`-prefixed names as
+    cell-private; the downstream cell raises NameError at runtime. See
+    `feedback_marimo_gotchas.md` rule 4. The cell-graph audit (below) also
+    catches this at runtime; this static check is faster and clearer.
+    """
+    violations: list[dict] = []
+    for nb in _find_curriculum_notebooks():
+        try:
+            tree = ast.parse(nb.read_text())
+        except SyntaxError:
+            continue
+        # First pass: gather (cell_line, returned_underscore_names) and (cell_line, arg_names)
+        underscore_returns: list[tuple[int, set[str]]] = []
+        arg_consumers: list[tuple[int, set[str]]] = []
+        for fn in ast.walk(tree):
+            if not (isinstance(fn, ast.FunctionDef) and fn.name == "_"):
+                continue
+            args = {a.arg for a in fn.args.args}
+            arg_consumers.append((fn.lineno, args))
+            for node in ast.walk(fn):
+                if isinstance(node, ast.Return) and node.value is not None:
+                    names: set[str] = set()
+                    if isinstance(node.value, ast.Tuple):
+                        for elt in node.value.elts:
+                            if isinstance(elt, ast.Name):
+                                names.add(elt.id)
+                    elif isinstance(node.value, ast.Name):
+                        names.add(node.value.id)
+                    underscore = {n for n in names if n.startswith("_") and not n.startswith("__")}
+                    if underscore:
+                        underscore_returns.append((fn.lineno, underscore))
+        # Cross-reference: any downstream cell that takes an underscore-returned name as an arg
+        for ret_line, names in underscore_returns:
+            for arg_line, arg_set in arg_consumers:
+                if arg_line <= ret_line:
+                    continue
+                for name in names:
+                    if name in arg_set:
+                        violations.append({
+                            "file": str(nb.relative_to(ROOT)),
+                            "return_cell_line": ret_line,
+                            "consumer_cell_line": arg_line,
+                            "name": name,
+                        })
+    return violations
+
+
+def audit_cell_graph(verbose: bool = False) -> list[dict]:
+    """Import each curriculum notebook and ask marimo's cell manager for the
+    cell graph. Flag any notebook with duplicate top-level definitions or
+    unresolved references. This is the most expensive audit (it imports every
+    notebook), but it catches whole classes of bugs (MultipleDefinitionError,
+    bad references, missing imports) before the WASM export phase, which is
+    even more expensive when it fails partway. See `feedback_marimo_gotchas.md`
+    rule 1.
+    """
+    import builtins
+    import importlib.util
+    from collections import Counter
+
+    violations: list[dict] = []
+    builtin_names = set(dir(builtins))
+    notebooks = sorted(_find_curriculum_notebooks())
+    for nb in notebooks:
+        try:
+            spec = importlib.util.spec_from_file_location("_audit_nb", nb)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+        except Exception as e:
+            violations.append({
+                "file": str(nb.relative_to(ROOT)),
+                "load_error": f"{type(e).__name__}: {str(e)[:200]}",
+            })
+            continue
+        try:
+            cells = list(mod.app._cell_manager.cells())
+            defs, refs = [], []
+            for c in cells:
+                defs.extend(c._cell.defs)
+                refs.extend(c._cell.refs)
+            dups = {k: v for k, v in Counter(defs).items() if v > 1}
+            unresolved = sorted({
+                r for r in refs
+                if r not in set(defs) and r not in builtin_names and r != "__file__"
+            })
+            if dups or unresolved:
+                violations.append({
+                    "file": str(nb.relative_to(ROOT)),
+                    "cells": len(cells),
+                    "dups": dups,
+                    "unresolved": unresolved,
+                })
+            elif verbose:
+                print(f"    {nb.relative_to(ROOT)}: cells={len(cells)} clean")
+        except Exception as e:
+            violations.append({
+                "file": str(nb.relative_to(ROOT)),
+                "graph_error": f"{type(e).__name__}: {str(e)[:200]}",
+            })
+    return violations
+
+
+def run_pre_launch_audits(skip_cell_graph: bool = False) -> bool:
+    """Run all pre-launch audits and print results. Returns True if clean.
+
+    Audits run cheap-to-expensive. The cell-graph audit is the slow one
+    (imports every notebook); skip it with skip_cell_graph=True for fast
+    iteration when you only changed prose or non-notebook files.
+    """
+    print("=== Pre-launch audits ===")
+    clean = True
+
+    def _report(name: str, violations: list[dict], formatter):
+        nonlocal clean
+        if violations:
+            clean = False
+            print(f"  {name}: {len(violations)} violation(s)")
+            for v in violations:
+                for line in formatter(v):
+                    print(f"    {line}")
+        else:
+            print(f"  {name}: clean")
+
+    _report(
+        "no shared imports",
+        audit_no_shared_imports(),
+        lambda v: [f"{v['file']}:{v['line']}  {v['import']}"],
+    )
+    _report(
+        "no mo.notebook_location",
+        audit_no_notebook_location(),
+        lambda v: [f"{v['file']}:{v['line']}"],
+    )
+    _report(
+        "no patients/elena-reyes reach-ups",
+        audit_no_patients_reach_up(),
+        lambda v: [f"{v['file']}:{v['line']}  {v['snippet']!r}"],
+    )
+    _report(
+        "em-dash audit (curriculum-wide)",
+        audit_em_dashes(),
+        lambda v: [f"{v['file']}  count={v['count']}  first_line={v['first_line']}"],
+    )
+    _report(
+        "rule 3b (markdown + widget in same cell)",
+        audit_no_md_widget_collapse(),
+        lambda v: [f"{v['file']}:{v['md_line']}  (cell at line {v['cell_line']})"],
+    )
+    _report(
+        "underscore cross-cell helpers",
+        audit_no_underscore_cross_cell_helpers(),
+        lambda v: [
+            f"{v['file']}: '{v['name']}' returned from cell at line "
+            f"{v['return_cell_line']}, consumed by cell at line "
+            f"{v['consumer_cell_line']}"
+        ],
+    )
+    _report(
+        "rule 14 (multi-line interpolation indentation)",
+        audit_rule_14_violations(),
+        lambda v: [
+            f"{v['file']}:{v['line']}  interp={v['interp']}",
+            f"  sample: {v['sample_bad_line']!r}",
+        ],
+    )
+    if skip_cell_graph:
+        print("  cell-graph validator: skipped (--skip-cell-graph)")
+    else:
+        _report(
+            "cell-graph validator (imports each notebook)",
+            audit_cell_graph(),
+            lambda v: [
+                f"{v['file']}: " + (
+                    v.get("load_error")
+                    or v.get("graph_error")
+                    or f"cells={v.get('cells')} dups={v.get('dups')} unresolved={v.get('unresolved')}"
+                )
+            ],
+        )
+
+    return clean
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--quick", action="store_true", help="Skip marimo exports (docs only)")
     parser.add_argument("--limit", type=int, default=None, help="Only build the first N courses")
+    parser.add_argument("--skip-audits", action="store_true",
+                        help="Skip pre-launch audits (use only to unblock emergency builds)")
+    parser.add_argument("--skip-cell-graph", action="store_true",
+                        help="Run the fast audits but skip the cell-graph validator")
     args = parser.parse_args()
+
+    if not args.skip_audits:
+        if not run_pre_launch_audits(skip_cell_graph=args.skip_cell_graph):
+            print("\nFix the violations above, or rerun with --skip-audits to bypass.")
+            print("Audit reference: CLAUDE.md pre-rebuild checklist + feedback_marimo_gotchas.md.")
+            raise SystemExit(1)
 
     print("=== Resetting docs/ ===")
     reset_docs(preserve_notebooks=args.quick)

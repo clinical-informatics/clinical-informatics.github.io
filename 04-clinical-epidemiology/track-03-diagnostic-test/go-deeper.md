@@ -1,12 +1,10 @@
 ## Go deeper
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
-
 **If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+- Boston University School of Public Health, "Evaluating the Diagnostic Performance of Screening Tests" module in the open EP713 textbook. Free, written for clinicians and trainees, walks the 2x2 table and the four measures (sensitivity, specificity, PPV, NPV) with worked numerical examples and the same pre-test-probability framing this track uses. The cleanest pure-text companion to the interactive material here. Pair it with the EP713 "Measures of Association" module from Track 1 of this course; together they cover the standard observational-epi vocabulary. [sphweb.bumc.bu.edu/otlt/MPH-Modules/EP/EP713_Screening](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/EP/EP713_Screening/)
 
-**If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
+**If you want to see this applied at the bedside:**
+- McGee S. "Simplifying likelihood ratios." *Journal of General Internal Medicine*, 2002, 17(8):646-9. Open access on PMC. Four pages. The shortest practical clinical paper on likelihood ratios you can hand a trainee. McGee replaces the calculator-and-nomogram workflow with three round numbers (LR+ of 2, 5, and 10 increase post-test probability by 15, 30, and 45 percentage points respectively, and LR- of 0.5, 0.2, and 0.1 decrease it by the same amounts), which is enough mental arithmetic to use likelihood ratios at the bedside. Read it once and the LR column in every diagnostic-test paper becomes useful instead of decorative. [pmc.ncbi.nlm.nih.gov/articles/PMC1495095](https://pmc.ncbi.nlm.nih.gov/articles/PMC1495095/)
 
-**If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+**If you want to go significantly further on ROC and AUC:**
+- Hajian-Tilaki K. "Receiver Operating Characteristic (ROC) Curve Analysis for Medical Diagnostic Test Evaluation." *Caspian Journal of Internal Medicine*, 2013, 4(2):627-635. Open access on PMC. Nine pages. Walks the construction of the ROC curve from a continuous test result, the geometric interpretation of AUC (the probability that a randomly chosen diseased patient has a higher test value than a randomly chosen non-diseased patient), how to compare two ROC curves, optimal-cutoff selection methods (Youden, closest-to-(0,1), cost-weighted), partial AUC for the clinically relevant operating range, and the assumptions that go into each. The right next reading for the ROC explorer in this track's notebook. [pmc.ncbi.nlm.nih.gov/articles/PMC3755824](https://pmc.ncbi.nlm.nih.gov/articles/PMC3755824/)

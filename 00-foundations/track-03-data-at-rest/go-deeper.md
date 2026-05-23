@@ -1,12 +1,10 @@
 ## Go deeper
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
+**If you want to see one of these file types in detail before moving on:**
+- The HL7 FHIR R4 *Observation* resource specification. The same resource type the track sketched (a lab value with its LOINC code, unit, patient reference, and timestamp) defined formally as a FHIR resource. Reading the page makes the JSON-as-structured-clinical-data story concrete. The page also shows the same resource serialized in JSON, XML, and Turtle side by side, which is the cleanest illustration of *the format is a packaging choice* the track makes. [hl7.org/fhir/R4/observation.html](https://hl7.org/fhir/R4/observation.html)
 
-**If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+**If you want to see the OLTP-vs-OLAP distinction applied to a real clinical data model:**
+- Chapter 4, *The Common Data Model*, from *The Book of OHDSI*. Free online textbook chapter that walks through the OMOP Common Data Model: the canonical OLAP-side representation of clinical data used by hundreds of health systems for research. Covers the core tables (`PERSON`, `OBSERVATION_PERIOD`, `VISIT_OCCURRENCE`, `CONDITION_OCCURRENCE`, `DRUG_EXPOSURE`, `PROCEDURE_OCCURRENCE`) with a running clinical example. Reads as the next step after Track 03's *what does an analytical database actually look like for clinical data*. [ohdsi.github.io/TheBookOfOhdsi/CommonDataModel.html](https://ohdsi.github.io/TheBookOfOhdsi/CommonDataModel.html)
 
-**If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
-
-**If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+**If you want to go significantly further on the language side:**
+- *SQL for Data Analysis* on freeCodeCamp, or the *Introduction to SQL* course on Khan Academy. Both are free and structured for absolute beginners. SQL is the language Course 07 Track 1 of this curriculum will build from first principles using Ms. Reyes's records; the freeCodeCamp and Khan Academy resources will get you to a working baseline before that course picks it up. Pair either one with the *Database Concepts* chapters from any open-access database textbook for the relational-model underpinnings. [freecodecamp.org](https://www.freecodecamp.org), [khanacademy.org/computing/computer-programming/sql](https://www.khanacademy.org/computing/computer-programming/sql).

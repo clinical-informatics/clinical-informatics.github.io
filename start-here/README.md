@@ -24,30 +24,32 @@ If you have feedback, suggestions, or comments, write to me at [fmario619@gmail.
 
 ## The full course map
 
-| # | Course | What it teaches |
-|---|---|---|
-| ... | [start-here](https://github.com/clinical-informatics/start-here) | Orientation, Ms. Reyes's data, the shared components |
-| 00 | [foundations](https://github.com/clinical-informatics/00-foundations) | What the field is, DIKW, CS and network fundamentals, the US health system, informatics roles |
-| 01 | [computational-thinking](https://github.com/clinical-informatics/01-computational-thinking) | The shift from clinical reasoning to computational thinking |
-| 02 | [data-literacy](https://github.com/clinical-informatics/02-data-literacy) | Rows, columns, joins, missingness. Thinking in tables. |
-| 03 | [privacy-ethics-governance](https://github.com/clinical-informatics/03-privacy-ethics-governance) | What protects patients and what the rules actually require |
-| 04 | [clinical-epidemiology](https://github.com/clinical-informatics/04-clinical-epidemiology) | Frequency and association measures, bias, diagnostic test performance, study designs |
-| 05 | [ehr-systems](https://github.com/clinical-informatics/05-ehr-systems) | How the EHR stores and moves data, including imaging (PACS, DICOM) |
-| 06 | [learn-fhir](https://github.com/clinical-informatics/06-learn-fhir) | FHIR from zero, the web architecture healthcare borrowed |
-| 07 | [data-wrangling-engineering](https://github.com/clinical-informatics/07-data-wrangling-engineering) | SQL, pandas, OMOP, graph databases |
-| 08 | [clinical-visualization](https://github.com/clinical-informatics/08-clinical-visualization) | Charts that communicate, charts that mislead |
-| 09 | [ai-in-medicine](https://github.com/clinical-informatics/09-ai-in-medicine) | Machine learning for clinicians who evaluate, not build |
-| 10 | [nlp-clinical-text](https://github.com/clinical-informatics/10-nlp-clinical-text) | The data that lives in notes, not in fields |
-| 11 | [health-economics-data](https://github.com/clinical-informatics/11-health-economics-data) | Claims, costs, decision analysis, decision curves |
-| 12 | [clinical-decision-support](https://github.com/clinical-informatics/12-clinical-decision-support) | The CDS capstone. CQL, CDS Hooks, evaluating CDS in practice |
-| 13 | [research-reproducibility](https://github.com/clinical-informatics/13-research-reproducibility) | Version control, provenance, sharing without leaking |
-| 14 | [interoperability-policy](https://github.com/clinical-informatics/14-interoperability-policy) | The Cures Act and what it changed |
-| 15 | [data-storytelling](https://github.com/clinical-informatics/15-data-storytelling) | Communicating findings beyond your own work |
-| 16 | [leadership-practice](https://github.com/clinical-informatics/16-leadership-practice) | Project and change management, KPIs, finance, executive communication |
-| 17 | [workflow-safety-human-factors](https://github.com/clinical-informatics/17-workflow-safety-human-factors) | Workflow mapping, human factors, alarm fatigue, RCA, FMEA |
-| 18 | [population-public-health](https://github.com/clinical-informatics/18-population-public-health) | Registries, risk stratification, value-based care, SDOH, surveillance |
-| 19 | [patient-data-digital-health](https://github.com/clinical-informatics/19-patient-data-digital-health) | Patient portals, PGHD, wearables, RPM, telemedicine, digital therapeutics, PROMs |
-| 20 | [bioinformatics](https://github.com/clinical-informatics/20-bioinformatics) | Concept-level bioinformatics: clinical genomics and the research infrastructure |
+The **Status** column is regenerated on each site build from each course's notebooks. *Built* means every track and the capstone are written and interactive. *Scaffolded* means the course structure is in place but the content is still to come.
+
+| # | Course | Status | What it teaches |
+|---|---|---|---|
+| ... | [start-here](https://github.com/clinical-informatics/start-here) |  | Orientation, Ms. Reyes's data, the shared components |
+| 00 | [foundations](https://github.com/clinical-informatics/00-foundations) | _status_ | What the field is, DIKW, CS and network fundamentals, the US health system, informatics roles |
+| 01 | [computational-thinking](https://github.com/clinical-informatics/01-computational-thinking) | _status_ | The shift from clinical reasoning to computational thinking |
+| 02 | [data-literacy](https://github.com/clinical-informatics/02-data-literacy) | _status_ | Rows, columns, joins, missingness. Thinking in tables. |
+| 03 | [privacy-ethics-governance](https://github.com/clinical-informatics/03-privacy-ethics-governance) | _status_ | What protects patients and what the rules actually require |
+| 04 | [clinical-epidemiology](https://github.com/clinical-informatics/04-clinical-epidemiology) | _status_ | Frequency and association measures, bias, diagnostic test performance, study designs |
+| 05 | [ehr-systems](https://github.com/clinical-informatics/05-ehr-systems) | _status_ | How the EHR stores and moves data, including imaging (PACS, DICOM) |
+| 06 | [learn-fhir](https://github.com/clinical-informatics/06-learn-fhir) | _status_ | FHIR from zero, the web architecture healthcare borrowed |
+| 07 | [data-wrangling-engineering](https://github.com/clinical-informatics/07-data-wrangling-engineering) | _status_ | SQL, pandas, OMOP, graph databases |
+| 08 | [clinical-visualization](https://github.com/clinical-informatics/08-clinical-visualization) | _status_ | Charts that communicate, charts that mislead |
+| 09 | [ai-in-medicine](https://github.com/clinical-informatics/09-ai-in-medicine) | _status_ | Machine learning for clinicians who evaluate, not build |
+| 10 | [nlp-clinical-text](https://github.com/clinical-informatics/10-nlp-clinical-text) | _status_ | The data that lives in notes, not in fields |
+| 11 | [health-economics-data](https://github.com/clinical-informatics/11-health-economics-data) | _status_ | Claims, costs, decision analysis, decision curves |
+| 12 | [clinical-decision-support](https://github.com/clinical-informatics/12-clinical-decision-support) | _status_ | The CDS capstone. CQL, CDS Hooks, evaluating CDS in practice |
+| 13 | [research-reproducibility](https://github.com/clinical-informatics/13-research-reproducibility) | _status_ | Version control, provenance, sharing without leaking |
+| 14 | [interoperability-policy](https://github.com/clinical-informatics/14-interoperability-policy) | _status_ | The Cures Act and what it changed |
+| 15 | [data-storytelling](https://github.com/clinical-informatics/15-data-storytelling) | _status_ | Communicating findings beyond your own work |
+| 16 | [leadership-practice](https://github.com/clinical-informatics/16-leadership-practice) | _status_ | Project and change management, KPIs, finance, executive communication |
+| 17 | [workflow-safety-human-factors](https://github.com/clinical-informatics/17-workflow-safety-human-factors) | _status_ | Workflow mapping, human factors, alarm fatigue, RCA, FMEA |
+| 18 | [population-public-health](https://github.com/clinical-informatics/18-population-public-health) | _status_ | Registries, risk stratification, value-based care, SDOH, surveillance |
+| 19 | [patient-data-digital-health](https://github.com/clinical-informatics/19-patient-data-digital-health) | _status_ | Patient portals, PGHD, wearables, RPM, telemedicine, digital therapeutics, PROMs |
+| 20 | [bioinformatics](https://github.com/clinical-informatics/20-bioinformatics) | _status_ | Concept-level bioinformatics: clinical genomics and the research infrastructure |
 
 For role-based reading orders, see the [learning paths](learning-paths.md) page.
 

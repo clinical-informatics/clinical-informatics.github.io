@@ -30,35 +30,91 @@ def _():
     import sys
     from pathlib import Path
 
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
-
     import marimo as mo
     import pandas as pd
 
-    from shared.socratic import commit_text, reveal
-
-    cache_dir = _track_dir / "cache"
+    # Absolute site path where this notebook's WASM export lives. See the
+    # comment in load() below.
+    _WASM_DATA_BASE = "/06-learn-fhir/track-05-smart-on-fhir/app"
 
     def load(filename):
-        with open(cache_dir / filename) as fh:
-            return json.load(fh)
+        """Read a JSON file from this notebook's cache/ dir. Local + WASM.
+
+        Locally: reads from ``Path(__file__).parent / "cache" / filename``.
+        In Pyodide WASM: fetches ``_WASM_DATA_BASE/cache/<filename>`` via
+        ``pyodide.http.open_url`` (leading-slash paths resolve against the
+        page origin, which works identically in the main thread and in the
+        marimo worker). The build pipeline mirrors ``cache/`` into the WASM
+        export so the same relative layout resolves in both contexts.
+        """
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
+
+            url = f"{_WASM_DATA_BASE}/cache/{filename}"
+            return json.loads(open_url(url).read())
+        return json.loads((Path(__file__).parent / "cache" / filename).read_text())
 
     smart_config = load("smart-configuration.json")
     sample_token = load("sample-token-response.json")
 
     return (
-        commit_text,
         json,
         load,
         mo,
         pd,
-        reveal,
         sample_token,
         smart_config,
     )
+
+
+@app.cell
+def _(mo):
+    # Socratic helpers inlined from shared/socratic.py so the WASM export is
+    # self-contained. Pyodide cannot import sibling modules from the source
+    # tree, so the live-site export needs the helpers defined in the notebook
+    # itself. Mirrors the API of start-here/shared/socratic.py.
+
+    def commit_text(prompt, *, min_chars=40):
+        widget = mo.ui.text_area(
+            label=prompt,
+            rows=6,
+            full_width=True,
+            placeholder="Take a few sentences. The reveal won't unlock until you do.",
+        )
+
+        def _ready():
+            value = widget.value or ""
+            return len(value.strip()) >= min_chars
+
+        return widget, _ready
+
+    def reveal(learner_value, ideal_answer, *, learner_label="Your answer"):
+        learner_display = learner_value if learner_value else "_(no answer yet)_"
+        return mo.hstack(
+            [
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md(f"**{learner_label}**"),
+                            mo.md(str(learner_display)),
+                        ]
+                    ),
+                    kind="neutral",
+                ),
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md("**How we'd think through this**"),
+                            mo.md(ideal_answer),
+                        ]
+                    ),
+                    kind="success",
+                ),
+            ],
+            widths="equal",
+        )
+
+    return commit_text, reveal
 
 
 @app.cell

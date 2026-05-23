@@ -1,8 +1,7 @@
 """Course 05: EHR systems.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Shows the five tracks and the capstone, with
+one-paragraph descriptions and direct-launch buttons.
 """
 
 import marimo
@@ -25,25 +24,27 @@ def _(mo):
 
         ## How the EHR actually stores and moves data, past the UI.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Five tracks plus a building capstone. Each track pairs a one-page intro with an interactive Marimo notebook. The intros frame the question and the vocabulary; the notebooks are where you build intuition through interactive work, all anchored on Ms. Elena Reyes.
+
+        Written by **Mario David Felix, MD MHS**.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **How EHRs structure data internally** | What the database behind the interface looks like. Why clicking 'medications' pulls from three tables. |
-        | 02 | **HL7 v2, CDA, and the mess we inherited** | The historical arc. Why each standard made sense and what it couldn't do. Forward reference to FHIR. |
-        | 03 | **Clinical data warehouses** | What a CDW is, how it differs from the operational EHR, why research uses it. |
-        | 04 | **Imaging informatics: PACS, DICOM, RIS, structured reporting** | The imaging subsystem. DICOM tags and study/series/instance hierarchy, PACS as storage and viewing, RIS for orders and reporting, structured reporting vs free-text PDF. Reyes's hand radiograph series. |
-        | 05 | **Real-world data quality problems** | Duplicate patients, inconsistent coding, missing structured data, note-only findings, applied to Ms. Reyes. |
+        | 01 | **How EHRs structure data internally** | The relational schema behind the chart, the flowsheet (EAV) pattern, indexes, and the physical storage layer (block vs object, SSD vs HDD, on-prem vs cloud, RPO and RTO). |
+        | 02 | **HL7 v2, CDA, and what we inherited** | The historical arc. Real ADT and ORU messages, a CDA fragment, and what each format could and could not do. Forward reference to FHIR. |
+        | 03 | **Clinical data warehouses** | OLTP versus OLAP, ETL and ELT, the warehouse / lake / lakehouse distinction, and the star schema walked on Ms. Reyes's CRP. |
+        | 04 | **Imaging informatics: PACS, DICOM, RIS, structured reporting** | The four-system imaging architecture. DICOM tags and the study / series / instance hierarchy, DIMSE versus DICOMweb, structured reporting versus PDF. Reyes's hand-radiograph series. |
+        | 05 | **Real-world data quality problems** | The five Weiskopf-Weng dimensions and the recurring problem families (duplicate patients, inconsistent coding, missing structured data, note-only findings, terminology drift, plausibility failures, MRN drift, phantom encounters). |
 
         ### Capstone
 
-        **Audit a synthetic EHR extract for data quality issues with a structured checklist interface.**
+        **Audit a synthetic EHR extract for data quality issues**, propose remediation, and apply the cleanup decisions with `shared.cohort_builder` to watch attrition shape the final cohort. Building capstone; ends in a one-page hand-off memo.
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` you can read on the side, a reference essay `XX.X-*.md`, the Marimo `notebook.py`, and a curated `go-deeper.md`. Open the notebooks in Marimo to do the work.
         """
     )
     return

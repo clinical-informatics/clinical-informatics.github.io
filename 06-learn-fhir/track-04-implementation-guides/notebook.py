@@ -31,21 +31,73 @@ def _():
     import sys
     from pathlib import Path
 
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
-
     import marimo as mo
     import pandas as pd
 
-    from shared.cross_reference import callback, forward
+    # Cross-reference helpers inlined from shared/cross_reference.py so the
+    # WASM export is self-contained. Pyodide cannot import sibling modules
+    # from the source tree.
+    _COURSE_TITLES = {
+        "00": "Foundations of clinical informatics",
+        "01": "Computational thinking",
+        "02": "Data literacy",
+        "03": "Privacy, ethics, and governance",
+        "04": "Clinical epidemiology",
+        "05": "EHR systems",
+        "06": "Learn FHIR",
+        "07": "Data wrangling and engineering",
+        "08": "Clinical visualization",
+        "09": "AI in medicine",
+        "10": "NLP and clinical text",
+        "11": "Health economics data",
+        "12": "Clinical decision support",
+        "13": "Research reproducibility",
+        "14": "Interoperability policy",
+        "15": "Data storytelling",
+    }
 
-    cache_dir = _track_dir / "cache"
+    def _course_label(course_id):
+        title = _COURSE_TITLES.get(course_id.split("-")[0])
+        if title is None:
+            return course_id
+        return f"course {course_id.split('-')[0]}: {title}"
+
+    def callback(from_course, to_course, topic, body):
+        src = _course_label(to_course)
+        header = f"**Remember {topic} from {src}?**"
+        return mo.callout(
+            mo.vstack([mo.md(header), mo.md(body)]),
+            kind="info",
+        )
+
+    def forward(from_course, to_course, topic, body):
+        dst = _course_label(to_course)
+        header = f"**Forward to {dst}: {topic}**"
+        return mo.callout(
+            mo.vstack([mo.md(header), mo.md(body)]),
+            kind="neutral",
+        )
+
+    # Absolute site path where this notebook's WASM export lives. See the
+    # comment in load() below.
+    _WASM_DATA_BASE = "/06-learn-fhir/track-04-implementation-guides/app"
 
     def load(filename):
-        with open(cache_dir / filename) as fh:
-            return json.load(fh)
+        """Read a JSON file from this notebook's cache/ dir. Local + WASM.
+
+        Locally: reads from ``Path(__file__).parent / "cache" / filename``.
+        In Pyodide WASM: fetches ``_WASM_DATA_BASE/cache/<filename>`` via
+        ``pyodide.http.open_url`` (leading-slash paths resolve against the
+        page origin, which works identically in the main thread and in the
+        marimo worker). The build pipeline mirrors ``cache/`` into the WASM
+        export so the same relative layout resolves in both contexts.
+        """
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
+
+            url = f"{_WASM_DATA_BASE}/cache/{filename}"
+            return json.loads(open_url(url).read())
+        return json.loads((Path(__file__).parent / "cache" / filename).read_text())
 
     us_core_obs_lab = load("us-core-observation-lab.json")
     mcode_primary_cancer = load("mcode-primary-cancer-condition.json")

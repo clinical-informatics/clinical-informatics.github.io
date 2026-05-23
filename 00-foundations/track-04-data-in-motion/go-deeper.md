@@ -1,12 +1,10 @@
 ## Go deeper
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
+**If you want to see HTTP, REST, and APIs in the clinical wrapper before moving on:**
+- The SMART on FHIR documentation. SMART is the OAuth-and-launch layer that sits on top of FHIR to handle authentication, authorization, and the *launch context* problem (this app should open showing the chart of the patient the clinician is currently viewing). Maintained by the Computational Health Informatics Program at Boston Children's Hospital. The introductory pages walk the client-server pattern from Track 04 directly into how a third-party clinical app actually talks to an EHR's FHIR endpoint. [docs.smarthealthit.org](https://docs.smarthealthit.org/)
 
-**If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+**If you want to see the policy that made the modern API surface inevitable:**
+- The ONC 21st Century Cures Act Final Rule overview. The federal rule that made FHIR-based patient-access APIs a certification requirement for EHRs. The same rule established the information-blocking provisions that govern what providers, vendors, and information networks can and cannot do with electronic health information. Reads as the legal counterpart to the technical work this track sketched. [healthit.gov/topic/oncs-cures-act-final-rule](https://www.healthit.gov/topic/oncs-cures-act-final-rule)
 
-**If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
-
-**If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+**If you want to go significantly further on the security side:**
+- The U.S. Department of Health and Human Services HIPAA *Privacy Rule* and *Security Rule* summary pages, at hhs.gov/hipaa. The authoritative plain-English explanation of what HIPAA actually requires and what it does not, organized by Privacy Rule (what PHI can be used and disclosed for) and Security Rule (what technical, physical, and administrative safeguards are required). The same site hosts the Office for Civil Rights enforcement guidance, which is the closest thing the field has to a *what gets you in trouble* manual. Pair with Course 03 of this curriculum (privacy, ethics, and governance), which takes this material seriously rather than orientation-style. [hhs.gov/hipaa](https://www.hhs.gov/hipaa/index.html)

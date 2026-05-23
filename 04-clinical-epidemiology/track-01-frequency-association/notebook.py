@@ -566,16 +566,20 @@ def _(mo):
         r"""
         ## Reflection
 
-        Pick one of these and write 4 to 6 sentences. Save what you write somewhere; this is the thing that actually consolidates.
+        Pick one of the two prompts below and write 4 to 6 sentences in the box that follows. Save what you write somewhere outside the browser. Nothing here is graded or persisted; the box is a scratch pad that lets you compose the answer in place. When you are done, continue to `track-02-bias`.
 
         1. **Take a paper you have read recently** (clinical trial or observational). Which of the five measures does it report? Was it the right one for the question the authors were asking? If they had been forced to report a different one, would the paper's headline have changed?
 
         2. **A vendor is selling your hospital an "infection risk score" that flags inpatients.** They report an OR of 3.5 for high-score vs low-score predicting bloodstream infection. The outcome occurs in about 8% of inpatients in their validation cohort. What do you ask them?
         """
     )
+    return
 
+
+@app.cell
+def _(mo):
     reflection = mo.ui.text_area(
-        placeholder="Write 4-6 sentences.",
+        placeholder="Write 4-6 sentences here. Your text stays in your browser; copy it out if you want to keep it.",
         rows=8,
         full_width=True,
     )

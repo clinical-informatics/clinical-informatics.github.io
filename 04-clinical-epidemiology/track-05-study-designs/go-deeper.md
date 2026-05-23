@@ -1,12 +1,10 @@
 ## Go deeper
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
+**If you want a clear written treatment of the six designs:**
+- Boston University School of Public Health, "Analytic Study Designs" overview in the open EP713 textbook. Free, written for trainees, walks RCTs, prospective and retrospective cohort studies, case-control studies, and cross-sectional designs with the same five-question logic this track uses. The companion modules on each individual design (the Cohort Studies, Case-Control Studies, and Randomized Clinical Trials chapters) are linked from the overview and go deeper on each. Pair with the EP713 measures-of-association module from Track 1 for the inferential vocabulary. [sphweb.bumc.bu.edu/otlt/MPH-Modules/EP/EP713_AnalyticOverview](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/EP/EP713_AnalyticOverview/)
 
-**If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+**If you want the bedside-length take on Kaplan-Meier and survival analysis:**
+- Bewick V, Cheek L, Ball J. "Statistics review 12: survival analysis." *Critical Care*, 2004, 8(5):389-394. Open access on PMC. Six pages. The shortest practical clinical paper on survival analysis: Kaplan-Meier construction with a worked numerical example, the log-rank test in plain English, Cox proportional hazards with the proportional-hazards assumption explained and the diagnostic shown, plus the censoring-vs-no-event distinction this track keeps coming back to. Read it once and the survival figures in clinical papers start carrying real information. [pmc.ncbi.nlm.nih.gov/articles/PMC1065034](https://pmc.ncbi.nlm.nih.gov/articles/PMC1065034/)
 
-**If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
-
-**If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+**If you want the canonical reporting checklist for observational studies:**
+- Vandenbroucke JP, von Elm E, Altman DG, Gøtzsche PC, Mulrow CD, Pocock SJ, Poole C, Schlesselman JJ, Egger M. "Strengthening the Reporting of Observational Studies in Epidemiology (STROBE): explanation and elaboration." *PLoS Medicine*, 2007, 4(10):e297. Open access. The STROBE statement is the cohort/case-control/cross-sectional equivalent of CONSORT for trials: a 22-item checklist for how to report an observational study in a way that lets a reader assess its validity. The explanation-and-elaboration paper walks each item with worked examples drawn from the literature. Use it as a structural checklist when you read (or write) any observational paper. The shorter STROBE Statement (the checklist alone) lives at [strobe-statement.org](https://www.strobe-statement.org/) and is the version to keep at the bedside. [journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040297](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040297)

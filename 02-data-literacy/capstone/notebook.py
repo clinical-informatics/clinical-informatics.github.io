@@ -16,14 +16,6 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import sys
-    from pathlib import Path
-
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
-
     import re
 
     import marimo as mo
@@ -31,6 +23,121 @@ def _():
     import pandas as pd
 
     return mo, np, pd, re
+
+
+@app.cell
+def _(mo, pd):
+    # CohortBuilder inlined from shared/cohort_builder.py so the WASM export
+    # is self-contained. Pyodide cannot import sibling modules from the source
+    # tree, so the live-site export needs the class defined in the notebook
+    # itself. Mirrors the public API of start-here/shared/cohort_builder.py.
+
+    from dataclasses import dataclass, field
+
+    @dataclass
+    class Criterion:
+        expression: str
+        plain_english: str
+        survivors: int = 0
+        lost: int = 0
+
+    @dataclass
+    class CohortBuilder:
+        df: pd.DataFrame
+        patient_id_col: str = "patient_id"
+        criteria: list = field(default_factory=list)
+
+        def add_criterion(self, expression, plain_english):
+            self.criteria.append(
+                Criterion(expression=expression, plain_english=plain_english)
+            )
+            return self
+
+        def reset(self):
+            self.criteria.clear()
+            return self
+
+        def evaluate(self):
+            current = self.df.copy()
+            starting = len(current)
+            rows = [
+                {
+                    "step": 0,
+                    "criterion": "Starting cohort",
+                    "patients_remaining": starting,
+                    "patients_lost_this_step": 0,
+                }
+            ]
+            previous = starting
+            for i, crit in enumerate(self.criteria, start=1):
+                try:
+                    current = current.query(crit.expression)
+                except Exception as exc:
+                    rows.append(
+                        {
+                            "step": i,
+                            "criterion": f"{crit.plain_english} (error: {exc})",
+                            "patients_remaining": previous,
+                            "patients_lost_this_step": 0,
+                        }
+                    )
+                    continue
+                remaining = len(current)
+                lost = previous - remaining
+                crit.survivors = remaining
+                crit.lost = lost
+                rows.append(
+                    {
+                        "step": i,
+                        "criterion": crit.plain_english,
+                        "patients_remaining": remaining,
+                        "patients_lost_this_step": lost,
+                    }
+                )
+                previous = remaining
+            return pd.DataFrame(rows)
+
+        def surviving_patients(self):
+            current = self.df.copy()
+            for crit in self.criteria:
+                try:
+                    current = current.query(crit.expression)
+                except Exception:
+                    continue
+            return current
+
+        def render(self):
+            table = self.evaluate()
+            starting = int(table.iloc[0]["patients_remaining"])
+            ending = int(table.iloc[-1]["patients_remaining"])
+            biggest_drop = (
+                table.iloc[1:]
+                .sort_values("patients_lost_this_step", ascending=False)
+                .head(1)
+                if len(table) > 1
+                else None
+            )
+            if biggest_drop is not None and len(biggest_drop) > 0:
+                drop_label = biggest_drop.iloc[0]["criterion"]
+                drop_n = int(biggest_drop.iloc[0]["patients_lost_this_step"])
+                summary = (
+                    f"You started with **{starting}** patients and ended with **{ending}**. "
+                    f"The single biggest drop happened at the step **{drop_label}**, "
+                    f"which removed **{drop_n}** patients."
+                )
+            else:
+                summary = (
+                    f"You started with **{starting}** patients and ended with **{ending}**."
+                )
+            return mo.vstack(
+                [
+                    mo.md("### Your cohort, step by step"),
+                    mo.ui.table(table, selection=None),
+                    mo.callout(mo.md(summary), kind="info"),
+                ]
+            )
+
+    return (CohortBuilder,)
 
 
 @app.cell
@@ -473,9 +580,7 @@ def _(mo):
 
 
 @app.cell
-def _(apply_inclusion, cohort, mo, pd):
-    from shared.cohort_builder import CohortBuilder
-
+def _(CohortBuilder, apply_inclusion, cohort, mo, pd):
     cb = CohortBuilder(cohort.copy(), patient_id_col="patient_id")
 
     if "Has demographics record (patient_id present in the cohort table)" in apply_inclusion.value:

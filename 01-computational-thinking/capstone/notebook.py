@@ -19,17 +19,58 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import sys
-    from pathlib import Path
-
-    # The shared/ symlink lives at the course root (one level up from capstone/).
-    _course_root = Path(__file__).parent.parent
-    if str(_course_root) not in sys.path:
-        sys.path.insert(0, str(_course_root))
-
     import marimo as mo
-    from shared.socratic import commit_text, reveal
-    return commit_text, mo, reveal
+    return (mo,)
+
+
+@app.cell
+def _(mo):
+    # Socratic helpers inlined from shared/socratic.py so the WASM export is
+    # self-contained. Pyodide cannot import sibling modules from the source
+    # tree, so the live-site export needs the helpers defined in the notebook
+    # itself. Mirrors the API of start-here/shared/socratic.py.
+
+    def commit_text(prompt, *, min_chars=40):
+        widget = mo.ui.text_area(
+            label=prompt,
+            rows=6,
+            full_width=True,
+            placeholder="Take a few sentences. The reveal won't unlock until you do.",
+        )
+
+        def _ready():
+            value = widget.value or ""
+            return len(value.strip()) >= min_chars
+
+        return widget, _ready
+
+    def reveal(learner_value, ideal_answer, *, learner_label="Your answer"):
+        learner_display = learner_value if learner_value else "_(no answer yet)_"
+        return mo.hstack(
+            [
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md(f"**{learner_label}**"),
+                            mo.md(str(learner_display)),
+                        ]
+                    ),
+                    kind="neutral",
+                ),
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md("**How we'd think through this**"),
+                            mo.md(ideal_answer),
+                        ]
+                    ),
+                    kind="success",
+                ),
+            ],
+            widths="equal",
+        )
+
+    return commit_text, reveal
 
 
 @app.cell

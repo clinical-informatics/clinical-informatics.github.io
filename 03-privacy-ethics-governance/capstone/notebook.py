@@ -15,18 +15,100 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import sys
-    from pathlib import Path
-
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
-
     import marimo as mo
     import pandas as pd
-
     return mo, pd
+
+
+@app.cell
+def _(mo):
+    # Socratic helpers inlined from shared/socratic.py so the WASM export is
+    # self-contained. Pyodide cannot import sibling modules from the source
+    # tree, so the live-site export needs the helpers defined in the notebook
+    # itself. Mirrors the API of start-here/shared/socratic.py.
+
+    def scenario(title, body):
+        return mo.vstack(
+            [
+                mo.md(f"## {title}"),
+                mo.callout(mo.md(body), kind="info"),
+            ]
+        )
+
+    def commit_text(prompt, *, min_chars=40):
+        widget = mo.ui.text_area(
+            label=prompt,
+            rows=6,
+            full_width=True,
+            placeholder="Take a few sentences. The reveal won't unlock until you do.",
+        )
+
+        def _ready():
+            value = widget.value or ""
+            return len(value.strip()) >= min_chars
+
+        return widget, _ready
+
+    def reveal(learner_value, ideal_answer, *, learner_label="Your answer"):
+        learner_display = learner_value if learner_value else "_(no answer yet)_"
+        return mo.hstack(
+            [
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md(f"**{learner_label}**"),
+                            mo.md(str(learner_display)),
+                        ]
+                    ),
+                    kind="neutral",
+                ),
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md("**How we'd think through this**"),
+                            mo.md(ideal_answer),
+                        ]
+                    ),
+                    kind="success",
+                ),
+            ],
+            widths="equal",
+        )
+
+    def reflection(prompt, placeholder=""):
+        widget = mo.ui.text_area(
+            label=prompt,
+            rows=5,
+            full_width=True,
+            placeholder=placeholder
+            or "Take a few sentences. No reveal here. The reflection is the work.",
+        )
+        layout = mo.vstack(
+            [
+                widget,
+                mo.callout(
+                    mo.md(
+                        "_There's no answer key for this one. The point isn't to be right. "
+                        "It's to make your reasoning explicit to yourself._"
+                    ),
+                    kind="neutral",
+                ),
+            ]
+        )
+        return widget, layout
+
+    def go_deeper(body):
+        return mo.callout(
+            mo.vstack(
+                [
+                    mo.md("### Go deeper"),
+                    mo.md(body),
+                ]
+            ),
+            kind="info",
+        )
+
+    return commit_text, go_deeper, reflection, reveal, scenario
 
 
 @app.cell
@@ -74,15 +156,13 @@ def _(mo):
 
 
 @app.cell
-def _(mo):
-    from shared.socratic import commit_text, go_deeper, reflection, reveal, scenario
-
+def _(commit_text):
     step1_widget, step1_ready = commit_text(
         "Your privacy threat model for Project Helios",
         min_chars=100,
     )
     step1_widget
-    return commit_text, go_deeper, reflection, reveal, scenario, step1_ready, step1_widget
+    return step1_ready, step1_widget
 
 
 @app.cell

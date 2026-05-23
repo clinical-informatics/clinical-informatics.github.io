@@ -1,14 +1,23 @@
 # Track 05: Real-world data quality problems
 
-Duplicate patients, inconsistent coding, missing structured data, note-only findings, applied to Ms. Reyes.
+You can know the schema, the messages, the warehouse, and the imaging subsystem inside out and still produce a cohort with a third of the patients duplicated and half the structured DAS28 values missing. The first four tracks of this course taught you the architecture. This track teaches you what the architecture produces when it meets a thirty-year hospital data history.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+Five problem families show up everywhere:
 
+1. **Duplicate patients** with overlapping but non-identical demographics.
+2. **Inconsistent coding** for the same clinical concept across systems.
+3. **Missing structured data** for concepts the chart appears to cover.
+4. **Note-only findings** that never made it into the structured fields.
+5. **Late-binding terminology drift** as local codes diverge from standard vocabularies over time.
 
-**Prerequisites:** Tracks 01 through 02 through 03 of this course.
+Each of the five is illustrated on Ms. Reyes's records. We use a synthetic but realistic 15-row export that seeds the same problems a real EHR export would show.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
+**Estimated time:** 75 minutes.
 
-**Companion reading (once written):** a reference essay on the track's topic.
+**Prerequisites:** Tracks 01 through 04 of this course.
 
-**What's next:** the course capstone.
+**How to start:** open `notebook.py` in Marimo. The notebook walks the five problem families on a synthetic export, classifies each against the Weiskopf and Weng (2013) data-quality dimensions, and lands at the capstone, where you will run the audit yourself.
+
+**Companion reading:** `05.1-data-quality.md` in this folder.
+
+**What's next:** the course capstone, where you audit a synthetic EHR extract end to end.

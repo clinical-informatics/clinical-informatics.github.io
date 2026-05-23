@@ -23,18 +23,33 @@ def _():
     from collections import Counter
     from pathlib import Path
 
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
-
     import marimo as mo
     import pandas as pd
-    from shared.socratic import commit_text, reveal
 
-    bundle_path = _course_dir / "patients" / "elena-reyes" / "fhir-bundle.json"
-    with open(bundle_path) as fh:
-        bundle = json.load(fh)
+    # Absolute site path where this notebook's WASM export lives. Used only
+    # in the Pyodide branch below; `pyodide.http.open_url` resolves a
+    # leading-slash path against the page origin, which works identically in
+    # the main thread and in the marimo worker. Update this if the notebook
+    # is renamed or the site is deployed under a subpath.
+    _WASM_DATA_BASE = "/06-learn-fhir/track-01-fhir-fundamentals/app"
+
+    def load_data_json(*parts):
+        """Read a JSON file alongside this notebook. Works locally and in WASM.
+
+        Locally: reads from ``Path(__file__).parent / parts``.
+        In Pyodide WASM: fetches ``_WASM_DATA_BASE / parts`` via
+        ``pyodide.http.open_url``. The build pipeline mirrors ``cache/`` and
+        ``fixtures/`` into the WASM export so the same relative layout
+        resolves in both contexts.
+        """
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
+
+            url = _WASM_DATA_BASE + "/" + "/".join(parts)
+            return json.loads(open_url(url).read())
+        return json.loads(Path(__file__).parent.joinpath(*parts).read_text())
+
+    bundle = load_data_json("cache", "fhir-bundle.json")
 
     entries = bundle["entry"]
     resources = [e["resource"] for e in entries]
@@ -66,16 +81,64 @@ def _():
         by_id,
         by_type,
         bundle,
-        commit_text,
         entries,
         json,
         mo,
         pd,
         resources,
-        reveal,
         type_counts,
         type_descriptions,
     )
+
+
+@app.cell
+def _(mo):
+    # Socratic helpers inlined from shared/socratic.py so the WASM export is
+    # self-contained. Pyodide cannot import sibling modules from the source
+    # tree, so the live-site export needs the helpers defined in the notebook
+    # itself. Mirrors the API of start-here/shared/socratic.py.
+
+    def commit_text(prompt, *, min_chars=40):
+        widget = mo.ui.text_area(
+            label=prompt,
+            rows=6,
+            full_width=True,
+            placeholder="Take a few sentences. The reveal won't unlock until you do.",
+        )
+
+        def _ready():
+            value = widget.value or ""
+            return len(value.strip()) >= min_chars
+
+        return widget, _ready
+
+    def reveal(learner_value, ideal_answer, *, learner_label="Your answer"):
+        learner_display = learner_value if learner_value else "_(no answer yet)_"
+        return mo.hstack(
+            [
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md(f"**{learner_label}**"),
+                            mo.md(str(learner_display)),
+                        ]
+                    ),
+                    kind="neutral",
+                ),
+                mo.callout(
+                    mo.vstack(
+                        [
+                            mo.md("**How we'd think through this**"),
+                            mo.md(ideal_answer),
+                        ]
+                    ),
+                    kind="success",
+                ),
+            ],
+            widths="equal",
+        )
+
+    return commit_text, reveal
 
 
 @app.cell

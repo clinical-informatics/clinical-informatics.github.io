@@ -26,43 +26,87 @@ def _():
     import sys
     from datetime import datetime
     from pathlib import Path
-
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
+    from urllib.parse import urlencode
 
     import altair as alt
     import marimo as mo
     import pandas as pd
 
-    from shared.fhir_compat import fhir_get
+    # fhir_get inlined from shared/fhir_compat.py so the WASM export is
+    # self-contained. Uses requests locally and pyodide.http in the browser.
+    def fhir_get(url, params=None):
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
 
-    fixtures_dir = _track_dir / "fixtures"
-    cache_dir = _track_dir / "cache"
+            full = url if not params else f"{url}?{urlencode(params)}"
+            return json.loads(open_url(full).read())
+        import requests
+
+        resp = requests.get(
+            url,
+            params=params or {},
+            headers={
+                "Accept": "application/fhir+json",
+                "User-Agent": "clinical-informatics/0.1",
+            },
+            timeout=30,
+        )
+        resp.raise_for_status()
+        return resp.json()
+
+    # Absolute site path where this notebook's WASM export lives. Used only
+    # in the Pyodide branch below; `pyodide.http.open_url` resolves a
+    # leading-slash path against the page origin, which works identically in
+    # the main thread and in the marimo worker. Update this if the notebook
+    # is renamed or the site is deployed under a subpath.
+    _WASM_DATA_BASE = "/06-learn-fhir/track-02-fhir-servers/app"
+
+    def read_data(*parts):
+        """Open a JSON file alongside this notebook. Works locally and in WASM.
+
+        Locally: reads from ``Path(__file__).parent / parts``.
+        In Pyodide WASM: fetches ``_WASM_DATA_BASE / parts`` via
+        ``pyodide.http.open_url``. The build pipeline mirrors ``cache/`` and
+        ``fixtures/`` into the WASM export so the same relative layout
+        resolves in both contexts.
+        """
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
+
+            url = _WASM_DATA_BASE + "/" + "/".join(parts)
+            return json.loads(open_url(url).read())
+        return json.loads(Path(__file__).parent.joinpath(*parts).read_text())
 
     def load_with_cache(cache_filename, live_url=None, live_params=None):
         """Return (data, source). Prefer cached; fetch live only if cache missing.
 
         The cached responses ship with the curriculum so the notebook is
-        deterministic and works offline. Delete the file in `cache/` to
-        force a live re-fetch.
+        deterministic and works offline. Delete the file in `cache/` (locally)
+        to force a live re-fetch.
         """
-        cache_path = cache_dir / cache_filename
-        if cache_path.exists():
-            return json.loads(cache_path.read_text()), "cache"
+        try:
+            return read_data("cache", cache_filename), "cache"
+        except Exception:
+            pass
         if live_url is None:
-            raise FileNotFoundError(f"Cache {cache_filename} missing and no live_url provided")
+            raise FileNotFoundError(
+                f"Cache {cache_filename} missing and no live_url provided"
+            )
         data = fhir_get(live_url, live_params or {})
-        cache_path.write_text(json.dumps(data, indent=2))
+        # Local-only: persist for offline re-runs. Best-effort, harmless in WASM.
+        try:
+            cache_dir = Path(__file__).parent / "cache"
+            cache_dir.mkdir(exist_ok=True)
+            (cache_dir / cache_filename).write_text(json.dumps(data, indent=2))
+        except Exception:
+            pass
         return data, "live"
 
     return (
+        read_data,
         alt,
-        cache_dir,
         datetime,
         fhir_get,
-        fixtures_dir,
         json,
         load_with_cache,
         mo,
@@ -525,7 +569,7 @@ def _(mo):
         Loading the fixture is one line:
 
         ```python
-        bundle = json.loads((fixtures_dir / "cohort.json").read_text())
+        bundle = read_data("fixtures/cohort.json")
         ```
         """
     )
@@ -533,8 +577,8 @@ def _(mo):
 
 
 @app.cell
-def _(fixtures_dir, json, mo, pd):
-    cohort_bundle = json.loads((fixtures_dir / "cohort.json").read_text())
+def _(read_data, mo, pd):
+    cohort_bundle = read_data("fixtures", "cohort.json")
 
     _type_counts = {}
     for _entry in cohort_bundle["entry"]:

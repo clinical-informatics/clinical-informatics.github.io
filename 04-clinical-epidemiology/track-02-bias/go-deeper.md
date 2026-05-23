@@ -1,12 +1,10 @@
 ## Go deeper
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
-
 **If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+- Shrier I, Platt RW. "Reducing bias through directed acyclic graphs." *BMC Medical Research Methodology*, 2008, 8:70. Open access. The cleanest free walk-through of the DAG mechanics this track introduces. Takes the same three roles (confounder, mediator, collider) and lays out a six-step procedure for using a DAG to decide what to adjust for, with worked examples that show why adjusting for a collider creates bias instead of fixing it. Read it once, work through one of the examples, and the rest of the literature on causal inference becomes much easier. [pmc.ncbi.nlm.nih.gov/articles/PMC2601045/](https://pmc.ncbi.nlm.nih.gov/articles/PMC2601045/)
 
 **If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
+- Tennant PWG, Murray EJ, Arnold KF, Berrie L, Fox MP, Gadd SC, Harrison WJ, Keeble C, Ranker LR, Textor J, Tomova GD, Gilthorpe MS, Ellison GTH. "Use of directed acyclic graphs (DAGs) to identify confounders in applied health research: review and recommendations." *International Journal of Epidemiology*, 2021, 50(2):620-632. Open access. A systematic review of 234 applied health studies that used DAGs, including which roles they got right and which ones they got wrong. The "common mistakes" section is the one to read first; conditioning on a collider and adjusting for a mediator are the two recurring errors. The recommendations section is how you should structure a DAG when you have to draw one for a paper or a protocol. [pmc.ncbi.nlm.nih.gov/articles/PMC8128477/](https://pmc.ncbi.nlm.nih.gov/articles/PMC8128477/)
 
 **If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+- Hernán MA, Robins JM. *Causal Inference: What If*. Boca Raton: Chapman and Hall/CRC, 2020 (updated annually). The standard graduate text on causal inference, written by two of the people who built the field. Free PDF, updated several times a year, at the authors' page: [miguelhernan.org/whatifbook](https://miguelhernan.org/whatifbook). Read Part I (chapters 1-10) for the conceptual treatment, which is what extends this track most directly: exchangeability, positivity, consistency, the structural definition of confounding, and the formal definition of a backdoor path. Pair it with DAGitty ([dagitty.net](https://dagitty.net)), a free browser-based tool for drawing causal diagrams that automatically computes which variables you must adjust for given the roles you have specified. Drawing a DAG in DAGitty for one of your own clinical questions is the single best exercise here.

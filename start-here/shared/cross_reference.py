@@ -18,6 +18,7 @@ from __future__ import annotations
 
 
 COURSE_TITLES = {
+    "00": "Foundations of clinical informatics",
     "01": "Computational thinking",
     "02": "Data literacy",
     "03": "Privacy, ethics, and governance",
@@ -33,6 +34,11 @@ COURSE_TITLES = {
     "13": "Research reproducibility",
     "14": "Interoperability policy",
     "15": "Data storytelling",
+    "16": "Leadership and professional practice",
+    "17": "Workflow, safety, and human factors",
+    "18": "Population and public health",
+    "19": "Patient data and digital health",
+    "20": "Bioinformatics",
 }
 
 

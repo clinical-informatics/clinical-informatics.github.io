@@ -1,12 +1,10 @@
 ## Go deeper
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
+**If you want a structured plain-English tour of the actor groups before moving on:**
+- The Kaiser Family Foundation's *Health Policy 101*. A free, well-organized seventeen-chapter primer on the U.S. health system, written for graduate students and faculty and updated as policy changes. Covers Medicare, Medicaid, the ACA, employer-sponsored insurance, the uninsured population, health-care costs, private-insurance regulation, equity, public health, international comparisons, and the federal role in health policy. The clearest single-source orientation to the actor groups Track 05 named, edited by Drew Altman at KFF. [kff.org/other-health/health-policy-101-introduction](https://www.kff.org/other-health/health-policy-101-introduction/)
 
-**If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+**If you want to see one regulator's worldview in depth:**
+- CMS's *Innovation Center* (CMMI) overview pages and the Medicare Shared Savings Program ACO documentation. CMS shapes more of the U.S. health system's behavior than any other single actor; the Innovation Center and the MSSP are where the value-based-care experiments that the capstone scenario sits on actually live. The MSSP pages document attribution rules, benchmark methodology, quality measurement, and the shared-savings calculations that drive the financial side of ACO partnerships. [cms.gov](https://www.cms.gov) (look for *Innovation Center* and *Medicare Shared Savings Program* in the navigation).
 
-**If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
-
-**If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+**If you want to go significantly further on the international comparison:**
+- The Commonwealth Fund's *Mirror, Mirror* report series. A recurring comparative analysis of health-system performance across high-income countries (the U.S., the U.K., Canada, Germany, the Netherlands, Australia, and others), measuring access, equity, administrative efficiency, and outcomes. The U.S. consistently ranks last or near-last among the comparators despite spending the most per capita, and the report makes the *why* concrete. Useful counter-context for everything Course 0 says about the U.S. system specifically. [commonwealthfund.org](https://www.commonwealthfund.org) (search for *Mirror Mirror*).

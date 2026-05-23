@@ -31,27 +31,82 @@ def _():
     import math
     import sys
     from pathlib import Path
-
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
+    from urllib.parse import urlencode
 
     import marimo as mo
     import pandas as pd
 
-    from shared.fhir_compat import fhir_get
+    # fhir_get inlined from shared/fhir_compat.py so the WASM export is
+    # self-contained. Uses requests locally and pyodide.http in the browser.
+    def fhir_get(url, params=None):
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
 
-    cache_dir = _track_dir / "cache"
+            full = url if not params else f"{url}?{urlencode(params)}"
+            return json.loads(open_url(full).read())
+        import requests
+
+        resp = requests.get(
+            url,
+            params=params or {},
+            headers={
+                "Accept": "application/fhir+json",
+                "User-Agent": "clinical-informatics/0.1",
+            },
+            timeout=30,
+        )
+        resp.raise_for_status()
+        return resp.json()
+
+    # Absolute site path where this notebook's WASM export lives. See the
+    # comment in load_cached below.
+    _WASM_DATA_BASE = "/06-learn-fhir/track-03-clinical-modeling/app"
 
     def load_cached(filename):
-        with open(cache_dir / filename) as fh:
-            return json.load(fh)
+        """Read a JSON file from the notebook's cache/ dir. Local + WASM.
+
+        Locally: reads from ``Path(__file__).parent / "cache" / filename``.
+        In Pyodide WASM: fetches ``_WASM_DATA_BASE/cache/<filename>`` via
+        ``pyodide.http.open_url`` (leading-slash paths resolve against the
+        page origin, which works identically in the main thread and in the
+        marimo worker). The build pipeline mirrors ``cache/`` into the WASM
+        export so the same relative layout resolves in both contexts.
+        """
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
+
+            url = f"{_WASM_DATA_BASE}/cache/{filename}"
+            return json.loads(open_url(url).read())
+        return json.loads((Path(__file__).parent / "cache" / filename).read_text())
 
     def post_validate(resource):
-        """POST to hapi.fhir.org/<ResourceType>/$validate. Returns the OperationOutcome."""
-        import urllib.request
+        """POST to hapi.fhir.org/<ResourceType>/$validate. Returns the OperationOutcome.
+
+        Uses urllib locally. In Pyodide WASM, synchronous POST is not
+        available; the learner can still run validation locally or read the
+        cached results below.
+        """
         url = f"https://hapi.fhir.org/baseR4/{resource['resourceType']}/$validate"
+        if "pyodide" in sys.modules:
+            return {
+                "resourceType": "OperationOutcome",
+                "issue": [
+                    {
+                        "severity": "information",
+                        "code": "informational",
+                        "diagnostics": (
+                            "Live $validate is unavailable in the browser-hosted "
+                            "version of this notebook. Run this notebook locally, "
+                            "or read the cached validation result the next cell "
+                            "loads, which is the same response hapi.fhir.org "
+                            "produced when the curriculum was built."
+                        ),
+                    }
+                ],
+            }
+        import urllib.error
+        import urllib.request
+
         body = json.dumps(resource).encode("utf-8")
         req = urllib.request.Request(
             url,
@@ -63,7 +118,6 @@ def _():
             },
         )
         try:
-            import urllib.error
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read())
         except urllib.error.HTTPError as e:
@@ -71,7 +125,6 @@ def _():
 
     return (
         Path,
-        cache_dir,
         fhir_get,
         json,
         load_cached,

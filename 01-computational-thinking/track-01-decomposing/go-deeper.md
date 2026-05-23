@@ -1,7 +1,7 @@
 ## Go deeper
 
 **To understand decomposition before moving on:**
-- Jeannette Wing, "Computational Thinking" (Communications of the ACM, March 2006). The essay that named the move. Three pages, written for non-computer-scientists, and the foundation for every "computational thinking" curriculum since. The CMU Center for Computational Thinking hosts a stable PDF. [cs.cmu.edu/~CompThink/papers/TheLinkWing.pdf](https://www.cs.cmu.edu/~CompThink/papers/TheLinkWing.pdf)
+- Jeannette Wing, "Computational Thinking" (Communications of the ACM, March 2006). The essay that named the move. Three pages, written for non-computer-scientists, and the foundation for every "computational thinking" curriculum since. CMU's CS department hosts a stable PDF on the 15-110 course page. [cs.cmu.edu/~15110-s13/Wing06-ct.pdf](https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf)
 
 **To see this applied to the sepsis alert problem:**
 - Atul Gawande, "Why Doctors Hate Their Computers" (The New Yorker, November 2018). A long-form essay on EHR usability that includes an honest accounting of how clinical alerts get specified, deployed, and ignored. [newyorker.com/magazine/2018/11/12/why-doctors-hate-their-computers](https://www.newyorker.com/magazine/2018/11/12/why-doctors-hate-their-computers)

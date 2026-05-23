@@ -1,12 +1,10 @@
 ## Go deeper
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
+**If you want a clear written walkthrough of hypothesis testing before moving on:**
+- Boston University School of Public Health, "Hypothesis Testing for Means and Proportions" module in the open BS704 textbook. Free, written for trainees, walks the one-sample and two-sample t-tests, the z-test for proportions, chi-square, and ANOVA with the same variable-type-by-variable-type logic this track uses. Pair it with the EP713 module on diagnostic test performance from Track 03 for the broader inferential vocabulary. [sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_HypothesisTest-Means-Proportions](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_HypothesisTest-Means-Proportions/)
 
-**If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+**If you want the canonical paper on how p-values get misread:**
+- Greenland S, Senn SJ, Rothman KJ, Carlin JB, Poole C, Goodman SN, Altman DG. "Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations." *European Journal of Epidemiology*, 2016, 31(4):337-350. Open access on PMC. The post-American-Statistical-Association-statement consensus paper, written by seven of the people whose careers have been about getting this right. Walks 25 specific misinterpretations of p-values, confidence intervals, and power with worked counter-examples. The 25-item list is the single best resource for catching the misinterpretation that just slipped past you in the paper you are reading. [pmc.ncbi.nlm.nih.gov/articles/PMC4877414](https://pmc.ncbi.nlm.nih.gov/articles/PMC4877414/)
 
-**If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
-
-**If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+**If you want the bedside-length take on CI vs p-value:**
+- du Prel JB, Hommel G, Röhrig B, Blettner M. "Confidence interval or p-value? Part 4 of a series on evaluation of scientific publications." *Deutsches Arzteblatt International*, 2009, 106(19):335-339. Open access on PMC. Five pages. Walks the practical use case for the two statistics side by side with worked examples that a clinical reader can do on paper. The companion piece to Greenland 2016: where Greenland gives you the comprehensive list of mistakes to avoid, du Prel gives you the practical guidance for when each statistic actually answers the question you have. [pmc.ncbi.nlm.nih.gov/articles/PMC2689604](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689604/)

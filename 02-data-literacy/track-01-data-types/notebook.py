@@ -16,19 +16,29 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
+    import io
+    import json
     import sys
     from pathlib import Path
-
-    _track_dir = Path(__file__).parent
-    _course_dir = _track_dir.parent
-    if str(_course_dir) not in sys.path:
-        sys.path.insert(0, str(_course_dir))
 
     import marimo as mo
     import numpy as np
     import pandas as pd
 
-    return _course_dir, mo, np, pd
+    _WASM_DATA_BASE = "/02-data-literacy/track-01-data-types/app"
+
+    def load_cached_csv(name, **read_csv_kwargs):
+        """Read a CSV from this track's cache/ directory. Works locally
+        (reads from disk) and in marimo's WASM runtime (fetches from the
+        site-absolute URL of the deployed cache).
+        """
+        if "pyodide" in sys.modules:
+            from pyodide.http import open_url
+            url = _WASM_DATA_BASE + "/cache/" + name
+            return pd.read_csv(io.StringIO(open_url(url).read()), **read_csv_kwargs)
+        return pd.read_csv(Path(__file__).parent / "cache" / name, **read_csv_kwargs)
+
+    return load_cached_csv, mo, np, pd
 
 
 @app.cell
@@ -76,9 +86,8 @@ def _(mo):
 
 
 @app.cell
-def _(_course_dir, mo, pd):
-    labs_path = _course_dir / "patients/elena-reyes/labs.csv"
-    labs = pd.read_csv(labs_path)
+def _(load_cached_csv, mo, pd):
+    labs = load_cached_csv("labs.csv")
     types_table = pd.DataFrame(
         {
             "column": labs.columns,
