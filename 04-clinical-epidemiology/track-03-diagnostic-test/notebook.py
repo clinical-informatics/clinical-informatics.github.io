@@ -422,7 +422,8 @@ def _(alt, mo, pd, roc_data, threshold_slider):
 
     mo.vstack([
         mo.as_html(_dist_chart),
-        mo.hstack([mo.as_html(_roc_chart), _summary_md]),
+        mo.as_html(_roc_chart),
+        _summary_md,
     ])
     return
 
