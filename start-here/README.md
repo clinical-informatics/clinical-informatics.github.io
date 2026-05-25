@@ -36,7 +36,7 @@ The **Status** column is regenerated on each site build from each course's noteb
 | 04 | [clinical-epidemiology](https://github.com/clinical-informatics/04-clinical-epidemiology) | _status_ | Frequency and association measures, bias, diagnostic test performance, study designs |
 | 05 | [ehr-systems](https://github.com/clinical-informatics/05-ehr-systems) | _status_ | How the EHR stores and moves data, including imaging (PACS, DICOM) |
 | 06 | [learn-fhir](https://github.com/clinical-informatics/06-learn-fhir) | _status_ | FHIR from zero, the web architecture healthcare borrowed |
-| 07 | [data-wrangling-engineering](https://github.com/clinical-informatics/07-data-wrangling-engineering) | _status_ | SQL, pandas, OMOP, graph databases |
+| 07 | [data-wrangling-engineering](https://github.com/clinical-informatics/07-data-wrangling-engineering) | _status_ | Standards in the EHR, OMOP CDM, SQL extraction, pandas analysis, graph databases. The analytic stack from the warehouse outward. |
 | 08 | [clinical-visualization](https://github.com/clinical-informatics/08-clinical-visualization) | _status_ | Charts that communicate, charts that mislead |
 | 09 | [ai-in-medicine](https://github.com/clinical-informatics/09-ai-in-medicine) | _status_ | Machine learning for clinicians who evaluate, not build |
 | 10 | [nlp-clinical-text](https://github.com/clinical-informatics/10-nlp-clinical-text) | _status_ | The data that lives in notes, not in fields |
