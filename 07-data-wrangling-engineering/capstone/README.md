@@ -1,9 +1,9 @@
-# Capstone: course 07
+# Capstone for Course 07: Data wrangling and engineering
 
-**Build an OMOP-structured dataset for a synthetic RA cohort from messy source data; run three clinical queries.**
+Three messy raw data files arrive from a source EHR. The capstone maps them to OMOP shape and then runs three clinical queries against the mapped output, one per analytic layer the course covered: cohort definition in SQL (Track 03), per-patient summary in pandas (Track 04), and a sequence question that exposes the kind of problem graph databases are designed for (Track 05). Code standards (Track 01) and OMOP CDM (Track 02) supply the targets the mapping aims at.
 
-This capstone is part of the scaffold for course 07: Data wrangling and engineering. The notebook is a placeholder; the interactive content will be filled in as the course is built out.
+The capstone is presented as a series of Socratic prompts: commit a written answer first, then unlock the worked solution.
 
-**Prerequisite:** all tracks in course 07.
+**Prerequisites:** Tracks 01 through 05 of this course.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left.
+**How to start:** open `notebook.py`. Marimo loads it in app mode.

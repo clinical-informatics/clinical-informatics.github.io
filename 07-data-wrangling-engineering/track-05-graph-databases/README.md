@@ -1,14 +1,11 @@
-# Track 05: Graph databases
+# Track 05: Graph databases, conceptual
 
-Conceptual fluency only. When a problem is graph-shaped. Ms. Reyes's medication history as a knowledge graph.
+A small set of clinical questions are not naturally tabular: care-team networks, medication-transition sequences, ontology traversal across SNOMED's is-a hierarchy. This track introduces the graph data model (nodes, edges, properties, traversal), demonstrates Cypher pattern syntax on Reyes's medication graph, presents the SNOMED variable-length traversal example, and identifies when a graph database is and is not the right tool. Presentation is conceptual; no installation is required.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Tracks 01 through 04 of this course.
 
+**How to start:** open `notebook.py`. Marimo loads it in app mode.
 
-**Prerequisites:** Tracks 01 through 02 through 03 through 04 of this course.
-
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
+**Companion reading:** `go-deeper.md` in this folder.
 
 **What's next:** the course capstone.
