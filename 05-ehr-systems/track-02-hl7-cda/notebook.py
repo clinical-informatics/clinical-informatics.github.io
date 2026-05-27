@@ -1,6 +1,6 @@
 """Track 02: HL7 v2, CDA, and what we inherited.
 
-A historical walk through the messaging standards that hospitals run on
+A historical survey of the messaging standards that hospitals run on
 right now: HL7 v2 (1987 and still dominant), CDA (2005), and the path
 that led to FHIR. Built around real-shaped synthetic messages for
 Ms. Reyes.
@@ -392,7 +392,7 @@ def _(mo):
         r"""
         Three observations about CDA that the fragment makes legible:
 
-        1. **Two parallel renderings of the same fact.** The `<text>` section has a human-readable HTML table of the problem list. The `<entry>` section has the same fact encoded with ICD-10 and SNOMED CT codes for a machine to pick up. The narrative and the structured entry are supposed to mean the same thing. **In practice they often do not match**, and the standard does not enforce that they should. That mismatch is one of CDA's quiet failures.
+        1. **Two parallel renderings of the same fact.** The `<text>` section has a human-readable HTML table of the problem list. The `<entry>` section has the same fact encoded with ICD-10 and SNOMED CT codes for a machine to consume. The narrative and the structured entry are supposed to mean the same thing. **In practice they often do not match**, and the standard does not enforce that they should. That mismatch is one of CDA's quiet failures.
         2. **Everything is keyed to template ids.** The CCD template tree (the OID `2.16.840.1.113883.10.20.22...`) is how the standard says "this is a Problem List section, this is a Problem Concern entry." A receiving system that does not know the template tree cannot pick the structured entries out reliably.
         3. **The data is buried under namespaces and codes.** To read the patient's diagnosis you have to find the `<observation>` inside the `<entryRelationship>` inside the `<act>` inside the `<entry>` inside the `<section>` inside the `<structuredBody>` inside the `<component>`. CDA is dense.
 
@@ -409,10 +409,10 @@ def _(xref):
     xref.forward(
         from_course="05",
         to_course="06",
-        topic="Where FHIR picks up",
+        topic="Where FHIR continues from",
         body=(
-            "FHIR (Fast Healthcare Interoperability Resources) is the standard that picked up where HL7 v2 and CDA left off. "
-            "Course 06 (Learn FHIR) walks the format end to end: Track 0 covers the web-architecture history that made FHIR possible, "
+            "FHIR (Fast Healthcare Interoperability Resources) is the standard that continues where HL7 v2 and CDA left off. "
+            "Course 06 (Learn FHIR) covers the format end to end: Track 0 covers the web-architecture history that made FHIR possible, "
             "Tracks 1 to 5 cover resources, server interaction, modeling, implementation guides, and SMART on FHIR. "
             "The short version for now: FHIR is REST-and-JSON over HTTP, which is the same web architecture every app and "
             "browser is already built on. That is the bet, and it has mostly paid off for external APIs. The internal "

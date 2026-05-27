@@ -301,7 +301,7 @@ def _(mo):
         r"""
         ## Who has to agree, in one picture.
 
-        The pattern across the seven groups: every clinical informatics decision touches more than one of them. The CRP value Track 04 walked through depended on a provider (the rheumatology practice), a payer (her insurer), a vendor (the EHR), regulators (HIPAA, ONC's API rule), standards bodies (LOINC, FHIR, X12 if it became a claim), and research infrastructure (if it ever joined a research extract). Public health did not feature in this particular trip; if Ms. Reyes had been diagnosed with a reportable disease, it would have.
+        The pattern across the seven groups: every clinical informatics decision touches more than one of them. The CRP value Track 04 traced depended on a provider (the rheumatology practice), a payer (her insurer), a vendor (the EHR), regulators (HIPAA, ONC's API rule), standards bodies (LOINC, FHIR, X12 if it became a claim), and research infrastructure (if it ever joined a research extract). Public health did not feature in this particular case; if Ms. Reyes had been diagnosed with a reportable disease, it would have.
 
         The reason this matters operationally is timing. Decisions inside a single actor (the provider, the vendor) move on a project timeline. Decisions that require multiple actors to agree (a contract, a standard, a regulation) move on the actors' shared timeline, which is the slower of the two. Most large clinical informatics initiatives are slow because they wait on shared timelines, not because the technical work is hard.
 

@@ -118,7 +118,7 @@ def __(mo):
         - **09: AI in medicine**, when we evaluate a published clinical model.
         - **12: Clinical decision support**, when we design a real CDS rule.
 
-        Each later course will tell you when it's picking up a thread from here. If a term throws you, the [GLOSSARY](GLOSSARY.md) defines every one of them in plain English.
+        Each later course flags when it continues a thread from here. If a term is unfamiliar, the [GLOSSARY](GLOSSARY.md) defines every one of them in plain English.
         """
     )
     return

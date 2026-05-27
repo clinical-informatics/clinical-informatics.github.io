@@ -44,7 +44,7 @@ Six tracks plus a Socratic capstone. Each track is a short interactive notebook 
 | Track | Title | What it covers |
 |---|---|---|
 | 01 | What clinical informatics is and how it got here | Definition, brief history (Weed's POMR, the NLM, HITECH 2009, FHIR, AI), and Ms. Reyes introduced as the running patient. |
-| 02 | DIKW and the lifecycle of clinical data | Data, information, knowledge, wisdom with Reyes's CRP walked through each layer. The capture-store-use-share-retire lifecycle. |
+| 02 | DIKW and the lifecycle of clinical data | Data, information, knowledge, wisdom with Reyes's CRP at each layer. The capture-store-use-share-retire lifecycle. |
 | 03 | How computers represent and store data | Bits, data structures, file types (TXT/CSV/JSON/XML), what a database is, relational concept, OLTP vs OLAP, database languages. |
 | 04 | How computers move data | Client-server, the hospital LAN/VPN/firewall, the internet, HTTP/REST/APIs at concept level, on-prem vs cloud, security boundaries. |
 | 05 | The American health system and its parts | Providers, payers, EHR vendors, regulators, research infrastructure, public health, standards bodies. Where informatics lives within each. |

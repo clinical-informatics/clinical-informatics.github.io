@@ -2,7 +2,7 @@
 
 > A FHIR bundle from another rheumatologist's office lands on your desk an hour before Ms. Reyes's appointment. You need to read it.
 
-This track teaches you to pick up an unfamiliar FHIR bundle, name what's in it, follow the references between resources, and pull a clinically coherent picture out the other side. No FHIR authoring yet (Track 3 covers that). The work here is the navigation skill that makes everything else in the course possible.
+This track teaches you to read an unfamiliar FHIR bundle, name what's in it, follow the references between resources, and pull a clinically coherent picture out the other side. No FHIR authoring yet (Track 3 covers that). The work here is the navigation skill that makes everything else in the course possible.
 
 Four foundational ideas before the capstone: what a **resource** is and how to recognize one by its fields; how **references** connect resources; what a **bundle** is and what its `type` field means; and which **terminology** system (LOINC, SNOMED CT, RxNorm, UCUM, ICD-10, CVX) belongs in which slot. Plus a concept-level introduction to **search parameters** so Track 2 starts on familiar ground. The capstone walks six clinical questions about Ms. Reyes, each answered by navigating her actual FHIR bundle, then synthesized into a five-to-seven-sentence clinical summary.
 

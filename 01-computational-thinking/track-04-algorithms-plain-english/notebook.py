@@ -2,13 +2,12 @@
 
 An algorithm is a finite list of named operations on named inputs. Most
 clinical scores share a common skeleton (transformed and weighted inputs,
-summed, with cutoffs added on top). This notebook walks DAS28 line by
-line on Ms. Elena Reyes's most recent values.
+summed, with cutoffs added on top). This notebook presents DAS28 line
+by line on Ms. Elena Reyes's most recent values.
 
-You move sliders for her TJC28, SJC28, CRP, and patient global
-assessment; each step's contribution to the score updates live. By the
-end you should be able to read any published clinical score the same
-way.
+Sliders set her TJC28, SJC28, CRP, and patient global assessment; each
+step's contribution to the score updates live. The same reading method
+applies to any published clinical score.
 """
 
 import marimo
@@ -320,7 +319,7 @@ def _(mo):
         - You read DAS28 line by line and watched each step's contribution change with the sliders.
         - You named the work each transformation is doing: square root for diminishing returns on joint counts, log for order-of-magnitude compression on CRP, identity for the PGA.
         - You separated the formula (which produces a number) from the cutoff (which interprets the number into a clinical category). These are different decisions made by different people on different evidence.
-        - You picked up a four-question framework for reading any published clinical score.
+        - You gained a four-question framework for reading any published clinical score.
 
         Decomposition (Track 01) made the parts visible. Edge cases (Track 02) showed where they break. Abstraction (Track 03) chose what to keep. Algorithmic reading (this track) made the kept-and-combined version inspectable. That is most of computational thinking applied to clinical decision rules.
 

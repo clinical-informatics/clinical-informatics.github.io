@@ -255,7 +255,7 @@ def _(by_type, json, mo):
 def _(mo):
     mo.md(
         r"""
-        Walk through it once with the field meanings.
+        Read it once with the field meanings.
 
         - **`resourceType`: `"Patient"`.** This is a Patient resource. Every Patient anywhere in FHIR R4 has this same outer shape.
         - **`id`: `"elena-reyes"`.** The stable identifier for this resource within the system that produced it. Other resources in this bundle reference this Patient by id.
@@ -516,7 +516,7 @@ def _(mo):
 
         Ms. Reyes's bundle has `type: collection`. That's one of several bundle types, each meaning a different thing about how the contained resources should be interpreted.
 
-        | Bundle `type` | What it means | When you'll see it |
+        | Bundle `type` | What it means | When it appears in practice |
         |---|---|---|
         | `collection` | A snapshot. "Here are these resources packaged together." No inherent operations to apply. | Records sent between systems; the synthetic bundle in this track. |
         | `searchset` | The result of a FHIR search query, with pagination info at the top of the bundle. | Every response when you ask a FHIR server to find resources. Track 2 lives here. |
@@ -597,7 +597,7 @@ def _(mo):
 
         FHIR doesn't define its own clinical vocabulary. It uses the existing standard vocabularies. The slot tells you which one to use, and the field always looks the same: a `coding` array, each entry an object with a `system` URI naming the vocabulary, a `code` value in that vocabulary, and a `display` string for humans.
 
-        The canonical mapping, with the URIs you'll see on the wire:
+        The canonical mapping, with the URIs that appear on the wire:
         """
     )
     return
@@ -608,34 +608,34 @@ def _(pd):
     terminology = pd.DataFrame(
         [
             {"What's coded": "Lab test, vital sign, observation code",
-             "Vocabulary": "LOINC", "URI you'll see": "http://loinc.org",
+             "Vocabulary": "LOINC", "URI in practice": "http://loinc.org",
              "Example from Ms. Reyes": "CRP = 1988-5, ESR = 4537-7, DAS28-CRP = 76374-2, anti-CCP = 32218-7."},
             {"What's coded": "Clinical finding, problem, procedure, anatomic site",
-             "Vocabulary": "SNOMED CT", "URI you'll see": "http://snomed.info/sct",
+             "Vocabulary": "SNOMED CT", "URI in practice": "http://snomed.info/sct",
              "Example from Ms. Reyes": "Seropositive RA = 239791008. Skin rash = 271807003. Subcutaneous route = 34206005."},
             {"What's coded": "Medication",
-             "Vocabulary": "RxNorm", "URI you'll see": "http://www.nlm.nih.gov/research/umls/rxnorm",
+             "Vocabulary": "RxNorm", "URI in practice": "http://www.nlm.nih.gov/research/umls/rxnorm",
              "Example from Ms. Reyes": "Methotrexate 25mg/mL inj = 1156665. Adalimumab 40mg/0.8mL pen = 327361. Folic acid 1mg tab = 315966."},
             {"What's coded": "Unit of measure on a quantity",
-             "Vocabulary": "UCUM", "URI you'll see": "http://unitsofmeasure.org",
+             "Vocabulary": "UCUM", "URI in practice": "http://unitsofmeasure.org",
              "Example from Ms. Reyes": "mg/L for CRP. mm/h for ESR. mmHg coded `mm[Hg]` for BP. mg for medication doses."},
             {"What's coded": "Billing-aligned diagnosis",
-             "Vocabulary": "ICD-10-CM", "URI you'll see": "http://hl7.org/fhir/sid/icd-10-cm",
+             "Vocabulary": "ICD-10-CM", "URI in practice": "http://hl7.org/fhir/sid/icd-10-cm",
              "Example from Ms. Reyes": "RA = M05.79 (sent alongside the SNOMED code). Anemia of chronic disease = D63.8."},
             {"What's coded": "Vaccine",
-             "Vocabulary": "CVX", "URI you'll see": "http://hl7.org/fhir/sid/cvx",
+             "Vocabulary": "CVX", "URI in practice": "http://hl7.org/fhir/sid/cvx",
              "Example from Ms. Reyes": "Influenza, inactivated quadrivalent = 150."},
             {"What's coded": "Language",
-             "Vocabulary": "BCP-47", "URI you'll see": "urn:ietf:bcp:47",
+             "Vocabulary": "BCP-47", "URI in practice": "urn:ietf:bcp:47",
              "Example from Ms. Reyes": "English (US) = `en-US`. Spanish = `es`."},
             {"What's coded": "Race / ethnicity in US Core extensions",
-             "Vocabulary": "CDC race & ethnicity (OMB)", "URI you'll see": "urn:oid:2.16.840.1.113883.6.238",
+             "Vocabulary": "CDC race & ethnicity (OMB)", "URI in practice": "urn:oid:2.16.840.1.113883.6.238",
              "Example from Ms. Reyes": "White = 2106-3. Hispanic or Latino = 2135-2."},
             {"What's coded": "Resource status, clinical status, observation interpretation",
-             "Vocabulary": "HL7 / FHIR-defined", "URI you'll see": "http://terminology.hl7.org/...",
+             "Vocabulary": "HL7 / FHIR-defined", "URI in practice": "http://terminology.hl7.org/...",
              "Example from Ms. Reyes": "Active condition = `active`. High lab interpretation = `H`. Allergy clinical status = `active`."},
             {"What's coded": "Site-specific identifiers (MRNs, internal IDs)",
-             "Vocabulary": "Local (site-defined)", "URI you'll see": "URIs the local site defines",
+             "Vocabulary": "Local (site-defined)", "URI in practice": "URIs the local site defines",
              "Example from Ms. Reyes": "MRN ER-001 uses the curriculum's example MRN system URI."},
         ]
     )
@@ -746,7 +746,7 @@ def _(mo):
 
         Each resource type defines its own search parameters. Observation defines about thirty. Patient defines about twenty. MedicationRequest about fifteen. You don't need to memorize them; you look them up in the spec page for whichever resource you're querying.
 
-        Track 2 builds real queries against hapi.fhir.org and you'll see exactly what each one returns. For now, the concept worth carrying is that **search is uniform across resource types, parameters are defined by the spec, and the response is always a `searchset` Bundle.**
+        Track 2 builds real queries against hapi.fhir.org and shows exactly what each one returns. For now, the concept worth carrying is that **search is uniform across resource types, parameters are defined by the spec, and the response is always a `searchset` Bundle.**
         """
     )
     return
@@ -957,7 +957,7 @@ def _(mo, q5_ready, q5_widget, reveal):
         "- **Severity (of the reaction):** mild.\n"
         "- **Criticality (of the overall allergy):** low.\n"
         "- **Clinical status:** active. Verification status: confirmed.\n\n"
-        "Worth noting the distinction between `reaction[].severity` and the top-level `criticality`. `severity` describes how bad the reaction was in the past; `criticality` is the clinician's assessment of how dangerous a re-exposure would be. They're related but not the same: a mild past reaction to a drug with strong cross-reactivity to other essential antibiotics might still warrant high criticality. Here both are low; this is a low-stakes allergy clinically."
+        "The distinction between `reaction[].severity` and the top-level `criticality` matters: `severity` describes how bad the reaction was in the past; `criticality` is the clinician's assessment of how dangerous a re-exposure would be. They're related but not the same: a mild past reaction to a drug with strong cross-reactivity to other essential antibiotics might still warrant high criticality. Here both are low; this is a low-stakes allergy clinically."
     )
     reveal(q5_widget.value, sample_q5, learner_label="Your answer")
     return (sample_q5,)
@@ -983,7 +983,7 @@ def _(mo, q6_ready, q6_widget, reveal):
         "- **Practitioner:** Maya Bennett, MD. NPI **1234567890** (in `identifier[]` with system `http://hl7.org/fhir/sid/us-npi`). Qualification: MD.\n"
         "- **Organization (her practice):** Bay Rheumatology Associates, 101 Main Street, Springfield, MA 01103. Phone 555-0100.\n\n"
         "The Encounter from 2022-02-14 references Dr. Bennett as the `participant.individual` and the Organization as the `serviceProvider`. Following those two references is how we connected the practitioner to the practice. "
-        "Worth noting: most resources that involve a clinician (Conditions via `recorder`, MedicationStatements via `informationSource`, Encounters via `participant`) reference the same Practitioner resource. The Practitioner is defined once and pointed at many times. That's the database-shaped half of FHIR I mentioned earlier: identity by reference, not duplication."
+        "One structural detail: most resources that involve a clinician (Conditions via `recorder`, MedicationStatements via `informationSource`, Encounters via `participant`) reference the same Practitioner resource. The Practitioner is defined once and pointed at many times. That's the database-shaped half of FHIR I mentioned earlier: identity by reference, not duplication."
     )
     reveal(q6_widget.value, sample_q6, learner_label="Your answer")
     return (sample_q6,)
@@ -1040,7 +1040,7 @@ def _(mo):
 
         - You put the four foundational FHIR ideas in place: a **resource** is a unit of clinical data shaped by a published specification; **references** are how resources connect; a **bundle** is a container of resources whose `type` tells you what the container means; and **terminology** lives in `system`+`code` pairs, with the slot determining the vocabulary.
         - You navigated Ms. Reyes's actual FHIR Bundle, answered six clinical questions by reading the right resource type and the right field, and synthesized the six answers into a clinical summary.
-        - You picked up the concept-level shape of FHIR search (`GET /<ResourceType>?<param>=<value>...` returns a `searchset` bundle), without writing one yet.
+        - You gained the concept-level shape of FHIR search (`GET /<ResourceType>?<param>=<value>...` returns a `searchset` bundle), without writing one yet.
 
         That is most of what "FHIR fluency" actually means for a clinician: not the ability to author resources from scratch (Track 3 does that), but the ability to read someone else's resources, follow the references, and pull out the clinical story. Every later track builds on this.
 

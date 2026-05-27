@@ -16,7 +16,7 @@ Each of the five is illustrated on Ms. Reyes's records. We use a synthetic but r
 
 **Prerequisites:** Tracks 01 through 04 of this course.
 
-**How to start:** open `notebook.py` in Marimo. The notebook walks the five problem families on a synthetic export, classifies each against the Weiskopf and Weng (2013) data-quality dimensions, and lands at the capstone, where you will run the audit yourself.
+**How to start:** open `notebook.py` in Marimo. The notebook covers the five problem families on a synthetic export, classifies each against the Weiskopf and Weng (2013) data-quality dimensions, and arrives at the capstone, where you will run the audit yourself.
 
 **Companion reading:** `05.1-data-quality.md` in this folder.
 

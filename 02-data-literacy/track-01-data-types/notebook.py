@@ -714,7 +714,7 @@ def _(mo):
     3. **Dates are their own nightmare.** Use ISO 8601 end to end. Parse explicitly with a format string. When parsing fails, look at the failing cells before deciding what to do.
     4. **Categorical columns need a value set, and ideally a coding system.** Without one, the same fact ends up written multiple ways and the cohort can't be counted. With one, you trust the code, render the text, and merge on the code.
 
-    Track 02 picks up from here. Once your columns have the right types, the next question is: **is each cell holding one fact?** Untidy clinical data fails that test in characteristic ways, and reshaping it is the most-used clinical data wrangling move that isn't joins.
+    Track 02 continues from here. Once your columns have the right types, the next question is: **is each cell holding one fact?** Untidy clinical data fails that test in characteristic ways, and reshaping it is the most-used clinical data wrangling move that isn't joins.
     """)
     return
 

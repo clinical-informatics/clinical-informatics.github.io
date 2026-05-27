@@ -341,7 +341,7 @@ def _(alt, cohort, field_choices, mo, pd):
 def _(mo):
     mo.md(
         r"""
-        **What to try.** Walk through these scenarios in the picker above:
+        **What to try.** Run these scenarios in the picker above:
 
         1. **Just sex.** k=1 should be 0% (with 5,000 patients and binary sex, every patient shares the field with ~half the cohort).
         2. **Sex + zip3.** Still safe; only seven 3-digit ZIPs, sex is binary, ~350 patients per cell.
@@ -368,7 +368,7 @@ def _(mo):
         3. **A vocabulary fix.** De-identification (HIPAA Safe Harbor) is legal permission; anonymization is statistical guarantee. Most "anonymized" clinical data is actually de-identified. Knowing the difference is the most useful single skill in this track.
         4. **The quasi-identifier instinct.** ZIP + sex + DOB is identifying for 87% of US adults. Add encounter date and a diagnosis, and you've often crossed into uniqueness on a small cohort. The defense is generalization and suppression, applied on purpose, with a documented residual risk.
 
-        Track 02 picks up the legal floor: what HIPAA actually requires (and the corners it leaves uncovered). Track 03 then takes the ethical question of secondary use. Track 04 connects the privacy work to the algorithmic-fairness work (the two overlap more than they usually get credit for). Track 05 closes with governance: which humans should be in the room when these trade-offs get made.
+        Track 02 covers the legal floor: what HIPAA actually requires (and the corners it leaves uncovered). Track 03 then takes the ethical question of secondary use. Track 04 connects the privacy work to the algorithmic-fairness work (the two overlap more than they usually get credit for). Track 05 closes with governance: which humans should be in the room when these trade-offs get made.
         """
     )
     return

@@ -131,7 +131,7 @@ def _(mo):
         - **L**oad the raw data into the warehouse first.
         - **T**ransform inside the warehouse, using its compute power.
 
-        ELT became practical when warehouse storage got cheap enough to hold raw plus transformed data, and when warehouse engines (Snowflake, BigQuery, Redshift, Databricks) got powerful enough to transform at scale. ELT keeps the raw landing data around forever, which makes lineage tracing and back-fills much easier.
+        ELT became practical when warehouse storage got cheap enough to hold raw plus transformed data, and when warehouse engines (Snowflake, BigQuery, Redshift, Databricks) got fast enough to transform at scale. ELT keeps the raw landing data around forever, which makes lineage tracing and back-fills much easier.
 
         The practical difference:
 
@@ -203,7 +203,7 @@ def _(mo):
         r"""
         ## The star schema
 
-        The dominant logical design inside a clinical data warehouse is the **star schema**. The pattern is simple to describe and powerful in practice:
+        The dominant logical design inside a clinical data warehouse is the **star schema**. The pattern is simple to describe and effective in practice:
 
         - **One fact table per clinical domain.** Lab results, medication orders, encounters, claims, vital signs. Each row is one measurable event. Numeric measures, foreign keys to the dimensions, and very little else.
         - **Several dimension tables surrounding each fact.** Patient, provider, date, location, drug, lab test. Each dimension is small (thousands to millions of rows), descriptive, and changes slowly.
@@ -221,7 +221,7 @@ def _(mo):
 
         The star is the same family of design as Kimball-style dimensional modeling that the BI world has used since the 1990s. The clinical adaptation is that the dimensions and facts are explicitly named for clinical concepts, the codes are clinical codes, and the time grain is clinical time.
 
-        Let's see Ms. Reyes's CRP value in both shapes side by side: the operational-EHR shape from Track 01 and the star-schema CDW shape.
+        Ms. Reyes's CRP value in both shapes appears side by side below: the operational-EHR shape from Track 01 and the star-schema CDW shape.
         """
     )
     return
@@ -381,7 +381,7 @@ def _(mo):
         Federated analytics across networks
         ```
 
-        Every arrow is a transformation, with attendant data-quality work and attendant data loss. Course 07's OMOP track says explicitly: no standard is lossless. Every step of this chain pays some loss. The point is that the gain (interoperability, query speed, federated research) is bigger than the loss, for the workloads that live downstream.
+        Every arrow is a transformation, with attendant data-quality work and attendant data loss. Course 07's OMOP track says explicitly: no standard is lossless. Every step of this chain pays some loss. The gain (interoperability, query speed, federated research) is bigger than the loss, for the workloads that live downstream.
         """
     )
     return

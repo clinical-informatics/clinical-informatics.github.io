@@ -124,7 +124,7 @@ def _(mo):
 
         Track 1 had you read a FHIR bundle that another rheumatologist sent over. Track 2 asks a different question: how did the bundle get there in the first place, and what would it take for *you* to ask their server for it?
 
-        A FHIR server is a web service that speaks FHIR over HTTP. You send it requests, it sends back responses. There is no other ceremony. By the end of this track you'll have:
+        A FHIR server is a web service that speaks FHIR over HTTP. You send it requests, it sends back responses. There is no other ceremony. The track closes with:
 
         - Made a real call to a public FHIR test server (`hapi.fhir.org`) and parsed the response.
         - Built a search URL piece by piece, with the LOINC code coming from a dropdown.
@@ -272,7 +272,7 @@ The two patients returned in this page:
 
 {chr(10).join(patient_rows)}
 
-These two were picked from a curated query (`Patient?name=Smith` and `Patient?name=Garcia`, one entry each) because the *uncurated* default query `Patient?_count=10` happens to return ten copies of the same test patient right now. Someone's load-testing script POSTed the same Patient ten times in a row, and FHIR's "every POST creates a new resource with a server-assigned id" semantics means the server now has ten different patient ids pointing at indistinguishable data. **This is what public FHIR test servers actually look like.** Production servers have their own quality issues; the noise on hapi is an underdamped version of what you'll see everywhere, and "find the same patient under multiple ids" is a real production duplicate-MRN problem at every health system.
+These two were picked from a curated query (`Patient?name=Smith` and `Patient?name=Garcia`, one entry each) because the *uncurated* default query `Patient?_count=10` happens to return ten copies of the same test patient right now. Someone's load-testing script POSTed the same Patient ten times in a row, and FHIR's "every POST creates a new resource with a server-assigned id" semantics means the server now has ten different patient ids pointing at indistinguishable data. **This is what public FHIR test servers actually look like.** Production servers have their own quality issues; the noise on hapi is an underdamped version of what appears everywhere, and "find the same patient under multiple ids" is a real production duplicate-MRN problem at every health system.
 
 The two structural takeaways. First, a search response is always a Bundle with `type: searchset`. Second, the `link[]` array carries pagination: the `next` link is what you fetch to get the second page.
 """
@@ -463,7 +463,7 @@ def _(mo):
         r"""
         ## Pagination.
 
-        Servers cap how many results they return in one response. If there are more matches than fit in one page, the Bundle carries a `next` link in its `link[]` array, and your client fetches that URL to get the second page. Keep walking the `next` links until there isn't one.
+        Servers cap how many results they return in one response. If there are more matches than fit in one page, the Bundle carries a `next` link in its `link[]` array, and your client fetches that URL to get the second page. Keep following the `next` links until there isn't one.
 
         The pattern:
 
@@ -799,7 +799,7 @@ def _(mo):
             reflection,
             mo.callout(
                 mo.md(
-                    "_There's no answer key for this one. A few things worth at least having on your list when you write it: "
+                    "_There's no answer key for this one. The list should at minimum cover: "
                     "(1) authentication (real servers don't let anonymous clients pull patient data); "
                     "(2) data quality (real cohorts have missing observations, duplicate observations from different lab systems, codes from local code sets that don't match LOINC, dates in the wrong time zone); "
                     "(3) pagination at scale (200 patients with quarterly labs over five years is 4,000+ observations, which will paginate); "
@@ -822,7 +822,7 @@ def _(mo):
         - You made real calls to a real FHIR server. The CapabilityStatement endpoint told you what the server can do. A Patient search showed you what a searchset Bundle looks like, including the unicode mojibake that comes with public test-server data.
         - You built FHIR search URLs piece by piece, with the LOINC code coming from a dropdown, and read the resulting URL like a sentence.
         - You learned the access path that every FHIR client repeats: `bundle["entry"][i]["resource"][<field>]`, with `name[0].family` and the other "always an array" quirks called out.
-        - You walked the pagination pattern: `link.relation = 'next'`, fetch until exhausted, treat the URL as opaque.
+        - You implemented the pagination pattern: `link.relation = 'next'`, fetch until exhausted, treat the URL as opaque.
         - You pulled CRP and ESR for five synthetic RA patients out of a 146-entry searchset bundle, into a pandas DataFrame, and rendered the four-year disease-activity trajectory for each one as an Altair line chart with the upper-limit-of-normal as a reference.
 
         That is what a FHIR client looks like end to end. The data quality questions you wrote in the reflection above are the work of Tracks 3 through 5.

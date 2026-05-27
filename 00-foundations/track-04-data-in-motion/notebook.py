@@ -391,7 +391,7 @@ def _(mo, walk_picker):
 def _(mo):
     mo.md(
         r"""
-        ## What you noticed walking the result.
+        ## What the result shows.
 
         The same CRP value of 36.2 mg/L visits seven systems. Each system has a different job. Each move across a boundary is authorized by a different combination of technical control (firewall rule, encryption, identity token) and contractual control (BAA, DUA, IRB protocol).
 
@@ -494,15 +494,15 @@ def _(mo):
         ## What you did in this track.
 
         - Named **client-server** through the restaurant analogy and saw that every clinical system you interact with is implicitly one role or the other.
-        - Walked the four network zones (LAN, firewall, VPN, public internet) and what each one allows and constrains.
+        - Covered the four network zones (LAN, firewall, VPN, public internet) and what each one allows and constrains.
         - Named **HTTP, REST, and APIs** at concept level: HTTP is the protocol, REST is the convention, an API is the menu.
         - Distinguished **on-prem** from **cloud** and noted that most new clinical work is cloud or vendor-hosted.
         - Sketched the U.S. clinical security landscape (HIPAA, HITECH, HITRUST, SOC 2) and saw that every boundary clinical data crosses is matched with a contract and a technical control.
-        - Walked Ms. Reyes's CRP through seven systems and noticed where the consequential boundaries actually are.
+        - Traced Ms. Reyes's CRP through seven systems and noted where the consequential boundaries actually are.
 
         ## What's next.
 
-        **Track 05: The American health system and its parts.** The boundaries from this track are between systems run by different actors. The next track names the actors: who provides care, who pays for it, who builds the EHRs, who regulates the field, who runs public health, and which standards bodies hold the vocabularies together. By the end of Track 05 the picture of *who has to agree* for the kind of integration above to happen will be in place.
+        **Track 05: The American health system and its parts.** The boundaries from this track are between systems run by different actors. The next track names the actors: who provides care, who pays for it, who builds the EHRs, who regulates the field, who runs public health, and which standards bodies hold the vocabularies together. Track 05 closes with the picture of *who has to agree* for the kind of integration above to happen.
         """
     )
     return

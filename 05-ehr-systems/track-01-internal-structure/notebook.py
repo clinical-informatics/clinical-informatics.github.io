@@ -154,7 +154,7 @@ def _(mo):
 
         That last point is why exports of the same record from two different EHR vendors look completely different. The codes are vendor-specific. The decoded display strings are mostly the same. The shape of the data is *similar* because the relational model is similar, but every table name, every column name, and every code is different. That is why FHIR and OMOP exist. We come back to that in Tracks 02 and 03.
 
-        Let's see what Ms. Reyes's row looks like in each of these tables.
+        Ms. Reyes's row in each of these tables looks like this.
         """
     )
     return
@@ -706,7 +706,7 @@ def _(mo):
 
         The operational EHR is structurally good at one thing: the chart. It is structurally bad at population queries, lossless export, and analytics. That is not a bug, it is the design discipline the operational system was built under. The schema, the indexing, the storage tiering, the backup posture are all downstream of that one priority.
 
-        Track 02 picks up the historical question of how the messages between EHR systems got to where they are. Track 03 picks up the analytical-system question this track left hanging: where the population queries actually run.
+        Track 02 covers the historical question of how the messages between EHR systems got to where they are. Track 03 covers the analytical-system question this track left hanging: where the population queries actually run.
         """
     )
     return

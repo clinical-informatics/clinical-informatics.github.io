@@ -554,7 +554,7 @@ def _(mo):
         r"""
         ## 5. Cohort attrition (Track 4, formalized)
 
-        For the methods section, walk the cohort step by step with the `cohort_builder` component. The criteria below match the medical question "RA cohort with at least one CRP drawn in 2024."
+        For the methods section, build the cohort step by step with the `cohort_builder` component. The criteria below match the medical question "RA cohort with at least one CRP drawn in 2024."
         """
     )
     return
@@ -823,7 +823,7 @@ def _(mo):
         label="Reflection prompt",
     )
     reflection = mo.ui.text_area(
-        placeholder="A short paragraph here. The point is that you wrote it.",
+        placeholder="A short paragraph here. The exercise is writing it.",
         rows=6,
         full_width=True,
         label="Your reflection",

@@ -515,7 +515,7 @@ def _(cohort, imp_method, mo, np, observed_df, rng, true_mean):
 def _(mo):
     mo.md(
         r"""
-        **What you should see if you walk through all five methods under each mechanism:**
+        **What the five methods produce under each mechanism:**
 
         - **Under MCAR:** complete-case is fine. Every imputation method works. The differences are about variance, not bias.
         - **Under MAR:** complete-case is biased. Mean imputation is also biased (same as complete-case for the mean). Regression imputation and multiple imputation correct the bias. Missing-as-indicator preserves the bias in the observed mean but adds the indicator as model input.
@@ -595,7 +595,7 @@ def _(mo):
         4. **Imputation is a modeling assumption, not a black box.** The assumption is usually MAR. Under MNAR, no observed-data imputation method fully corrects the bias, and the honest tools are sensitivity analysis and going back to collect more data.
         5. **Drop or keep is a principled decision, not a default.** Each column and each row gets a decision with a stated reason. The reasons go in the methods section, not the appendix.
 
-        Track 04 picks up from here. Joins are where missingness gets multiplicative: a left-joined table has missing rows on the right side, and figuring out whether those nulls are MCAR or MNAR is the same framework applied to a different shape of data.
+        Track 04 continues from here. Joins are where missingness gets multiplicative: a left-joined table has missing rows on the right side, and figuring out whether those nulls are MCAR or MNAR is the same framework applied to a different shape of data.
         """
     )
     return

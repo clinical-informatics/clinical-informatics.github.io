@@ -1,6 +1,6 @@
 # Capstone: Course 03 Privacy, Ethics, and Governance
 
-A research proposal walked through every framework in this course. You commit a written analysis at each step before the worked review is shown.
+A research proposal evaluated against every framework in this course. You commit a written analysis at each step before the worked review is shown.
 
 A regional health system has drafted a proposal: develop an AI tool to predict early sepsis on the inpatient wards, using five years of EHR data across the academic medical center and three community hospital partners. The system plans to partner with a national AI vendor, then eventually license the model out to other health systems. The proposal is sitting on the governance committee's docket for next week's meeting.
 

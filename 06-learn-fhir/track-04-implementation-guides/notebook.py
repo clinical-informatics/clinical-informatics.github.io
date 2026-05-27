@@ -124,7 +124,7 @@ def _(mo):
 
         Two vendors both say they support US Core Observation Lab. One of them displays the `interpretation` flag prominently in the chart. The other stores it but never shows it. Both can defensibly claim conformance.
 
-        The work of this track is making that disagreement explicit. By the end you can:
+        The work of this track is making that disagreement explicit. The track closes with the ability to:
 
         - Read the anatomy of a published implementation guide (US Core, mCODE) without getting lost.
         - Trace the profile inheritance chain a single resource has to satisfy.
@@ -672,7 +672,7 @@ The tooling for publishing such an IG is the same as any HL7 IG: write profiles 
             mo.callout(mo.md(_report), kind="info"),
             mo.md(
                 "Copy out the report above as your draft. Edit the summary paragraph and the gap details as your analysis sharpens. "
-                "This is the kind of artifact a clinical informatics lead brings to a project kickoff so the engineering and clinical teams can argue from a shared list."
+                "A clinical informatics lead would bring this artifact to a project kickoff so the engineering and clinical teams can argue from a shared list."
             ),
         ]
     )

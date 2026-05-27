@@ -127,9 +127,9 @@ def _(mo):
 
         Most introductions to SMART on FHIR start with OAuth, throw redirects and JWTs at the reader, and lose them in the first ten minutes. There is a simpler frame, and Track 4 built it for you: **SMART on FHIR is an implementation guide**, published at `hl7.org/fhir/smart-app-launch`, layered on top of US Core. Like every other IG, it has profiles, value sets (here, the scope vocabulary), a CapabilityStatement, and worked examples. The OAuth flow is the part that takes longest to describe; structurally, SMART is one more IG.
 
-        By the end of this track:
+        The track closes with:
 
-        - You can name the two launch flavors (EHR launch vs standalone) and which to use when.
+        - The ability to name the two launch flavors (EHR launch vs standalone) and which to use when.
         - You can walk the OAuth authorization-code-with-PKCE flow in plain English, step by step.
         - You can read a SMART scope string and tell what it grants.
         - You can spot the "we requested `patient/*.*` for convenience" antipattern when evaluating a vendor.
@@ -461,7 +461,7 @@ def _(mo):
 
         You did the gap analysis in Track 4: US Core covers RA labs reasonably well, but leaves DAS28 composite scoring, joint-count assessments, biologic-line tracking, and treat-to-target as gaps that a custom IG would have to close. Now you're designing the SMART app that sits on top of that data model: an in-EHR rheumatology dashboard that gives a treating clinician the full picture for an RA patient on a single screen.
 
-        Six commit-and-reveal steps. Each asks you to commit a written answer before the sample reveals. There are no single right answers; the point is that the design questions get answered explicitly and your reasoning is on paper. The final cell assembles your six answers into a one-page design brief you can copy out.
+        Six commit-and-reveal steps. Each asks you to commit a written answer before the sample reveals. There are no single right answers; the exercise is to answer the design questions explicitly and get your reasoning on paper. The final cell assembles your six answers into a one-page design brief you can copy out.
         """
     )
     return
@@ -617,7 +617,7 @@ def _(cap_data, cap_data_ready, mo, reveal):
         "- `GET /Patient/<patient>` (one Patient by id) for demographics.\n"
         "- `GET /Observation?subject=Patient/<patient>&code=http://loinc.org|1988-5,4537-7,76374-2&_sort=-date&_count=200` for CRP, ESR, DAS28-CRP over time.\n"
         "- `GET /MedicationStatement?subject=Patient/<patient>&status=active` for current regimen, plus a follow-up paged search with status=`stopped` for treatment history.\n"
-        "- `GET /Condition?subject=Patient/<patient>&category=problem-list-item` for the problem list (to confirm RA diagnosis and pick up any comorbidities).\n\n"
+        "- `GET /Condition?subject=Patient/<patient>&category=problem-list-item` for the problem list (to confirm RA diagnosis and surface any comorbidities).\n\n"
         "**Screen 2 (today's visit capture).** No additional reads beyond what the timeline already loaded. On save: a `transaction` Bundle POSTed to `/` with four Observation entries (TJC, SJC, PGA, DAS28-CRP), each with `subject` and `encounter` set to the launch context.\n\n"
         "**Screen 3 (regimen detail).** Reuses the MedicationStatement results from screen 1; no new query unless the user clicks an individual medication, which fires `GET /MedicationStatement/<id>` for the full resource.\n\n"
         "**Track 4 gap impact.** Three places where US Core doesn't cleanly cover what the app needs:\n\n"
@@ -749,7 +749,7 @@ def _(mo):
         ## What you did in this track.
 
         - You put five ideas in place for SMART on FHIR: **authentication is who, authorization is what**, and SMART solves both via OpenID Connect plus OAuth 2.0 scopes plus launch context; SMART is **another implementation guide** layered on US Core; there are **two launch flavors** (EHR vs standalone) and the choice is workflow-driven; the **OAuth dance** is six steps with one fetch-discovery-and-redirect plus a token exchange; **scopes** are the contract for what the app can read and write, and "the smallest scope that does the job" is the right design instinct.
-        - You picked up CDS Hooks and Bulk Data at the concept level: hooks are event-driven services that return cards into the EHR's workflow; Bulk Data is population-scale async data access via `$export`.
+        - You gained a concept-level understanding of CDS Hooks and Bulk Data: hooks are event-driven services that return cards into the EHR's workflow; Bulk Data is population-scale async data access via `$export`.
         - You wrote a one-page SMART app design brief for an RA monitoring dashboard, naming the problem, the launch flavor, the scopes, the UI surface, the FHIR data needs (with explicit reference to the Track 4 gap analysis output), and an optional CDS Hook integration that completes the story.
 
         That brief is what a clinical informaticist actually produces before any engineering work begins. The technical content of the rest of this course (Tracks 0 through 4) is what lets it be specific instead of decorative.

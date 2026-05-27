@@ -7,7 +7,7 @@ A clinical decision rule is a pattern. It works because most patients in its tar
 This track teaches the deliberate generation of edge cases. You will take the rule from Track 01 and stack candidate changes on top of it one at a time. Each change catches a class of patients you were missing and misses a class of patients you were catching. The trade is the lesson. You finish with a working rule and a written catalogue of the patients it gets wrong, which is what a fielded rule looks like in a hospital that is paying attention.
 
 
-**Prerequisite:** Track 01. The notebook picks up where that one ended, on the same medicine cohort, with the same six-part decomposition.
+**Prerequisite:** Track 01. The notebook continues where that one ended, on the same medicine cohort, with the same six-part decomposition.
 
 **How to start:** open `notebook.py` from the file tree on the left. Marimo loads it in app mode.
 

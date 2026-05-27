@@ -2,10 +2,11 @@
 
 The number you see in a paper can be the wrong number. This notebook
 names the three families of bias (selection, information, confounding),
-introduces DAGs as the visual grammar, and walks through what happens
-when you adjust for a confounder, a mediator, or a collider. The same
-2,000-patient RA cohort from Track 01 is reused, with prednisone co-use
-explicitly tracked so we can watch a confounded estimate move.
+introduces DAGs as the visual grammar, and presents what happens when
+the analysis adjusts for a confounder, a mediator, or a collider. The
+same 2,000-patient RA cohort from Track 01 is reused, with prednisone
+co-use explicitly tracked so the confounded estimate is visible as it
+moves.
 """
 
 import marimo
@@ -644,7 +645,7 @@ def _(mo):
         r"""
         ## 7. Now read it back
 
-        Two short quizzes that walk you through what to do when you encounter a covariate in a paper or a vendor's model description.
+        Two short quizzes covering what to do when you encounter a covariate in a paper or a vendor's model description.
         """
     )
     return

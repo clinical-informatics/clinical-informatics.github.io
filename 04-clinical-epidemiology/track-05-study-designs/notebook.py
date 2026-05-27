@@ -2,7 +2,7 @@
 
 The five-question framework is the spine: name the exposure, name the
 outcome, locate the point of observation, name what is being measured,
-identify the time component. The first interactive walks the five
+identify the time component. The first interactive applies the five
 questions and returns the matching design. The second draws Kaplan-Meier
 curves for two arms under either a clean proportional-hazards scenario
 or a curves-cross scenario, with the log-rank p-value computed manually

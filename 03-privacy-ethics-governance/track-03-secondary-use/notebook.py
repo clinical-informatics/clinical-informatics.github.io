@@ -8,7 +8,7 @@ between legal permission and ethical defensibility (with the Lacks,
 Havasupai, and Project Nightingale cases); consent, broad consent, and
 waivers; the five-dimensional ethical risk framework; and the
 commercial-vs-academic-vs-translational archetypes. The interactive
-piece is a scenario analyzer that walks the five dimensions on six
+piece is a scenario analyzer that applies the five dimensions to six
 realistic secondary-use scenarios.
 """
 
@@ -663,12 +663,12 @@ def _(mo):
         Five things in place:
 
         1. **The primary/secondary distinction.** Care is primary; everything else is secondary. "Everything else" is most of modern clinical informatics.
-        2. **Three case studies you should be able to summarize.** Henrietta Lacks (governance for legacy datasets), Havasupai (consent is not a blank check), Project Nightingale (HIPAA-compliant is not the same as trust-preserving).
+        2. **Three case studies worth being able to summarize.** Henrietta Lacks (governance for legacy datasets), Havasupai (consent is not a blank check), Project Nightingale (HIPAA-compliant is not the same as trust-preserving).
         3. **Consent vocabulary.** Specific consent, broad consent, IRB waiver. The waiver is the operational default for retrospective EHR research; it is a defensible trade only when it is honest.
         4. **The five-dimension framework.** Consent-expectation fit, public vs commercial benefit, equity, transparency, reversibility. Apply it to every proposed secondary use.
         5. **The destination matters.** Internal QI, academic publication, pharma deal, vendor partnership, public benchmark, and model deployment are different ethical questions even with the same de-identified data underneath.
 
-        Track 04 picks up algorithmic fairness, where the equity dimension of this framework becomes the dominant one and where most of the contested AI use cases live. Track 05 closes with governance: who is actually in the room when these decisions get made, and what the clinician's role is.
+        Track 04 covers algorithmic fairness, where the equity dimension of this framework becomes the dominant one and where most of the contested AI use cases live. Track 05 closes with governance: who is actually in the room when these decisions get made, and what the clinician's role is.
         """
     )
     return

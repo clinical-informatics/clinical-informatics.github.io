@@ -1,6 +1,6 @@
 """Track 04: Algorithmic fairness and equity.
 
-Algorithms are not neutral. This notebook walks the five places bias
+Algorithms are not neutral. This notebook covers the five places bias
 enters a clinical algorithm, three landmark clinical cases (Obermeyer
 2019, Vyas et al 2020, the pulse oximeter), the fairness-metric
 impossibility result (Kleinberg, Mullainathan, Raghavan 2016), and the

@@ -326,7 +326,7 @@ def _(mo):
 
         The trend is slow but real. AI radiology tools (Course 09) increasingly produce DICOM SR outputs because they can. Some specialties (mammography with BI-RADS, lung-cancer screening with Lung-RADS, prostate MRI with PI-RADS) have moved meaningfully toward structured reporting because of the standardized templates the specialty itself adopted. The general radiology report is still mostly a PDF.
 
-        We pick up this thread in Track 05 of this course (data quality) and in Course 10 (NLP and clinical text), since extracting structured data from radiology PDFs is one of the largest NLP use cases in clinical informatics.
+        This thread continues in Track 05 of this course (data quality) and in Course 10 (NLP and clinical text), since extracting structured data from radiology PDFs is one of the largest NLP use cases in clinical informatics.
         """
     )
     return
@@ -410,7 +410,7 @@ def _(mo):
 
         Imaging is the part of the clinical data ecosystem that lives in parallel to the EHR rather than inside it. Four systems collaborate on every study (EHR, RIS, modality, PACS), DICOM is the lingua franca between them, and the radiologist's interpretation lands on the chart as a PDF even when the structured-reporting machinery exists to do better.
 
-        Track 05 picks up the PDF-versus-structured-data tension as one instance of the broader real-world data-quality story. The capstone of this course is where the five tracks converge.
+        Track 05 covers the PDF-versus-structured-data tension as one instance of the broader real-world data-quality story. The capstone of this course is where the five tracks converge.
         """
     )
     return

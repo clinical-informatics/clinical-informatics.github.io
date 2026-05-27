@@ -147,7 +147,7 @@ def _(mo):
 
         Everything in this capstone is real work. The bundle you'll audit is the same `fhir-bundle.json` that has shown up since Track 1. The OperationOutcome you'll triage was returned by hapi.fhir.org's `Bundle/$validate` endpoint against that bundle. The 22 errors and 40 warnings are not a teaching contrivance; they're the artifact the public validator actually emitted, and the work is deciding which of those findings block a production hand-off and which are validator configuration noise.
 
-        You will move through eight steps that walk the six tracks of the course in sequence: a bundle-anatomy view (Track 1), scope (Tracks 0 + 4), profile selection (Tracks 1 + 3 + 4), a real validator verdict (Tracks 2 + 3), triage (Tracks 3 + 4), prioritized fixes (Track 3), SMART access for a downstream registry app (Track 5), and portability versus interoperability with a forward look to course 07 (Tracks 0 + 4). Six of the eight steps are Socratic: they gate a sample answer behind a written commit from you. The other two are display steps that show what the bundle and the validator report contain. At the end the notebook assembles your seven written answers into a one-page hand-off document.
+        Eight steps cover the six tracks of the course in sequence: a bundle-anatomy view (Track 1), scope (Tracks 0 + 4), profile selection (Tracks 1 + 3 + 4), a real validator verdict (Tracks 2 + 3), triage (Tracks 3 + 4), prioritized fixes (Track 3), SMART access for a downstream registry app (Track 5), and portability versus interoperability with a forward look to course 07 (Tracks 0 + 4). Six of the eight steps are Socratic: they gate a sample answer behind a written commit from you. The other two are display steps that show what the bundle and the validator report contain. At the end the notebook assembles your seven written answers into a one-page hand-off document.
         """
     )
     return
@@ -302,7 +302,7 @@ def _(Counter, mo, validation):
 @app.cell
 def _(commit_text):
     triage_widget, triage_ready = commit_text(
-        "**Step 4. Triage (Tracks 3 + 4).** The validator returned 22 errors and 40 warnings. Walk through the categories above and say which of them are real findings against the bundle, which are artifacts of the public validator's configuration, and what action each category implies before the hand-off.",
+        "**Step 4. Triage (Tracks 3 + 4).** The validator returned 22 errors and 40 warnings. Go through the categories above and say which of them are real findings against the bundle, which are artifacts of the public validator's configuration, and what action each category implies before the hand-off.",
         min_chars=200,
     )
     triage_widget
@@ -486,7 +486,7 @@ def _(mo):
         r"""
         ## What you did in this capstone.
 
-        You walked the six tracks of the course in sequence and applied each one to a single real artifact:
+        You covered the six tracks of the course in sequence and applied each one to a single real artifact:
 
         - **Track 0 (Before FHIR)** when you decided what *belongs* in a clinical snapshot versus what belongs in a longitudinal feed or a claims pipeline. The framing of "different jobs, different layers" is Track 0's mental model applied to a packaging decision.
         - **Track 1 (FHIR fundamentals)** when you read the bundle's seventeen entries by resource type, recognized the internal-reference pattern (`urn:uuid:` plus `fullUrl`), and noticed which resources already carried a `meta.profile` declaration.
@@ -501,7 +501,7 @@ def _(mo):
 
         The fluency you built in this course continues into two adjacent courses immediately:
 
-        - **Course 07 (Data wrangling and engineering)** picks up the portability vs interoperability split and walks OMOP end-to-end. The Step 7 sample answer is a preview of the framing course 07 takes seriously across all five tracks.
+        - **Course 07 (Data wrangling and engineering)** continues the portability vs interoperability split and covers OMOP end-to-end. The Step 7 sample answer is a preview of the framing course 07 takes seriously across all five tracks.
         - **Course 12 (Clinical decision support)** comes back to FHIR through CDS Hooks and CQL. The bundle you just hand-handed off is exactly the data shape a CDS Hooks service would receive as the patient context for a `patient-view` hook; the scope discussion in Step 6 is the negotiation that determines whether the service can read it. CDS Hooks is introduced at the concept level in Track 5; course 12 builds the rest.
 
         Other entries you'll meet again with this fluency in hand: course 09 (AI in medicine) when a clinical prediction service is delivered as a SMART app over FHIR; course 11 (health economics) when claims and clinical data are joined to evaluate value-based care; and course 14 (interoperability policy) when the 21st Century Cures Act and ONC information-blocking rules name the FHIR endpoints whose existence the rest of this course assumed.

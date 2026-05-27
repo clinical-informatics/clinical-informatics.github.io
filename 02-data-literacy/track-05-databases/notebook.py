@@ -333,7 +333,7 @@ def _(bad_insert, conn, mo, pd):
             "tier": "schema-check",
             "expected_outcome": (
                 "**Caught.** The CHECK constraint enforces the FHIR-aligned value set. `'F'` is not in the allowed list. "
-                "This is how a schema bakes in clinical value sets: the database refuses to accept anything outside them. "
+                "Schemas bake in clinical value sets by this mechanism: the database refuses to accept anything outside them. "
                 "The cleaning that Track 01 did at analysis time is done once, at insert time, by the schema."
             ),
         },
@@ -461,7 +461,7 @@ def _(mo):
 
         ### FHIR (course 06): an *interoperability* schema
 
-        FHIR specifies clinical resources designed to *travel*. A `Patient` resource is not just any table with a primary key; it's a FHIR `Patient` resource with mandatory fields, allowed value sets, and a published JSON shape. The constraints that this track called `CHECK` show up in FHIR as **profiles** (US Core, mCODE, etc.) and **value set bindings**. The foreign keys show up as **references** between resources. The relational thinking is the same; the clinical semantics are layered on top.
+        FHIR specifies clinical resources designed to *travel*. A `Patient` resource is more than a table with a primary key. It carries mandatory fields, allowed value sets, and a published JSON shape. The constraints that this track called `CHECK` show up in FHIR as **profiles** (US Core, mCODE, etc.) and **value set bindings**. The foreign keys show up as **references** between resources. The relational thinking is the same; the clinical semantics are layered on top.
 
         ### OMOP (course 07): an *analysis* schema
 

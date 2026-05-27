@@ -215,9 +215,9 @@ def _(mo):
 
         Three different representations of the same clinical fact, in three different systems, with one of them outright contradicting the other two. A naive query that filters for "current penicillin allergy" might:
 
-        - Pick up row 9 only, miss row 10.
-        - Pick up row 10 only, miss row 9.
-        - Pick up both rows 9 and 10, and also pick up row 11's NKDA (and not know which one to trust).
+        - Return row 9 only, miss row 10.
+        - Return row 10 only, miss row 9.
+        - Return both rows 9 and 10, and also return row 11's NKDA (and not know which one to trust).
 
         This is the most painful single class of data-quality problem because it conflates two issues: terminology drift (the *same* fact written with different code systems) and concordance failure (the *contradicting* fact written by mistake or in a different context).
 
@@ -390,7 +390,7 @@ def _(xref):
         topic="Documenting what was done to the data",
         body=(
             "Every data-quality fix you apply is a *transformation* of the data, and the next analyst (or "
-            "future you) needs to know what was done. Course 13 (Research reproducibility) Track 4 picks up "
+            "future you) needs to know what was done. Course 13 (Research reproducibility) Track 4 covers "
             "this problem explicitly: data provenance is the practice of recording where the dataset came from "
             "and every change applied to it, in a form that someone else can reconstruct. The audit you do "
             "in the course capstone produces a finding list. The provenance documentation Course 13 teaches "

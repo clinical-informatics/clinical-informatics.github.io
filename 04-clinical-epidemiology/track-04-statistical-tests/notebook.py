@@ -83,7 +83,7 @@ def _(mo):
         | Continuous | Time-to-event | (n/a) | Cox regression |
         | Any | Count | (any) | Poisson regression (or negative binomial when overdispersed) |
 
-        The interactive below walks the four questions and gives back the test plus the one-line reasoning. Use it as a checker for any analysis you read.
+        The interactive below applies the four questions and returns the test plus the one-line reasoning. Use it as a checker for any analysis you read.
         """
     )
     return
@@ -324,7 +324,7 @@ def _(alt, mo, np, pd, scenario_picker, stats):
         "the parametric and non-parametric tests reach similar conclusions, "
         "with the t-test slightly more powerful."
         if not _scenario.startswith("Skewed")
-        else "**The two tests disagree.** Mann-Whitney's small p-value picks up "
+        else "**The two tests disagree.** Mann-Whitney's small p-value detects "
              "the rank-based difference that the t-test misses. The t-test sees "
              "a large variance in the untreated arm (driven by the outlier) and "
              "concludes the means are not reliably different. If you had reported "

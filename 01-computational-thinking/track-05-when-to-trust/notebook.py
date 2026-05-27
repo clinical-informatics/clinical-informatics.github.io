@@ -286,7 +286,7 @@ def _(decision, mo):
     elif decision.value.startswith("Pilot in one unit"):
         d_resp = mo.callout(
             mo.md(
-                "**Most defensible given what you know.** Multiple gaps across the four questions, but the model is not disqualified outright. The proportionate response is to pilot, in writing, with explicit subgroup performance monitoring (broken out by your catchment's specific subgroups, not the vendor's aggregate categories), a clear stopping rule (subgroup AUC below 0.70, calibration error above some threshold, alert PPV below some floor), and a duration that captures seasonality and at least one EHR-upgrade cycle. This is how you convert the four-question gaps into local evidence rather than waiting to discover them through patient harm."
+                "**Most defensible given what you know.** Multiple gaps across the four questions, but the model is not disqualified outright. The proportionate response is to pilot, in writing, with explicit subgroup performance monitoring (broken out by your catchment's specific subgroups, not the vendor's aggregate categories), a clear stopping rule (subgroup AUC below 0.70, calibration error above some threshold, alert PPV below some floor), and a duration that captures seasonality and at least one EHR-upgrade cycle. A pilot converts the four-question gaps into local evidence rather than letting them surface through patient harm."
             ),
             kind="success",
         )
@@ -329,7 +329,7 @@ def _(mo):
 
         ## What's next.
 
-        **The course capstone.** A Socratic walkthrough where you design your own clinical decision rule, drawing on decomposition (Track 01), edge-case generation (Track 02), abstraction (Track 03), algorithmic reading (Track 04), and the trust framework (this track). The output is a written design document an implementation team could pick up. That document is what fluency in computational thinking looks like applied to your own work, and it is the artifact you can carry into the next real CDS conversation you find yourself in.
+        **The course capstone.** A Socratic walkthrough where you design your own clinical decision rule, drawing on decomposition (Track 01), edge-case generation (Track 02), abstraction (Track 03), algorithmic reading (Track 04), and the trust framework (this track). The output is a written design document an implementation team could act on. That document is what fluency in computational thinking looks like applied to your own work, and it is the artifact you can carry into the next real CDS conversation you find yourself in.
         """
     )
     return

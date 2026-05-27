@@ -14,6 +14,6 @@ The second half is the **physical view**. Where those tables actually sit. Block
 
 **How to start:** open `notebook.py` in Marimo. The notebook loads cleanly against the synthetic Ms. Reyes Epic-style export shipped with the curriculum and uses an in-memory SQLite database for the SQL examples.
 
-**Companion reading:** `01.1-internal-structure.md` in this folder is the reference essay. The notebook focuses on what you can do interactively; the essay walks the moves and the vocabulary at your own pace.
+**Companion reading:** `01.1-internal-structure.md` in this folder is the reference essay. The notebook focuses on what you can do interactively; the essay covers the moves and the vocabulary at your own pace.
 
-**What's next:** Track 02 (HL7 v2, CDA, and what we inherited) picks up where this one ends. Track 03 (clinical data warehouses) is where the population-query problem this track surfaces gets a real answer.
+**What's next:** Track 02 (HL7 v2, CDA, and what we inherited) continues where this one ends. Track 03 (clinical data warehouses) is where the population-query problem this track surfaces gets a real answer.

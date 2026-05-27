@@ -318,7 +318,7 @@ def _(mo):
         r"""
         Reyes is on three chronic medications. Row 1 is the methotrexate she started at her first office visit. Row 2 is the adalimumab added in January 2024 when methotrexate alone proved insufficient. Row 3 is the folic acid supplementation paired with methotrexate. Row 4 is the one short prednisone taper she received during a 2025 flare; it is the only row with a non-empty `drug_exposure_end_date`, because the rest are ongoing chronic medications.
 
-        Three columns are worth noting.
+        Three columns deserve attention.
 
         - `drug_concept_id` is the standardized RxNorm-aligned identifier. Concept 1503297 is methotrexate at the ingredient level. The same integer would be used for every methotrexate prescription written at any OMOP-conformant institution.
         - `days_supply` is the prescribed duration of the supplied quantity. Chronic medications often have `days_supply` of 28 or 30 per prescription, with refills_remaining recorded separately.

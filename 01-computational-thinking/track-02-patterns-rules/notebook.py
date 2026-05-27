@@ -52,7 +52,7 @@ def _(mo):
 
         Every clinical decision rule, score, or alert is a pattern. *"Adult inpatients meeting two SIRS criteria with chart evidence of an infectious source are likely septic."* That one sentence covers thousands of patients with broadly the same phenotype.
 
-        The point is the abstraction. If you had to write a separate rule per patient, you wouldn't have a rule. You'd have a chart. A pattern lets you cover the regular cases with one specification and reserve the irregular ones for clinical judgment. The whole leverage of CDS comes from the abstraction holding.
+        Abstraction is what makes a rule a rule. Without it, a separate rule per patient is required, which is not a rule but a chart. A pattern covers the regular cases with one specification and reserves the irregular ones for clinical judgment. The whole leverage of CDS comes from the abstraction holding.
 
         The trouble is which patients are which.
         """
@@ -84,7 +84,7 @@ def _(mo):
         r"""
         ## Today's census.
 
-        The medicine floor census from Track 01, expanded with three new admits the day team picked up. The "actual" column is the clinical ground truth: the diagnosis you'd settle on at the end of the workup. The "alert?" column reflects the rule as you left it in Track 01:
+        The medicine floor census from Track 01, expanded with three new admits the day team admitted. The "actual" column is the clinical ground truth: the diagnosis you would settle on at the end of the workup. The "alert?" column reflects the rule as you left it in Track 01:
 
         > **Adult medicine inpatient, not post-op within 48 hours, HR > 100 AND temp > 38.5°C, with chart evidence of an infectious source.**
 

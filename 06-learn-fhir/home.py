@@ -40,7 +40,7 @@ def _(mo):
 
         ### Capstone
 
-        **Author and validate a complete FHIR record for Ms. Reyes on hapi.fhir.org.** Eight steps walking the six tracks in sequence on Ms. Reyes's real bundle: bundle anatomy, scope, profile selection, a real cached `Bundle/$validate` OperationOutcome from hapi.fhir.org (22 errors and 40 warnings), triage, prioritized fixes, SMART access for a downstream registry app, and the portability vs interoperability frame with a forward look to course 07. Six of the eight steps are Socratic commit-and-reveal; the other two are display steps. Output is a one-page hand-off document.
+        **Author and validate a complete FHIR record for Ms. Reyes on hapi.fhir.org.** Eight steps covering the six tracks in sequence on Ms. Reyes's real bundle: bundle anatomy, scope, profile selection, a real cached `Bundle/$validate` OperationOutcome from hapi.fhir.org (22 errors and 40 warnings), triage, prioritized fixes, SMART access for a downstream registry app, and the portability vs interoperability frame with a forward look to course 07. Six of the eight steps are Socratic commit-and-reveal; the other two are display steps. Output is a one-page hand-off document.
 
         ---
 

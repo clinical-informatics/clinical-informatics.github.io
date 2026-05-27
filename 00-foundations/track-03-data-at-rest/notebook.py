@@ -30,7 +30,7 @@ def _(mo):
 
         Most clinical informatics conversations turn on a question that sounds technical and is actually plain language: where is the data, and what shape is it in? When the EHR is slow on Tuesday morning, the right person to ask depends on whether the bottleneck is the database, the network, or the application. When a research request takes nine weeks, the reason usually lives in a difference between two storage systems that were designed for different jobs. When a vendor says their tool can ingest "any format," they mean it can read four of them.
 
-        This track gives you the vocabulary for those conversations. No code, no schemas. By the end of the track you will be able to name the four file types most of clinical data lives in, sketch the difference between a file and a database, and explain why every health system has two big databases instead of one.
+        This track gives you the vocabulary for those conversations. No code, no schemas. The track names the four file types most of clinical data lives in, sketches the difference between a file and a database, and explains why every health system has two big databases instead of one.
         """
     )
     return
@@ -127,8 +127,8 @@ def _(mo, shape_picker):
                 "**Graphs.** A network of relationships, where the relationships are as important "
                 "as the things being related. The classic clinical example is a **drug-interaction "
                 "network**: every medication is a node; every known interaction is an edge between "
-                "two nodes; the question *does this combination interact* becomes a walk through "
-                "the graph. Another example is a **knowledge graph** of clinical concepts: "
+                "two nodes; the question *does this combination interact* becomes a traversal "
+                "through the graph. Another example is a **knowledge graph** of clinical concepts: "
                 "*rheumatoid arthritis* connects to *methotrexate* through the relationship "
                 "*may-be-treated-with* and to *anti-CCP* through *commonly-associated-finding*. "
                 "Graphs handle problems where the shape of the relationships matters and a table "
@@ -145,8 +145,8 @@ def _(mo, shape_picker):
                 "a **FHIR Bundle's index** lets you look up *Patient/123* and get back the patient "
                 "resource directly without scanning a table. A **session cache** in MyChart lets "
                 "the page look up *this user's last viewed lab* without a database query. The "
-                "shape is simple but powerful for problems where you know exactly what you are "
-                "looking for and you want it fast. Key-value stores power most of the modern web."
+                "shape is simple and very fast for problems where you know exactly what you "
+                "are looking for. Key-value stores back most of the modern web."
             ),
             kind="info",
         )
@@ -740,7 +740,7 @@ def _(mo):
         ## What you did in this track.
 
         - Named the four data structures (tables, trees, graphs, key-value) and matched each one to the kind of clinical data it holds.
-        - Walked the four file types (TXT, CSV, JSON, XML) the field actually uses, with a one-screen example of each and an honest sense of where each one wins.
+        - Covered the four file types (TXT, CSV, JSON, XML) the field actually uses, with a one-screen example of each and an honest sense of where each one wins.
         - Distinguished file from database, and named the three things a database buys you that a folder of files does not (constraints, concurrency, query optimization).
         - Sketched a relational database as tables linked by keys.
         - Named **OLTP vs OLAP**: the EHR is transactional, the CDW is analytical, the two databases exist because the two jobs cannot share one.

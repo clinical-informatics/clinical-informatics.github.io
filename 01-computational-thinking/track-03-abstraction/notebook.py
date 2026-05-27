@@ -159,7 +159,7 @@ def _(mo):
 
         Pick the features that belong in the model. The deployment memo below regenerates as you change the selection.
 
-        There is no scoring rubric here. The point is the reasoning, not the count. Whatever you pick, you should be able to defend each inclusion (why is this in?) and each exclusion (why isn't this in?) to a reviewer.
+        There is no scoring rubric here. The reasoning is what matters, not the count. Every inclusion and every exclusion should have a defensible answer when a reviewer asks why.
         """
     )
     return

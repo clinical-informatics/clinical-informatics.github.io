@@ -147,7 +147,7 @@ def _(mo):
 
         The wire format is the same. A FHIR resource is a JSON object with a `resourceType`, an optional `id`, and a set of fields appropriate to that type. The difference is responsibility. As a reader you trusted whatever the sender wrote. As a writer, you *are* the sender, and the receiver will reject your resource if it's malformed.
 
-        By the end of this track:
+        The track closes with:
 
         - You can identify the minimum required fields for Observation, Condition, MedicationRequest, and Encounter.
         - You understand what a profile is (a constrained version of a base resource) and what must-support means (a contract on the receiver, not the sender).

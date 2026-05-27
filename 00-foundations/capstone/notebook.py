@@ -463,7 +463,7 @@ def _(mo):
 
         This was orientation. The work was naming what you already knew implicitly: that clinical informatics is its own field with its own history; that data is not data alone but lives in layers and stages; that the systems clinical work runs on have a shape you can describe; that the people who built and maintain those systems have titles and roles you can name; and that the org chart of U.S. healthcare is knowable.
 
-        The rest of the curriculum builds on this. The same Ms. Reyes you met in Track 01 will appear in every course. The same DIKW vocabulary will be used to talk about predictions, about CDS alerts, about NLP extractions. The same lifecycle will be walked through for FHIR resources, for OMOP records, for claims. The same actor groups will be the ones whose agreement everything else depends on.
+        The rest of the curriculum builds on this. The same Ms. Reyes you met in Track 01 will appear in every course. The same DIKW vocabulary will be used to talk about predictions, about CDS alerts, about NLP extractions. The same lifecycle will apply to FHIR resources, to OMOP records, to claims. The same actor groups will be the ones whose agreement everything else depends on.
 
         **What's next.** Most learning paths in `start-here/learning-paths.md` route from here into `01-computational-thinking`. Open it from the file tree on the left, or run `marimo run 01-computational-thinking/home.py` to launch its menu.
         """

@@ -1,7 +1,7 @@
 """Track 04: Joins, the central skill.
 
 Every clinical analysis is a join. The mechanics are simple; the trap is
-what you don't see. This notebook walks the four basic joins (inner,
+what you don't see. This notebook covers the four basic joins (inner,
 left, right, full outer) plus the anti-join on a real-looking RA cohort,
 then exposes the silent patient loss problem with a reactive UI. The
 many-to-many row explosion gets its own demo at the end.
@@ -526,7 +526,7 @@ def _(mo):
         4. **Composite keys are normal.** A clean clinical join is almost always `(patient_id, encounter_date)` or `(patient_id, specimen_date, loinc_code)`, not just `patient_id`.
         5. **Many-to-many joins explode the row count** when the key is non-unique on both sides. Always know the unique key on each table before joining.
 
-        Track 05 picks up from here. Once you can join tables, the next question is: *what was the table designed for?* Joins behave the way they do because of schema decisions the database designer made. Track 05 unpacks the schema layer that makes the joins work, with a forward pointer to FHIR and OMOP for the standardized clinical versions.
+        Track 05 continues from here. Once joins are second nature, the next question is: *what was the table designed for?* Joins behave the way they do because of schema decisions the database designer made. Track 05 covers the schema layer that makes the joins work, with a forward pointer to FHIR and OMOP for the standardized clinical versions.
         """
     )
     return

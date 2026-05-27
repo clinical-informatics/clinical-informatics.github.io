@@ -1,6 +1,6 @@
 # Track 05: The American health system and its parts
 
-The boundaries Track 04 walked through (LAN to firewall, firewall to internet, internet to vendor cloud, vendor cloud to research collaborator) are between systems run by different actors. *We need ONC to certify this*, *the BAA with the vendor is the blocker*, *CMS will pay for it under the new rule*, *the IRB owns the research authorization*, *LOINC won't have a code for that for two cycles*: each of those sentences references a specific actor doing a specific job. This track is the org chart. Knowing the actors is most of what makes the sentences legible.
+The boundaries Track 04 covered (LAN to firewall, firewall to internet, internet to vendor cloud, vendor cloud to research collaborator) are between systems run by different actors. *We need ONC to certify this*, *the BAA with the vendor is the blocker*, *CMS will pay for it under the new rule*, *the IRB owns the research authorization*, *LOINC won't have a code for that for two cycles*: each of those sentences references a specific actor doing a specific job. This track is the org chart. Knowing the actors is most of what makes the sentences legible.
 
 Seven sets of actors do most of the work.
 

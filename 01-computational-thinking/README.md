@@ -64,7 +64,7 @@ Concepts introduced here return in:
 - **09: AI in medicine**, in the appraisal of a published clinical model.
 - **12: Clinical decision support**, in the design of a real CDS rule.
 
-Each later course flags when it picks up a thread from here.
+Each later course flags when it continues a thread from here.
 
 ---
 

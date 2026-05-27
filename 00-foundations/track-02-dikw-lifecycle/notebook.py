@@ -1,9 +1,9 @@
 """Track 02: DIKW and the lifecycle of clinical data.
 
-Plain English orientation. No code visible. The DIKW pyramid walked layer
-by layer using Ms. Reyes's CRP, with Frické's 2009 critique cited honestly.
-Then the lifecycle of clinical data (capture, store, use, share, retire)
-walked through with the same CRP as a worked example.
+Plain English orientation. No code visible. The DIKW pyramid presented
+layer by layer using Ms. Reyes's CRP, with Frické's 2009 critique cited
+honestly. Then the lifecycle of clinical data (capture, store, use, share,
+retire) presented with the same CRP as a worked example.
 """
 
 import marimo
@@ -32,7 +32,7 @@ def _(mo):
 
         That is **a number on a screen**. By itself, it is not yet anything else. It is not a diagnosis. It is not a recommendation. It is not even, strictly, a fact about Ms. Reyes; it is a fact about a tube of her blood that a laboratory analyzer ran on the morning of the eighth.
 
-        What turns that number into a clinical decision later in the visit is a series of steps that informatics has a name for. This track puts a vocabulary around those steps. The first half names the layers (data, information, knowledge, wisdom). The second half walks the same CRP through the lifecycle (capture, store, use, share, retire) and notices that the layering happens at every stage, not once.
+        What turns that number into a clinical decision later in the visit is a series of steps that informatics has a name for. This track puts a vocabulary around those steps. The first half names the layers (data, information, knowledge, wisdom). The second half follows the same CRP through the lifecycle (capture, store, use, share, retire) and notes that the layering happens at every stage, not once.
         """
     )
     return
@@ -193,7 +193,7 @@ def _(mo):
             "4. Share.",
             "5. Retire.",
         ],
-        label="Pick a lifecycle stage. Same CRP, walked through each one.",
+        label="Pick a lifecycle stage. Same CRP at each one.",
         value="1. Capture.",
     )
     stage_picker
@@ -419,9 +419,9 @@ def _(mo):
         r"""
         ## What you did in this track.
 
-        - Walked Ms. Reyes's CRP through the four layers of DIKW (data, information, knowledge, wisdom) and saw what each layer adds.
+        - Traced Ms. Reyes's CRP through the four layers of DIKW (data, information, knowledge, wisdom) and saw what each layer adds.
         - Read Frické's critique honestly: the layers blur, the direction of flow is not strictly bottom-up, and the field treats DIKW as vocabulary, not gospel.
-        - Walked the same value through the lifecycle (capture, store, use, share, retire) and named the failure modes at each stage.
+        - Traced the same value through the lifecycle (capture, store, use, share, retire) and named the failure modes at each stage.
         - Located one common clinical failure (the patient alone with a context-stripped value at 11 p.m.) at a specific intersection of stage and layer.
 
         ## What's next.

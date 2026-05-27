@@ -66,7 +66,7 @@ def _(mo):
 def _(first_move, mo):
     if first_move.value is None:
         response = mo.callout(
-            mo.md("_Pick something. There's no wrong answer; the point is to notice what you did._"),
+            mo.md("_Pick something. There is no wrong answer; the exercise is to notice what you did._"),
             kind="neutral",
         )
     elif first_move.value.startswith("Look at a handful"):
@@ -453,7 +453,7 @@ def _(mo):
 
         ## What's next.
 
-        **Track 02: Patterns, rules, and edge cases.** Every clinical rule is a pattern, and every pattern has edge cases. You'll take the rule you finish this notebook with, stack candidate changes onto it, and watch the catalogue of edge cases regenerate. By the end of Track 02 you'll have a working rule plus a written catalogue of the patients it gets wrong. That is what a fielded rule actually looks like.
+        **Track 02: Patterns, rules, and edge cases.** Every clinical rule is a pattern, and every pattern has edge cases. Track 02 takes the rule you finish this notebook with, stacks candidate changes onto it, and watches the catalogue of edge cases regenerate. Track 02 closes with a working rule plus a written catalogue of the patients it gets wrong. That is what a fielded rule actually looks like.
         """
     )
     return

@@ -9,10 +9,11 @@ thing.
 
 The notebook closes with a diagnosis. Ms. Elena Reyes has two
 synthetic EHR exports in this curriculum: one shaped like Epic
-Clarity, one shaped like Cerner Millennium. You'll walk four real
-differences between them and classify each one. By the end you can
-look at any "the two systems can't talk" complaint and say, with
-specificity, which layer the problem is living at.
+Clarity, one shaped like Cerner Millennium. The exercise presents four
+real differences between them and asks for a classification of each.
+The track closes with a layer-naming habit for any "the two systems
+can't talk" complaint: name, with specificity, which layer the
+problem is living at.
 """
 
 import marimo
@@ -139,7 +140,7 @@ def _(matchups, mo):
 
     if not chosen:
         feedback = mo.callout(
-            mo.md("_Pick at least one. The point is to notice which fields hold the same fact even when their names disagree._"),
+            mo.md("_Pick at least one. The exercise is to notice which fields hold the same fact even when their names disagree._"),
             kind="neutral",
         )
     elif chosen == same_fact:
@@ -977,7 +978,7 @@ def _(mo):
 @app.cell
 def _(mo):
     reflection = mo.ui.text_area(
-        placeholder="Two or three sentences. No grading; the point is writing it.",
+        placeholder="Two or three sentences. No grading; the exercise is writing it.",
         rows=4,
         full_width=True,
         label=(
@@ -1004,8 +1005,8 @@ def _(mo):
         ## What you did in this track.
 
         - You put four foundational ideas in place before meeting a single FHIR resource: data has three shapes (spreadsheet, database, document); the web is three boring agreements (HTTP, REST, JSON); health data standards layer (HL7 v2 still moves the lab traffic inside hospitals, CDA still moves the documents between organizations, FHIR is the new boundary layer); and the paper-chart-to-EHR-to-FHIR continuity is a story about each step keeping what was useful and adding a new layer.
-        - You walked four real differences between Ms. Reyes's Epic-style and Cerner-style exports and named which interoperability layer each one lives at: structure, terminology, terminology, content.
-        - You picked up a five-layer framework for diagnosing any "the two systems can't talk to each other" complaint.
+        - You traced four real differences between Ms. Reyes's Epic-style and Cerner-style exports and named which interoperability layer each one lives at: structure, terminology, terminology, content.
+        - You gained a five-layer framework for diagnosing any "the two systems can't talk to each other" complaint.
 
         That last piece is the move worth keeping. Most interop arguments at work are arguments about which of the five layers is broken. As soon as someone names the layer, the conversation can move.
 

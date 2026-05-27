@@ -126,7 +126,7 @@ def _(mo):
     mo.md(r"""
     ## 3. The four shapes of untidy data
 
-    Each of these four shapes is a real export you might receive. Each one breaks one of the tidy rules in a characteristic way. For each, you'll see the untidy version and the tidy target side by side.
+    Each of these four shapes is a real export you might receive. Each one breaks one of the tidy rules in a characteristic way. The untidy version and the tidy target are shown side by side for each.
 
     | # | Shape | Definition | Which tidy rule it breaks |
     |---|---|---|---|
@@ -227,7 +227,7 @@ def _(mo, pd):
             mo.ui.table(long_labs_display, selection=None),
             mo.md(
                 "**Tidy (what the per-visit analysis wants).** Wide. 3 rows × 4 columns. "
-                "Each row is one visit. The three labs are columns. Now you can write `df['CRP'] > df['ESR'] / 2` and ask flare-pattern questions row by row."
+                "Each row is one visit. The three labs are columns. A query like `df['CRP'] > df['ESR'] / 2` then asks flare-pattern questions row by row."
             ),
             mo.ui.table(tidy_labs_wide_display, selection=None),
             mo.callout(

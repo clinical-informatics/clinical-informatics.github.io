@@ -46,7 +46,7 @@ def _(mo):
         This track has five jobs:
 
         1. **Name the vocabulary** that runs every HIPAA conversation: PHI, covered entities, business associates, the four pillars.
-        2. **Walk the two de-identification paths** the Privacy Rule provides: Safe Harbor (mechanical) and Expert Determination (actuarial).
+        2. **Cover the two de-identification paths** the Privacy Rule provides: Safe Harbor (mechanical) and Expert Determination (actuarial).
         3. **Explain the Limited Data Set + Data Use Agreement middle path**, which is the operational sweet spot for most secondary-use clinical research.
         4. **Cover IRB basics**: when review is required, what "exempt" means, what determines exempt vs expedited vs full review.
         5. **Survey the layers beyond HIPAA**: state laws, 42 CFR Part 2, GDPR, the apps/wearables gap.
@@ -427,7 +427,7 @@ def _(mo):
         4. **IRB categories.** Not human-subjects research, exempt, expedited, full board. The right move is to get a determination from your local IRB, not to assume.
         5. **The layers beyond HIPAA.** State laws (CCPA, BIPA, MHMDA), 42 CFR Part 2, GDPR, the apps/wearables gap. HIPAA-compliant is necessary; it is rarely sufficient.
 
-        Track 03 takes the ethics layer that sits on top of the legal layer. Most research that is HIPAA-compliant is also ethically defensible, but the categories of "legal" and "right" are not identical, and Track 03 walks the gap.
+        Track 03 takes the ethics layer that sits on top of the legal layer. Most research that is HIPAA-compliant is also ethically defensible, but the categories of "legal" and "right" are not identical, and Track 03 addresses the gap.
         """
     )
     return

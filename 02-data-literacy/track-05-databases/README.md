@@ -2,7 +2,7 @@
 
 A spreadsheet is a piece of paper that does arithmetic. A database is a system that refuses to store data it can prove is wrong.
 
-That difference is the whole track. By the end you should be able to look at a clinical data system and see, behind the rows-and-columns view, the schema that defines what is and is not a legal value, the constraints that catch bugs before they ship, and the relations that make the joins of Track 04 possible at all.
+That difference is the whole track. The reader should leave able to look at a clinical data system and see, behind the rows-and-columns view, the schema that defines what is and is not a legal value, the constraints that catch bugs before they ship, and the relations that make the joins of Track 04 possible at all.
 
 Five pieces:
 

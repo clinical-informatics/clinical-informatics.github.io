@@ -4,7 +4,7 @@
 
 Decomposition (Track 01) takes a rule apart. Patterns and edge cases (Track 02) put it back together while watching the trades. Abstraction is the third move, and the one that lets a rule survive deployment: choosing what to leave out. Every feature you include is a debt (data quality, drift, monitoring, explanation, equity surveillance). Every feature you exclude is a bet that the rule will work without it. The skill is making both decisions deliberately, with reasoning you could defend to a reviewer.
 
-This track works through the readmission-model scenario above. You will read a catalogue of candidate features, pick the ones that go in, and watch a deployment memo regenerate live with the equity, leakage, and missingness consequences of your choices. The output is a fifteen-line memo describing a model a real implementation team could pick up.
+This track works through the readmission-model scenario above. The interactive presents a catalogue of candidate features, lets you select which ones go in, and regenerates a deployment memo live with the equity, leakage, and missingness consequences of your choices. The output is a fifteen-line memo describing a model a real implementation team could take forward.
 
 
 **Prerequisite:** Tracks 01 and 02. The vocabulary (cohort, signals, thresholds, time window, data source, trigger moment; phenotypic mimics, suppressed signals, off-cohort, off-window, missing data) is reused here without re-introduction.

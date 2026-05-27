@@ -393,7 +393,7 @@ def _(mo, venue_options):
         label=(
             "C. A short methods note proposing a new way of evaluating the calibration of "
             "clinical prediction models in subgroups defined by race and ethnicity, with a worked "
-            "example on a publicly available dataset. The authors want the method picked up "
+            "example on a publicly available dataset. The authors want the method adopted "
             "quickly by other groups working on algorithmic fairness."
         ),
     )
@@ -408,7 +408,7 @@ def _(mo, sub_c):
     elif sub_c.value == "JAMIA Open":
         c_resp = mo.callout(
             mo.md(
-                "**Yes, for the *picked up quickly* goal.** JAMIA Open's open access means other "
+                "**Yes, for the *adopted quickly* goal.** JAMIA Open's open access means other "
                 "groups working on algorithmic fairness will encounter the method without a "
                 "paywall. A short methods note is a good fit; the journal publishes them. The "
                 "trade-off vs. JAMIA proper: JAMIA Open lowers the access barrier at the cost of "
@@ -520,7 +520,7 @@ def _(mo):
         ## What you did in this track.
 
         - Named the working titles in the field (CMIO, CNIO, CRIO, clinical informaticist, clinical data scientist, health IT) and what each one actually does day to day.
-        - Walked the training pathways (AMIA 10x10, master's and PhD programs, ACGME-accredited fellowships, the Clinical Informatics board certification, the parallel nursing and other allied pathways) and noticed the field moving from *learned on the job* toward *formally trained*.
+        - Covered the training pathways (AMIA 10x10, master's and PhD programs, ACGME-accredited fellowships, the Clinical Informatics board certification, the parallel nursing and other allied pathways) and noted the field moving from *learned on the job* toward *formally trained*.
         - Heard the orienting paragraph on the field's ethics and saw where the deep treatment lives later in the curriculum (Course 03).
         - Located the five core publication venues (JAMIA, JAMIA Open, ACI, AMIA Annual Symposium proceedings, BMC MIDM) and the adjacent venues you will encounter.
         - Picked the natural first home for four very different hypothetical papers and noticed the trade-offs that drive each choice.

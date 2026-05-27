@@ -600,7 +600,7 @@ def _(mo):
 
         ## Reflection
 
-        What surprised you most in walking through this analysis? Or: when you have done observational analyses in the past, which of these three threats did you address the least carefully, and what would change about your next analysis?
+        What surprised you most in this analysis? Or: when you have done observational analyses in the past, which of these three threats did you address the least carefully, and what would change about your next analysis?
         """
     )
     return

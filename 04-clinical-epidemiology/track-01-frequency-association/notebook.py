@@ -242,7 +242,7 @@ def _(mo):
 
         1. **Case-control studies.** You sample people *by outcome*: you grab 200 patients with serious infection (cases) and 200 patients without (controls), then look back at exposures. You *cannot* compute risk this way; you chose the cases-to-controls ratio yourself. But you can still compute odds in each group and compare them. The OR is the only association measure a case-control study can give you.
 
-        2. **Logistic regression.** Every logistic-regression coefficient is on the log-odds scale. Exponentiate the coefficient and you have an OR. This is why so many papers report ORs even when the data would have supported an RR. It is a property of the model the authors chose, not always a property of the design.
+        2. **Logistic regression.** Every logistic-regression coefficient is on the log-odds scale. Exponentiate the coefficient and you have an OR. So many papers report ORs even when the data would have supported an RR because of the model the authors chose, not because of the design.
 
         **The rare-disease approximation.** When the outcome is uncommon (say, under 10% in both groups), OR ≈ RR. When the outcome is common, the OR exaggerates: an OR of 2 might correspond to an RR of 1.4. Clinicians routinely misread common-outcome ORs as if they were RRs. They aren't.
         """
