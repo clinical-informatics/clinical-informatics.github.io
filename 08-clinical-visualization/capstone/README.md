@@ -1,9 +1,9 @@
-# Capstone: course 08
+# Capstone: Disease-activity dashboard for Ms. Reyes's RA cohort
 
-**Disease activity dashboard for Ms. Reyes's RA cohort: DAS28 over time, lab trends, medication history.**
+A reactive Marimo dashboard for an RA cohort of four patients (Ms. Reyes plus three synthetic peers). The reader selects a patient, picks a date range, chooses one or more labs to plot, toggles the DAS28 trajectory on or off, and toggles a medication timeline on or off. Each control re-renders the dashboard. The capstone is a building exercise: by the end the reader has assembled a usable clinical visualization tool that applies every decision discussed across the four tracks.
 
-This capstone is part of the scaffold for course 08: Clinical visualization. The notebook is a placeholder; the interactive content will be filled in as the course is built out.
+The reveal at the end summarizes the chart-type and uncertainty-display choices baked into the dashboard and contrasts them with the alternatives that would have misled.
 
-**Prerequisite:** all tracks in course 08.
+**Prerequisites:** all four tracks in this course.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left.
+**How to start:** open `notebook.py`. Marimo loads the dashboard in app mode.

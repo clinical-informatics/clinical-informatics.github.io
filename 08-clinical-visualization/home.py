@@ -1,8 +1,7 @@
 """Course 08: Clinical visualization.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Lists the four tracks plus the disease-activity dashboard
+capstone and a one-sentence description of what each one covers.
 """
 
 import marimo
@@ -25,24 +24,24 @@ def _(mo):
 
         ## Charts that communicate. Charts that mislead.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Four tracks and one capstone. Each track pairs a written introduction with an interactive Marimo notebook. Ms. Reyes's four-year lab and disease-activity trajectory carries every example.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **Choosing the right chart type** | Data type → chart type as a decision. Common mismatches and why they mislead. |
-        | 02 | **Longitudinal and time-series data** | Disease activity over time. How to show change, how to show uncertainty in a trend. |
-        | 03 | **Visualizing uncertainty** | Error bars, confidence intervals, prediction intervals. Same data, different uncertainty display, different impression. |
-        | 04 | **Common misleading patterns** | Truncated axes, cherry-picked windows, inappropriate chart types, dual axes, with real clinical examples. |
+        | 01 | **Choosing the right chart type** | Data type to chart type as a decision. Six clinical scenarios with the right chart for each and three mismatches that mislead. |
+        | 02 | **Longitudinal and time-series data** | Reyes's CRP and ESR over four years. Reference-range bands, medication annotations, smoothing decisions. |
+        | 03 | **Visualizing uncertainty** | Standard error, confidence interval, and prediction interval as three claims about the same data. |
+        | 04 | **Common misleading patterns** | Truncated axes, cherry-picked windows, dual axes, time series as bars, aggregation that hides spikes. |
 
         ### Capstone
 
-        **Disease activity dashboard for Ms. Reyes's RA cohort: DAS28 over time, lab trends, medication history.**
+        **Disease-activity dashboard for Ms. Reyes's RA cohort.** Patient selector, date-range selector, lab multi-select, DAS28 toggle, medication-timeline toggle. The dashboard assembles reactively from the controls.
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return

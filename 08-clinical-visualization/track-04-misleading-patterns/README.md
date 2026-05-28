@@ -1,14 +1,11 @@
 # Track 04: Common misleading patterns
 
-Truncated axes, cherry-picked windows, inappropriate chart types, dual axes, with real clinical examples.
+Five patterns that produce charts a clinician would believe but that misrepresent the data: a truncated y-axis that exaggerates a small change, a cherry-picked time window that hides a longer trend, a dual axis that implies a correlation the data does not support, a time series rendered as a bar chart that loses the temporal cue, and monthly aggregation that hides intra-month spikes. Each pattern is shown as a side-by-side pair (misleading on the left, honest on the right), with Ms. Reyes's labs as the working dataset throughout.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Tracks 01, 02, and 03 of this course.
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 through 02 through 03 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** the course capstone.
+**What's next:** the course capstone (disease-activity dashboard).

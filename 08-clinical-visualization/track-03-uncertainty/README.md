@@ -1,14 +1,11 @@
 # Track 03: Visualizing uncertainty
 
-Error bars, confidence intervals, prediction intervals. Same data, different uncertainty display, different impression.
+Three uncertainty objects are defined and contrasted on the same dataset: the standard error of the mean, the confidence interval, and the prediction interval. Each makes a different claim about the data, and each draws a different band on a chart. The notebook shows the three side by side on Ms. Reyes's CRP rolling mean, and the confidence-level slider lets the reader watch the bands widen as the chosen coverage rises from 50% to 99%.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Tracks 01 and 02 of this course. Familiarity with mean and standard deviation at the level of Course 04 Track 4 is assumed.
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 through 02 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 04.
+**What's next:** Track 04 (Common misleading patterns).

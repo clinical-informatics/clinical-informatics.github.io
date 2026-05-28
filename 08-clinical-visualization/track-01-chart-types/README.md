@@ -1,14 +1,11 @@
 # Track 01: Choosing the right chart type
 
-Data type → chart type as a decision. Common mismatches and why they mislead.
+Data type to chart type as a decision. Six clinical scenarios are presented, each with the chart that fits it and a short note on why. Three common mismatches are shown alongside the right chart so the contrast is visible: a pie chart with many small slices, a 3D bar chart, and a time series rendered as a bar chart. The track closes with an interactive selector that plots Ms. Reyes's 2022 CRP series in four different chart types so the reader can compare them directly.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** None within this course.
 
+**How to start:** open `notebook.py`. Marimo loads it in app mode.
 
-**Prerequisites:** None within this course; prerequisites are listed in the course README.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 02.
+**What's next:** Track 02 (Longitudinal and time-series data).
