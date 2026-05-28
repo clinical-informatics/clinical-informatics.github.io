@@ -1,14 +1,11 @@
 # Track 01: What a model actually does
 
-Intuition before math. A model as a function. What training and prediction mean.
+A clinical AI model is a function that takes inputs (patient features) and returns an output (a score, a probability, or a class label). This track defines the function, separates training from prediction, and presents a small readmission scoring example with reactive sliders so the reader can move each input feature and see the score respond. No math is shown; the goal is to make the function visible.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** None within this course. Course 04 Track 3 (the 2x2 table) is a useful anchor for the later tracks.
 
+**How to start:** open `notebook.py`. Marimo loads it in app mode.
 
-**Prerequisites:** None within this course; prerequisites are listed in the course README.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 02.
+**What's next:** Track 02 (Training, validation, overfitting).

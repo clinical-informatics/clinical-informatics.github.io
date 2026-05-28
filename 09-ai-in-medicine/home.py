@@ -1,8 +1,6 @@
 """Course 09: AI in medicine.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Six tracks plus a Socratic critical-appraisal capstone.
 """
 
 import marimo
@@ -23,28 +21,28 @@ def _(mo):
         r"""
         # 09: AI in medicine
 
-        ## Machine learning for clinicians who evaluate, not build. Explicitly deepens Track 04 (epi).
+        ## Machine learning for clinicians who evaluate, not build.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Six tracks plus a Socratic critical-appraisal capstone. The course deepens the discrimination and calibration vocabulary introduced in Course 04 Track 3, applies it to clinical model evaluation, and ends with a vendor-appraisal exercise.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **What a model actually does** | Intuition before math. A model as a function. What training and prediction mean. |
-        | 02 | **Training, validation, overfitting** | Why you can't test on what you trained on. Overfitting shown visually. |
-        | 03 | **Discrimination vs calibration** | ROC, threshold slider, 2x2, and calibration plot side by side. Why a well-discriminating model can still be useless. |
-        | 04 | **Reading an AI paper critically** | What to look for: training population, outcome, validation approach, calibration, subgroup performance. |
-        | 05 | **Bias, fairness, and clinical risk** | Where bias enters. Disparate subgroup performance. What to ask a vendor. |
-        | 06 | **LLMs in clinical workflows** | What LLMs are without math. Where they help, where they're dangerous, hallucination explained clearly. |
+        | 01 | **What a model actually does** | Inputs in, score out. Training, prediction, and a reactive readmission scoring demo. |
+        | 02 | **Training, validation, overfitting** | Why a model that memorizes its training set is useless on new patients. Cross-validation. |
+        | 03 | **Discrimination vs calibration** | The ROC explorer alongside the calibration plot. Two models, same AUC, different probabilities. |
+        | 04 | **Reading an AI paper critically** | A five-dimension appraisal framework applied to a published paper. |
+        | 05 | **Bias, fairness, and clinical risk** | Where bias enters. Subgroup performance. Fairness-metric trade-offs. Vendor checklist. |
+        | 06 | **LLMs in clinical workflows** | Next-token prediction as the intuition. Hallucination, RAG, evaluation. |
 
         ### Capstone
 
-        **Critical appraisal of a published clinical AI model across each appraisal dimension (Socratic).**
+        **Critical appraisal of a vendor "RA flare predictor".** Apply the Track 04 framework in a Socratic commit-then-reveal exercise.
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return

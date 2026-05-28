@@ -1,9 +1,7 @@
-# Capstone: course 09
+# Capstone: Critical appraisal of a vendor "RA flare predictor"
 
-**Critical appraisal of a published clinical AI model across each appraisal dimension (Socratic).**
+A vendor pitches an "RA flare predictor" to the rheumatology practice that cares for Ms. Reyes. The vendor offers a one-page handout: AUC 0.82, internal validation, trained on a single-center cohort. The capstone is a Socratic critical-appraisal exercise. The reader commits an answer for each of six appraisal dimensions (outcome definition, training population, validation approach, calibration reporting, subgroup performance, adoption recommendation) before seeing the ideal analysis. The capstone applies the Track 04 framework directly and integrates the fairness and clinical-risk material from Track 05.
 
-This capstone is part of the scaffold for course 09: AI in medicine. The notebook is a placeholder; the interactive content will be filled in as the course is built out.
+**Prerequisites:** all six tracks in this course.
 
-**Prerequisite:** all tracks in course 09.
-
-**How to start (once built):** open `notebook.py` from the file tree on the left.
+**How to start:** open `notebook.py`. Marimo loads it in app mode.

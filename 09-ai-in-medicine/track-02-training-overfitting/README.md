@@ -1,14 +1,11 @@
-# Track 02: Training, validation, overfitting
+# Track 02: Training, validation, and overfitting
 
-Why you can't test on what you trained on. Overfitting shown visually.
+A model that is evaluated on the same data it was trained on always looks excellent. The model has memorized the data; the evaluation is not a test of anything. This track defines the train / validation / test split, demonstrates overfitting by plotting training error and test error against model complexity (training error goes to zero, test error climbs), defines generalization as the goal that overfitting fails, and introduces k-fold cross-validation as the workaround when the dataset is too small to afford three separate splits.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Track 01 of this course.
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 03.
+**What's next:** Track 03 (Discrimination vs calibration).

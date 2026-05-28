@@ -2,13 +2,13 @@
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/clinical-informatics/09-ai-in-medicine?quickstart=1)
 
-**Machine learning for clinicians who evaluate, not build. Explicitly deepens Track 04 (epi).**
+**Machine learning for clinicians who evaluate, not build.**
 
-Each track in this course pairs a written introduction with an interactive Marimo notebook. The intro frames the question and the vocabulary; the notebook is where you build intuition through interactive work.
+Each track pairs a written introduction with an interactive Marimo notebook. The course deepens the discrimination and calibration vocabulary introduced in Course 04 Track 3, applies it to model evaluation, and ends with a critical-appraisal capstone.
 
 Written by **Mario David Felix, MD MHS**.
 
-This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. It is currently **scaffolded only**: the structure, file layout, and short per-track descriptions are in place; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for current progress.
+This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum.
 
 ---
 
@@ -16,13 +16,13 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 | Track | Title | What it covers |
 |---|---|---|
-| 01 | What a model actually does | Intuition before math. A model as a function. What training and prediction mean. |
-| 02 | Training, validation, overfitting | Why you can't test on what you trained on. Overfitting shown visually. |
-| 03 | Discrimination vs calibration | ROC, threshold slider, 2x2, and calibration plot side by side. Why a well-discriminating model can still be useless. |
-| 04 | Reading an AI paper critically | What to look for: training population, outcome, validation approach, calibration, subgroup performance. |
-| 05 | Bias, fairness, and clinical risk | Where bias enters. Disparate subgroup performance. What to ask a vendor. |
-| 06 | LLMs in clinical workflows | What LLMs are without math. Where they help, where they're dangerous, hallucination explained clearly. |
-| ... | **Capstone** | Critical appraisal of a published clinical AI model across each appraisal dimension (Socratic). |
+| 01 | What a model actually does | A model as a function: inputs in, score out. What training and prediction mean without math. A worked readmission scoring example with reactive sliders. |
+| 02 | Training, validation, and overfitting | The train / validation / test split. Why a model that memorizes its training set has zero training error and useless test performance. Cross-validation in plain English. |
+| 03 | Discrimination vs calibration | The ROC explorer (threshold slider, 2x2 table, ROC curve, AUC) alongside the calibration plot (predicted vs observed probability, Brier score). Two models with the same AUC but very different calibration, side by side. |
+| 04 | Reading an AI paper critically | A five-dimension appraisal framework (training population, outcome definition, validation approach, calibration reporting, subgroup performance) applied to a published clinical AI paper. |
+| 05 | Bias, fairness, and clinical risk | Where bias enters (training data, labels, features, deployment context). Subgroup performance demonstrated on a synthetic model. The trade-offs between fairness metrics. What to ask a vendor. |
+| 06 | LLMs in clinical workflows | Next-token prediction as the intuition. Hallucination, retrieval-augmented generation, and evaluation. Where LLMs help (summarization, drafting) and where they are dangerous (diagnosis, dosing, citation). |
+| ... | **Capstone** | Critical appraisal of a vendor-pitched "RA flare predictor" against the Track 04 framework, in the Socratic commit-then-reveal pattern. |
 
 ## What you'll find in this repo
 
@@ -45,7 +45,7 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 ## How to start
 
-Once the content is built: click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) will open in your browser. While the course is still scaffolded, the home.py renders a track list with descriptions so you can see what's coming.
+Click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) opens in a browser tab. Each track folder has a `README.md` that frames the topic and a `notebook.py` that contains the interactive material.
 
 ## License
 
