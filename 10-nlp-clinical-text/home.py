@@ -1,8 +1,6 @@
 """Course 10: NLP and clinical text.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Five tracks plus a building capstone on Reyes's notes.
 """
 
 import marimo
@@ -23,27 +21,27 @@ def _(mo):
         r"""
         # 10: NLP and clinical text
 
-        ## The data that lives in notes, not fields. Most clinically meaningful information lives here.
+        ## The data that lives in notes, not fields.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Five tracks plus a building capstone. The majority of clinically meaningful information lives in narrative notes rather than structured fields. The course addresses what NLP pipelines extract from those notes, how the notes are de-identified for research use, where LLMs fit in the modern NLP landscape, and how to evaluate any NLP tool before adoption.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **Structured vs unstructured data** | What lives in notes that doesn't live in fields. Why that matters for research and CDS. |
-        | 02 | **What NLP actually does** | Tokenization, named entity recognition, relation extraction, each with one of Ms. Reyes's notes. |
-        | 03 | **De-identification** | Why it's hard. Common approaches. What residual risk looks like. |
-        | 04 | **LLMs and clinical text** | How LLMs relate to traditional NLP. Practical use cases and failure modes. |
-        | 05 | **Evaluating NLP tools** | Precision, recall, F1 in plain English. Same idea as sensitivity/specificity, different vocabulary. |
+        | 01 | **Structured vs unstructured data** | What lives in notes that does not live in fields, on one of Ms. Reyes's encounters. |
+        | 02 | **What NLP actually does** | Tokenization, NER, relation extraction, negation, each illustrated on her notes. |
+        | 03 | **De-identification** | The HIPAA Safe Harbor 18 identifiers. Three approaches. A before-and-after on a Reyes note. |
+        | 04 | **LLMs and clinical text** | Where LLMs fit alongside classical pipelines. Clinical-domain fine-tuning. Schema-driven extraction. |
+        | 05 | **Evaluating NLP tools** | Precision, recall, F1, mapped to PPV and sensitivity. Strict vs lenient matching. The cost asymmetry. |
 
         ### Capstone
 
-        **Run a pre-built NLP pipeline on Ms. Reyes's notes; compare to structured EHR fields.**
+        **Build a structured representation of Ms. Reyes's record from her 8 clinical notes and contrast with the structured EHR fields.** Quantify what was lost when only the structured fields were queried.
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return
