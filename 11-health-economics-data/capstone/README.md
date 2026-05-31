@@ -1,9 +1,9 @@
-# Capstone: course 11
+# Capstone: Decision tree for the RA treatment choice, with one-way sensitivity
 
-**Decision tree + one-way sensitivity analysis for an RA treatment choice; interpret strategy stability.**
+The reader assembles a decision tree for the biologic-vs-csDMARD choice in a patient like Ms. Reyes. The inputs are reactive: the probability of a clinically meaningful response on each treatment, the probability of an adverse event on each, the utility of full response vs partial vs serious adverse event, and the time horizon. The outputs are the expected value per arm and a sensitivity-sweep chart that shows the value of each arm as a function of one chosen input, with the cross-over point (the value of the input at which the preferred strategy flips) marked explicitly.
 
-This capstone is part of the scaffold for course 11: Health economics data. The notebook is a placeholder; the interactive content will be filled in as the course is built out.
+The capstone is a building exercise; by the end the reader has produced the kind of decision-analytic artifact that a pharmacy and therapeutics committee would actually use in a formulary decision.
 
-**Prerequisite:** all tracks in course 11.
+**Prerequisites:** all six tracks in this course.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left.
+**How to start:** open `notebook.py`. Marimo loads it in app mode.

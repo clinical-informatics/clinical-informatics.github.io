@@ -4,11 +4,11 @@
 
 **Claims, costs, decisions, and value.**
 
-Each track in this course pairs a written introduction with an interactive Marimo notebook. The intro frames the question and the vocabulary; the notebook is where you build intuition through interactive work.
+Six tracks plus a building capstone. The course covers how claims data is structured (and where it differs from the clinical record), the cost and utilization vocabulary, decision analysis with reactive probability sliders, cost-effectiveness analysis (QALYs and ICERs), decision curve analysis as the unifying framework that closes the threshold question left open in Course 04, and how to read outcomes data critically.
 
 Written by **Mario David Felix, MD MHS**.
 
-This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. It is currently **scaffolded only**: the structure, file layout, and short per-track descriptions are in place; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for current progress.
+This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum.
 
 ---
 
@@ -16,13 +16,13 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 | Track | Title | What it covers |
 |---|---|---|
-| 01 | How claims data is structured | What a claim actually records. What it can and can't tell you. |
-| 02 | Cost and utilization measures | Total cost of care, PMPM, utilization rates, applied to Ms. Reyes. |
-| 03 | Decision analysis | Decision trees with probability sliders. Sensitivity analysis (one-way, tornado). Biologic vs conventional DMARD. |
-| 04 | Cost-effectiveness | QALYs, ICERs, willingness-to-pay thresholds in plain English. The CE plane. |
-| 05 | Decision curve analysis | Net benefit in plain English. DCA as the unifying framework. Cross-reference to CDS course. |
-| 06 | Reading outcomes data critically | Value-based care. Common confounders in health economics research. |
-| ... | **Capstone** | Decision tree + one-way sensitivity analysis for an RA treatment choice; interpret strategy stability. |
+| 01 | How claims data is structured | What a claim records, what it can and cannot tell you. The 7 claim rows for Ms. Reyes's 2024-01-08 visit, the institutional vs professional split, and the common claims-research mistakes. |
+| 02 | Cost and utilization measures | The vocabulary: total cost of care, PMPM, utilization rate, allowed vs paid vs patient-responsibility. Ms. Reyes's 2024 utilization summarized by month and by claim category. |
+| 03 | Decision analysis | A decision tree as a picture and as math. Reactive probability sliders on the biologic-vs-csDMARD choice for a patient like Ms. Reyes. One-way sensitivity analysis showing where the preferred strategy flips. |
+| 04 | Cost-effectiveness | QALYs, ICERs, willingness-to-pay thresholds, the cost-effectiveness plane. A worked CE comparison of the biologic-add and csDMARD-monotherapy strategies. |
+| 05 | Decision curve analysis | Net benefit defined in one paragraph. The three curves (treat all, treat none, use the model). A reactive DCA on a synthetic flare-prediction model. The threshold-question payoff that Course 04 Track 3 and Course 09 Track 3 set up. |
+| 06 | Reading outcomes data critically | Value-based care vocabulary. Common confounders in health-economics research (treatment selection, immortal time, channeling). The CHEERS reporting checklist as the appraisal framework. |
+| ... | **Capstone** | Build a decision tree for the RA treatment choice. Run a one-way sensitivity analysis. Interpret whether the preferred strategy is stable across plausible probability ranges. |
 
 ## What you'll find in this repo
 
@@ -45,7 +45,7 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 ## How to start
 
-Once the content is built: click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) will open in your browser. While the course is still scaffolded, the home.py renders a track list with descriptions so you can see what's coming.
+Click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) opens in a browser tab. Each track folder has a `README.md` that frames the topic and a `notebook.py` that contains the interactive material.
 
 ## License
 

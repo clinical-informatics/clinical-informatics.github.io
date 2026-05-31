@@ -1,8 +1,7 @@
 """Course 11: Health economics data.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Six tracks plus a building capstone built around the
+biologic-vs-csDMARD decision in RA.
 """
 
 import marimo
@@ -25,26 +24,26 @@ def _(mo):
 
         ## Claims, costs, decisions, and value.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Six tracks plus a building capstone. The course covers how claims data is structured, the cost and utilization vocabulary, decision analysis with reactive probability sliders, cost-effectiveness analysis, decision curve analysis as the unifying threshold framework, and how to read outcomes data critically.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **How claims data is structured** | What a claim actually records. What it can and can't tell you. |
-        | 02 | **Cost and utilization measures** | Total cost of care, PMPM, utilization rates, applied to Ms. Reyes. |
-        | 03 | **Decision analysis** | Decision trees with probability sliders. Sensitivity analysis (one-way, tornado). Biologic vs conventional DMARD. |
-        | 04 | **Cost-effectiveness** | QALYs, ICERs, willingness-to-pay thresholds in plain English. The CE plane. |
-        | 05 | **Decision curve analysis** | Net benefit in plain English. DCA as the unifying framework. Cross-reference to CDS course. |
-        | 06 | **Reading outcomes data critically** | Value-based care. Common confounders in health economics research. |
+        | 01 | **How claims data is structured** | What a claim records. The 7 claim rows for Reyes's 2024-01-08 visit. |
+        | 02 | **Cost and utilization measures** | Total cost of care, PMPM, allowed vs paid. Reyes's 2024 utilization. |
+        | 03 | **Decision analysis** | Decision trees with reactive probability sliders. One-way sensitivity. |
+        | 04 | **Cost-effectiveness** | QALYs, ICERs, willingness-to-pay thresholds, the CE plane. |
+        | 05 | **Decision curve analysis** | Net benefit. Treat-all / treat-none / use-the-model. |
+        | 06 | **Reading outcomes data critically** | VBC vocabulary, confounders in HE research, CHEERS. |
 
         ### Capstone
 
-        **Decision tree + one-way sensitivity analysis for an RA treatment choice; interpret strategy stability.**
+        **Decision tree for the RA treatment choice with one-way sensitivity analysis.** Inputs are response probabilities and outcome utilities; output is expected value per arm plus a sensitivity sweep showing where the preferred strategy flips.
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return

@@ -1,14 +1,11 @@
 # Track 06: Reading outcomes data critically
 
-Value-based care. Common confounders in health economics research.
+Value-based care, accountable-care organizations, bundled payments, and quality-payment programs all rest on outcomes measurement against a payer-defined denominator. The track defines the value-based-care vocabulary at the level a clinical informaticist needs at the contracting table, then addresses the three common confounders that affect almost every published health-economics outcomes study (treatment selection, immortal time bias, channeling). The track closes with the CHEERS reporting checklist as the operational appraisal framework for any cost-effectiveness paper a clinician is asked to consider.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Tracks 01 through 05 of this course; Course 04 Track 2 (selection bias and confounding).
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 through 02 through 03 through 04 through 05 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** the course capstone.
+**What's next:** the course capstone (decision tree + sensitivity analysis for the RA treatment choice).

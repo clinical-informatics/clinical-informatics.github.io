@@ -1,14 +1,11 @@
 # Track 05: Decision curve analysis
 
-Net benefit in plain English. DCA as the unifying framework. Cross-reference to CDS course.
+Decision curve analysis (DCA) is the chart that closes the threshold question Course 04 Track 3 (sensitivity, specificity, PPV) and Course 09 Track 3 (discrimination, calibration) both opened. DCA asks: at the probability threshold a clinician would actually act on, does using this model produce more net benefit than the two trivial alternatives (treat everyone, treat no one)? The track defines net benefit in one paragraph, derives the three-curve plot, applies it to a synthetic RA-flare-prediction model so the reader sees the unifying behavior of the framework, and connects DCA forward to the CDS course (Course 12) as the operational form of the alert-threshold question. The DCA-plot component is inlined per the WASM rule.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Tracks 01 through 04 of this course; Course 04 Track 3 (the 2x2 table and ROC); Course 09 Track 3 (discrimination vs calibration).
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 through 02 through 03 through 04 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 06.
+**What's next:** Track 06 (Reading outcomes data critically).

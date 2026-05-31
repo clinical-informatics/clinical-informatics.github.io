@@ -1,14 +1,11 @@
 # Track 01: How claims data is structured
 
-What a claim actually records. What it can and can't tell you.
+A claim is the bill the provider sends to the payer for a service rendered. The claim record is structured to satisfy billing and contractual requirements, not to capture the clinical encounter. The track addresses the structure (the fields a claim carries, the institutional vs professional split, the EDI 837 transaction set background), shows Ms. Reyes's 2024-01-08 office visit as the 7 claim rows it actually produces in the claims data, and frames the clinical-vs-claim gap that drives most of the common errors in claims-based research.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** None within this course. Course 05 Track 3 (clinical data warehouses) is a useful context anchor.
 
+**How to start:** open `notebook.py`. Marimo loads it in app mode.
 
-**Prerequisites:** None within this course; prerequisites are listed in the course README.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 02.
+**What's next:** Track 02 (Cost and utilization measures).

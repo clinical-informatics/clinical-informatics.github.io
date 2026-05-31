@@ -1,14 +1,11 @@
 # Track 02: Cost and utilization measures
 
-Total cost of care, PMPM, utilization rates, applied to Ms. Reyes.
+Five terms cover most of the cost-and-utilization vocabulary an informaticist needs: total cost of care, per-member-per-month (PMPM), utilization rate, allowed amount, and patient-responsibility amount. The track defines each one against Ms. Reyes's actual 2024 claims, computes her per-month utilization summary, and addresses the three-way split (allowed vs paid vs patient-responsibility) that appears on every claim line. The reader can filter her claims interactively by month and by claim category to see how each summary measure responds.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Track 01 of this course.
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 03.
+**What's next:** Track 03 (Decision analysis).
