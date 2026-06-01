@@ -1,14 +1,11 @@
 # Track 04: Evaluating CDS
 
-DCA from course 11. Before/after study design. Unintended consequences checklist.
+A CDS intervention is a clinical intervention; the same evaluation discipline that applies to drugs and procedures applies to alerts. The track combines the decision-curve-analysis framework from Course 11 Track 5 (the alert threshold as the operating point, the net-benefit chart as the comparator) with the before-and-after study-design framework from Course 04 Track 5 (interrupted time series, controlled before-after, segmented regression). The closing checklist names the unintended-consequences categories every CDS evaluation should report: workflow disruption, equity, automation bias, and alert-fatigue spillover to other alerts the new one shares its channel with.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Tracks 01 through 03 of this course; Course 04 Track 5 (study designs); Course 11 Track 5 (DCA).
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 through 02 through 03 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 05.
+**What's next:** Track 05 (Governance and the human side).

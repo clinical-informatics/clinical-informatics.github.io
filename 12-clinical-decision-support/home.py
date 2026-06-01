@@ -1,8 +1,6 @@
 """Course 12: Clinical decision support.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Five tracks plus the curriculum's grand-finale capstone.
 """
 
 import marimo
@@ -23,27 +21,27 @@ def _(mo):
         r"""
         # 12: Clinical decision support
 
-        ## The capstone course. Requires courses 06 and 09. All prior concepts revisited and connected.
+        ## The curriculum's capstone course.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Five tracks plus the seven-step CDS-design capstone that integrates every prior course (Courses 01, 03, 04, 06, 09, 10, 11). The course covers what CDS actually is and why most of it fails, the standards-based logic layer (CQL), the delivery layer (CDS Hooks), evaluation methods, and governance and equity.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **What CDS actually is** | Passive alerts → active recommendations → autonomous actions. Why most CDS fails. The five rights. |
-        | 02 | **CQL: Clinical Quality Language** | Why CQL exists. Reading published CQL. Writing simple CQL. Value sets. |
-        | 03 | **CDS Hooks** | Architecture in plain English. patient-view, order-select, order-sign. A simulated CDS Hooks request. |
-        | 04 | **Evaluating CDS** | DCA from course 11. Before/after study design. Unintended consequences checklist. |
-        | 05 | **Governance and the human side** | Who decides what gets built. Equity in CDS. Regulatory landscape. |
+        | 01 | **What CDS actually is** | The spectrum, the 5 rights, alert fatigue, the diagnostic-test framing. |
+        | 02 | **CQL** | Why CQL exists, reading published CQL, writing a small CQL rule, VSAC value sets. |
+        | 03 | **CDS Hooks** | Hook-as-workflow-moment, the three load-bearing hooks, simulated request/response. |
+        | 04 | **Evaluating CDS** | DCA at the alert threshold, before/after designs, unintended consequences. |
+        | 05 | **Governance and the human side** | Who decides, equity, FDA / ONC regulatory landscape, vendor-eval checklist. |
 
         ### Capstone
 
-        **Design a complete CDS intervention for RA end to end, drawing on every prior course; export as PDF.**
+        **Seven-step CDS design brief for a Reyes-style RA flare alert.** Integrates the computational decomposition (Course 01), FHIR data specification (Course 06), CQL logic, CDS Hook design, evaluation plan (Course 04), DCA at the alert threshold (Course 11), and equity monitoring (Course 03). Output is a CDS design brief a real implementation team could act on, exportable as Markdown.
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return

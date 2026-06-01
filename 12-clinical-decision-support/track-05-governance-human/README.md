@@ -1,14 +1,11 @@
 # Track 05: Governance and the human side
 
-Who decides what gets built. Equity in CDS. Regulatory landscape.
+A CDS deployment that is technically correct can still fail for governance reasons: the wrong committee approved it, the clinicians who use it were not consulted in design, the equity audit was not done, or the regulatory category was misread. The track presents the published governance vocabulary (who decides what gets built, who decides what gets retired, how clinician input enters the design loop), addresses equity in CDS with a focus on the race-correction conversations of the past decade, surveys the regulatory landscape (FDA SaMD, the IMDRF risk framework, ONC certification), and closes with the vendor-evaluation checklist for a new CDS tool that an institution is considering adopting.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Tracks 01 through 04 of this course; Course 03 Track 4 (algorithmic fairness); Course 09 Track 5 (bias entry points in AI).
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** Tracks 01 through 02 through 03 through 04 of this course.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** the course capstone.
+**What's next:** the course capstone (the seven-step CDS design brief).
