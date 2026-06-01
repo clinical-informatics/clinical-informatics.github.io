@@ -1,14 +1,11 @@
 # Track 02: Genomic data structures and file types
 
-Concept-level FASTQ, BAM, VCF, GFF/GTF, BED. What each contains, when each appears. Interactive: format identifier.
+Five file types account for almost all of the genomic-data pipeline a clinical informaticist might encounter: FASTQ (raw sequencing reads), BAM (reads aligned to a reference), VCF (variant calls), GFF/GTF (genomic-feature annotations), and BED (genomic regions). The track presents the sequencer-to-clinical-report pipeline as a structured progression through these formats, shows a representative snippet of each, and closes with an interactive file-type identifier exercise that asks the reader to recognize each format from a short snippet.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+**Prerequisites:** Track 01 of this course. Course 00 Track 3 (file types in general) and Course 02 Track 1 (data types) are the cross-curriculum anchors.
 
+**How to start:** open `notebook.py`.
 
-**Prerequisites:** None within this course; prerequisites are listed in the course README.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
-
-**Companion reading (once written):** a reference essay on the track's topic.
-
-**What's next:** Track 03.
+**What's next:** Track 03 (clinical genomics in the EHR).

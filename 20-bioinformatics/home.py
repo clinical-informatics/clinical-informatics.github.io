@@ -1,8 +1,7 @@
-"""Course 20: bioinformatics for clinical informaticists.
+"""Course 20: Bioinformatics for clinical informaticists.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Five tracks plus the precision-medicine-program Socratic
+capstone that closes the curriculum.
 """
 
 import marimo
@@ -23,27 +22,27 @@ def _(mo):
         r"""
         # 20: Bioinformatics for clinical informaticists
 
-        ## The final course. Concept-level only. How bioinformatics relates to clinical informatics and the health system, plus the research infrastructure around it. Reyes hooks: her HLA-DRB1 shared-epitope test, TPMT screening, 23andMe DTC results.
+        ## The final course in the curriculum. Concept level only.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Five tracks plus the Socratic precision-medicine-program capstone. The course covers where genomic and molecular data live in clinical and research systems, how research bioinformatics infrastructure is organized, and how clinical genomics intersects with the EHR. Ms. Reyes's HLA-DRB1 shared-epitope test, her TPMT screening, and her 23andMe direct-to-consumer test carry the course end to end.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **What bioinformatics is and how it relates to clinical informatics** | Definition. Molecular to translational to clinical genomics. Brief history. Reyes's HLA-DRB1 test walked from buccal swab to chart line. |
-        | 02 | **Genomic data structures and file types** | Concept-level FASTQ, BAM, VCF, GFF/GTF, BED. What each contains, when each appears. Interactive: format identifier. |
-        | 03 | **Clinical genomics in the EHR** | HL7 Genomics Reporting IG, GA4GH variant representation, ACMG 79-gene list. Pharmacogenomics (TPMT, CYP2C19, HLA-B*5701). The PDF-vs-structured-field gap. |
-        | 04 | **Research bioinformatics infrastructure** | Cores, HPC clusters, secure enclaves, dbGaP. NHGRI and NCBI databases (GenBank, dbSNP, ClinVar, OMIM). CTSA. TCGA/GTEx/ENCODE/gnomAD. |
-        | 05 | **Population genomics, equity, and the future** | All of Us, UK Biobank, MyCode, eMERGE. PRS at concept level. Ancestry vs race in genomics. DTC testing. Reyes's 23andMe results. |
+        | 01 | **What bioinformatics is** | The molecular-to-translational-to-clinical-genomics spectrum. Reyes's HLA-DRB1 test from buccal swab to chart line. |
+        | 02 | **Genomic data structures and file types** | FASTQ, BAM, VCF, GFF / GTF, BED. What each contains and when. Interactive format identifier. |
+        | 03 | **Clinical genomics in the EHR** | HL7 Genomics Reporting IG, ACMG 79-gene list, pharmacogenomics, the PDF-vs-structured-field gap. |
+        | 04 | **Research bioinformatics infrastructure** | Cores, HPC, secure enclaves, dbGaP. NCBI databases (GenBank, dbSNP, ClinVar, OMIM). Public datasets. |
+        | 05 | **Population genomics, equity, and the future** | All of Us, UK Biobank, MyCode, eMERGE. PRS. Ancestry vs race. DTC testing. |
 
         ### Capstone
 
-        **Design a precision medicine program (pharmacogenomic testing at the point of high-risk prescribing): infrastructure, standards, returns to patients, research/clinical coexistence, governance, equity (Socratic). Closes the curriculum.**
+        **Design a precision medicine program.** A pharmacogenomic-testing-at-the-point-of-prescribing program walked across six Socratic dimensions: infrastructure, standards, returns to patients, research/clinical coexistence, governance, equity. The capstone that closes the curriculum.
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return
