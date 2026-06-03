@@ -1,8 +1,6 @@
 """Course 13: Research reproducibility.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Five tracks plus a Socratic reproducibility-audit capstone.
 """
 
 import marimo
@@ -23,27 +21,27 @@ def _(mo):
         r"""
         # 13: Research reproducibility
 
-        ## Unglamorous but the thing most people wish someone had taught them early.
+        ## Unglamorous, and the thing most people wish someone had taught them early.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Five tracks plus a Socratic capstone. The course covers why reproducibility is a clinical-research problem, how to organize a data project so it can be rerun, what version control does without requiring any code, how to document a dataset's provenance and the loss every transformation introduces, and what sharing and publication require.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
-        | 01 | **Why reproducibility matters** | The replication crisis in clinical research. What 'reproducible' actually means. |
-        | 02 | **Project organization** | How to structure a data project. File naming, folder structure, README-driven development. |
-        | 03 | **Version control without coding** | What Git does in plain English. GitHub for non-developers; issues and PRs as collaboration tools. |
-        | 04 | **Data provenance and documentation** | Where did this dataset come from? What was done to it? No standard is lossless. |
-        | 05 | **Sharing and publication** | Data sharing requirements. What to share, what not to. Preprints. EQUATOR. |
+        | 01 | **Why reproducibility matters** | The replication crisis. The reproducible / replicable / robust distinction. Why an analysis can be wrong with every number correct. |
+        | 02 | **Project organization** | Structuring a data project so it can be rerun. File naming, folder structure, raw-data-is-sacred, README-driven development. |
+        | 03 | **Version control without coding** | What Git does in plain English. GitHub for non-developers; issues and pull requests as collaboration tools. |
+        | 04 | **Data provenance and documentation** | Where a dataset came from, what was done to it, and documenting the loss. Cross-reference to Course 07: no mapping is lossless. |
+        | 05 | **Sharing and publication** | What to share and what to withhold. Code sharing, preprints, persistent identifiers, the EQUATOR reporting guidelines. |
 
         ### Capstone
 
-        **Identify reproducibility gaps in a synthetic published analysis and produce a documentation plan (Socratic).**
+        **Audit a synthetic published RA analysis for reproducibility gaps and produce a documentation plan that would make it reproducible (Socratic).**
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return

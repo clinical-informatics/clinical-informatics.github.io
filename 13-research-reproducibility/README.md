@@ -2,13 +2,13 @@
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/clinical-informatics/13-research-reproducibility?quickstart=1)
 
-**Unglamorous but the thing most people wish someone had taught them early.**
+**Unglamorous, and the thing most people wish someone had taught them early.**
 
-Each track in this course pairs a written introduction with an interactive Marimo notebook. The intro frames the question and the vocabulary; the notebook is where you build intuition through interactive work.
+Five tracks plus a Socratic capstone. The course covers why reproducibility is a clinical-research problem and not only a software problem, how to organize a data project so a stranger (or future you) can rerun it, what version control does without requiring the reader to write code, how to document where a dataset came from and what was done to it, and what the rules and reporting guidelines require when an analysis is shared or published. The capstone is a reproducibility audit: given a synthetic published analysis with poor reproducibility practices, identify what is missing and produce a documentation plan that would let an independent group rerun the work.
 
 Written by **Mario David Felix, MD MHS**.
 
-This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. It is currently **scaffolded only**: the structure, file layout, and short per-track descriptions are in place; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for current progress.
+This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. No coding experience is required; Track 03 explains version control in plain English without asking the reader to run a single command.
 
 ---
 
@@ -16,12 +16,12 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 | Track | Title | What it covers |
 |---|---|---|
-| 01 | Why reproducibility matters | The replication crisis in clinical research. What 'reproducible' actually means. |
-| 02 | Project organization | How to structure a data project. File naming, folder structure, README-driven development. |
-| 03 | Version control without coding | What Git does in plain English. GitHub for non-developers; issues and PRs as collaboration tools. |
-| 04 | Data provenance and documentation | Where did this dataset come from? What was done to it? No standard is lossless. |
-| 05 | Sharing and publication | Data sharing requirements. What to share, what not to. Preprints. EQUATOR. |
-| ... | **Capstone** | Identify reproducibility gaps in a synthetic published analysis and produce a documentation plan (Socratic). |
+| 01 | Why reproducibility matters | The replication crisis in clinical research. The reproducible / replicable / robust distinction. Why an analysis can be wrong even when every number is correct. |
+| 02 | Project organization | How to structure a data project so it can be rerun. File naming, folder structure, the raw-data-is-sacred rule, README-driven development. |
+| 03 | Version control without coding | What Git does in plain English, and the one problem it solves. GitHub for non-developers; issues and pull requests as collaboration tools. |
+| 04 | Data provenance and documentation | Where a dataset came from and what was done to it. Documenting transformations and the loss they introduce. Cross-reference to Course 07: no mapping is lossless. |
+| 05 | Sharing and publication | What to share and what to withhold. Code sharing, preprints, persistent identifiers, and the EQUATOR reporting guidelines. Cross-reference to Course 03 on privacy. |
+| ... | **Capstone** | Audit a synthetic published RA analysis for reproducibility gaps and produce a documentation plan that would make it reproducible (Socratic). |
 
 ## What you'll find in this repo
 
@@ -43,7 +43,7 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 ## How to start
 
-Once the content is built: click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) will open in your browser. While the course is still scaffolded, the home.py renders a track list with descriptions so you can see what's coming.
+Click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) opens in a browser tab. Each track folder has a `README.md` that frames the topic and a `notebook.py` that contains the interactive material.
 
 ## License
 

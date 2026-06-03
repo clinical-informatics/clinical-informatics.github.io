@@ -1,12 +1,13 @@
-## Go deeper
+## Go deeper: Why reproducibility matters
 
-Resources for this track will be curated and annotated as the content is built. The format follows the curriculum-wide standard:
+**If you want the vocabulary pinned down before moving on:**
 
-**If you want to understand this better before moving on:**
-[best free resource for the concept, annotated]
+- [The Turing Way, "Reproducible Research"](https://book.the-turing-way.org/reproducible-research/reproducible-research.html) is the open-source handbook that defines reproducible, replicable, robust, and generalisable as four distinct properties and keeps them straight throughout. It is community-maintained, free, and the single best plain-language reference for the distinctions this track introduces.
 
-**If you want to see this applied clinically:**
-[paper, case study, or dataset, annotated]
+**If you want to see the crisis in the clinical literature:**
+
+- [Ioannidis, "Why Most Published Research Findings Are False" (PLoS Medicine 2005)](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124) is the most-cited paper making the base-rate argument: when the prior probability of a true effect is low and analytic flexibility is high, a statistically significant finding is more likely false than true. It is open access and uses the same positive-predictive-value logic the 2x2 table chapter in Course 04 built.
 
 **If you want to go significantly further:**
-[free course, textbook, or tutorial, annotated]
+
+- [Sandve, Nekrutenko, Taylor, and Hovig, "Ten Simple Rules for Reproducible Computational Research" (PLoS Computational Biology 2013)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) converts the why-it-matters argument into ten concrete operational rules. It is the bridge from this track to the rest of the course, and most of the practices Tracks 02 through 05 teach appear here in compressed form.
