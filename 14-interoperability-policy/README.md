@@ -4,11 +4,11 @@
 
 **The policy context that makes the technical courses meaningful.**
 
-Each track in this course pairs a written introduction with an interactive Marimo notebook. The intro frames the question and the vocabulary; the notebook is where you build intuition through interactive work.
+Five tracks plus a Socratic policy-analysis capstone. The course covers why federal policy had to enter the picture at all (information blocking is the problem the rest of the field had been describing without naming), what the 21st Century Cures Act required and what its exceptions actually mean in practice, how the ONC and CMS rules turned the Cures Act into technical mandates that explain why FHIR adoption accelerated when it did, how the international policy landscape differs in foundational ways (GDPR, NHS Digital, the European Health Data Space), and where the gaps still are (patient matching, USCDI evolution, TEFCA roll-out, AI transparency under HTI-1). The capstone applies the framework to three real-shaped scenarios in which a patient, a researcher, and an outside vendor each run into the policy layer.
 
 Written by **Mario David Felix, MD MHS**.
 
-This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. It is currently **scaffolded only**: the structure, file layout, and short per-track descriptions are in place; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for current progress.
+This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. Course 06 (FHIR) and Course 07 (OMOP) are the natural prerequisites; the technical standards those courses cover are what the policies in this course mandate, restrict, or accelerate.
 
 ---
 
@@ -16,12 +16,12 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 | Track | Title | What it covers |
 |---|---|---|
-| 01 | Why policy exists | Information blocking: what it is, why it persisted, who benefited from it. |
-| 02 | 21st Century Cures Act | What it requires. Information blocking rules. What changed in practice. |
-| 03 | ONC and CMS interoperability rules | Certification, mandated standards, why FHIR adoption accelerated when it did. |
-| 04 | The international landscape | GDPR. NHS Digital. What other countries are doing differently and why. |
-| 05 | Where the gaps still are | What policy hasn't solved. The patient matching problem. What's coming next. |
-| ... | **Capstone** | Apply applicable policy to a health-system scenario (records access, dataset access, vendor restriction) (Socratic). |
+| 01 | Why policy exists | Information blocking as the structural problem. HITECH and Meaningful Use as the precondition. Who benefited from blocking and how. |
+| 02 | 21st Century Cures Act | What the 2016 law required. The information-blocking exceptions (eight in the original Cures Final Rule, ten after HTI-1). What changed in practice, what did not. |
+| 03 | ONC and CMS interoperability rules | The Cures Act Final Rule, HTI-1, HTI-2, CMS Patient Access and Payer-to-Payer. Cross-reference to Course 06: why FHIR adoption accelerated. |
+| 04 | The international landscape | GDPR versus HIPAA. NHS Digital. The European Health Data Space. What other countries do differently and why. |
+| 05 | Where the gaps still are | Patient matching without a national patient identifier. USCDI evolution. TEFCA and the QHIN network. AI transparency under HTI-1. |
+| ... | **Capstone** | Apply the policy framework to three health-system scenarios (records access, dataset access, vendor restriction) and produce a written analysis (Socratic). |
 
 ## What you'll find in this repo
 
@@ -43,7 +43,7 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 ## How to start
 
-Once the content is built: click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) will open in your browser. While the course is still scaffolded, the home.py renders a track list with descriptions so you can see what's coming.
+Click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) opens in a browser tab. Each track folder has a `README.md` that frames the topic and a `notebook.py` that contains the interactive material.
 
 ## License
 
