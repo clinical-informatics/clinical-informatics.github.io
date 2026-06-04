@@ -1,6 +1,6 @@
-# Track 04: Quality, KPIs, and operations management
+# Track 04: Healthcare quality improvement and operations management
 
-KPI definition, process vs outcome, leading vs lagging, balanced scorecard, PDSA, Lean/Six Sigma, HEDIS/MIPS/eCQMs. RA-CDS dashboard.
+Expanded 2026-06-04 from the original Quality/KPIs framing to give the QI methodology depth its own dedicated coverage. The Model for Improvement and PDSA at depth (three IHI questions; small tests of change at scale). Lean for healthcare (5S, value stream mapping, gemba walks, A3). Six Sigma DMAIC. Run charts and control charts as the QI measurement system. The IHI Triple/Quadruple Aim. Healthcare KPIs informaticists own (HCAHPS, readmissions, mortality, LOS, override rates, time-to-result, structured data capture). Balanced scorecards. The RA-CDS dashboard as the worked artifact.
 
 This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
 

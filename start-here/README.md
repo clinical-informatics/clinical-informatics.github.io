@@ -50,6 +50,8 @@ The **Status** column is regenerated on each site build from each course's noteb
 | 18 | [population-public-health](https://github.com/clinical-informatics/18-population-public-health) | _status_ | Registries, risk stratification, value-based care, SDOH, surveillance |
 | 19 | [patient-data-digital-health](https://github.com/clinical-informatics/19-patient-data-digital-health) | _status_ | Patient portals, PGHD, wearables, RPM, telemedicine, digital therapeutics, PROMs |
 | 20 | [bioinformatics](https://github.com/clinical-informatics/20-bioinformatics) | _status_ | Concept-level bioinformatics: clinical genomics and the research infrastructure |
+| 21 | [pathology-ancillaries](https://github.com/clinical-informatics/21-pathology-ancillaries) | _status_ | Pathology informatics, the LIS, pharmacy systems, medical device integration, ancillary systems |
+| 22 | [security](https://github.com/clinical-informatics/22-security) | _status_ | The healthcare threat landscape, regulatory frameworks, IAM, cryptography, incident response, AI security |
 
 For role-based reading orders, see the [learning paths](learning-paths.md) page.
 

@@ -56,6 +56,8 @@ COURSES = [
     "18-population-public-health",
     "19-patient-data-digital-health",
     "20-bioinformatics",
+    "21-pathology-ancillaries",
+    "22-security",
 ]
 
 COURSE_TITLES = {
@@ -80,6 +82,8 @@ COURSE_TITLES = {
     "18-population-public-health": "18: Population and public health informatics",
     "19-patient-data-digital-health": "19: Patient-generated data, telemedicine, digital health",
     "20-bioinformatics": "20: Bioinformatics for clinical informaticists",
+    "21-pathology-ancillaries": "21: Pathology, ancillary systems, and medical device integration",
+    "22-security": "22: Security in clinical informatics",
 }
 
 
@@ -693,7 +697,7 @@ def classify_course(course_id: str) -> tuple[str, int, int, bool]:
 
 
 def build_status_admonition() -> str:
-    """Generate a markdown admonition summarizing what's built across all 21 courses."""
+    """Generate a markdown admonition summarizing what's built across all curriculum courses."""
     by_status: dict[str, list[str]] = {"built": [], "partial": [], "scaffolded": []}
     detail: list[str] = []
     for cid in COURSES:
@@ -711,9 +715,10 @@ def build_status_admonition() -> str:
     n_built = len(by_status['built'])
     n_partial = len(by_status['partial'])
     n_scaff = len(by_status['scaffolded'])
+    total_courses = len(COURSES)
     lines.append(
         f"    The curriculum is being actively written. {pluralize(n_built, 'course', 'courses')} "
-        f"of 21 {'is' if n_built == 1 else 'are'} fully built (interactive notebooks ready). "
+        f"of {total_courses} {'is' if n_built == 1 else 'are'} fully built (interactive notebooks ready). "
         f"{pluralize(n_partial, 'course', 'courses')} {'is' if n_partial == 1 else 'are'} partially built, "
         f"and {pluralize(n_scaff, 'is scaffolded', 'are scaffolded')} with the structure in place but content still to come. "
         "Tracks whose content has not been written yet show a placeholder notebook in the interactive area at the bottom of their page; "
@@ -821,6 +826,7 @@ def write_top_level_pages_yaml(course_ids: list[str]) -> None:
             "06-learn-fhir",
             "07-data-wrangling-engineering",
             "08-clinical-visualization",
+            "21-pathology-ancillaries",
         ]),
         ("Applied courses", [
             "09-ai-in-medicine",
@@ -836,6 +842,7 @@ def write_top_level_pages_yaml(course_ids: list[str]) -> None:
         ("Working informaticist's toolkit", [
             "16-leadership-practice",
             "17-workflow-safety-human-factors",
+            "22-security",
         ]),
         ("Modern practice frontiers", [
             "18-population-public-health",
