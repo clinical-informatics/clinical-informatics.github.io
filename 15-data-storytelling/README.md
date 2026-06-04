@@ -4,11 +4,11 @@
 
 **The course that makes everything else useful beyond your own work.**
 
-Each track in this course pairs a written introduction with an interactive Marimo notebook. The intro frames the question and the vocabulary; the notebook is where you build intuition through interactive work.
+Five tracks plus a building capstone. The course covers how to make the work the rest of the curriculum produced (data analyses, evaluation reports, vendor assessments, CDS designs) usable to the audiences who have to act on it. Four audience types appear in any clinical informatics setting (technical, clinical, executive, patient); each needs a differently-shaped version of the same set of facts. The five tracks cover audience analysis, the craft of writing about data, the three-part narrative structure that turns a finding into a recommendation, the practice of presenting visuals to non-technical readers, and communicating with AI teams and vendors as a clinician in the room. The capstone takes the CDS design brief from Course 12 and produces two communication artifacts: a 2-minute verbal pitch for a CMO and a one-page visual summary for clinical staff.
 
 Written by **Mario David Felix, MD MHS**.
 
-This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. It is currently **scaffolded only**: the structure, file layout, and short per-track descriptions are in place; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for current progress.
+This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. The course assumes the analytic and clinical-informatics material from Courses 02 through 14; it teaches the communication craft that makes that material land outside the analyst's own workspace.
 
 ---
 
@@ -16,12 +16,12 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 | Track | Title | What it covers |
 |---|---|---|
-| 01 | Knowing your audience | Technical vs clinical vs executive vs patient. How to find out which one you're talking to. |
-| 02 | Writing about data clearly | Plain English for quantitative findings. Explaining uncertainty without losing the audience. |
-| 03 | Building a narrative | Data alone doesn't persuade. Finding → implication → recommendation. |
-| 04 | Presenting visuals to non-technical audiences | How to walk someone through a chart who has never seen one before. |
-| 05 | Communicating with AI teams and vendors | How to specify what you need, how to ask the right questions, how to evaluate what you're shown. |
-| ... | **Capstone** | Take the CDS design brief from course 12 and produce a 2-minute pitch + one-page visual summary. |
+| 01 | Knowing your audience | Four audience types in clinical informatics (technical, clinical, executive, patient). What each needs and does not need. How to identify the audience before composing the message. |
+| 02 | Writing about data clearly | Plain English for quantitative findings. Explaining uncertainty in language a reader can act on. Phrases that obscure rather than communicate. |
+| 03 | Building a narrative | The three-part structure (finding, implication, recommendation) that turns data into a recommendation an audience can act on. The clinical story that gives data its meaning. |
+| 04 | Presenting visuals to non-technical audiences | Cross-reference to Course 08. How to walk a non-technical audience through a chart. What to annotate. What to leave out. |
+| 05 | Communicating with AI teams and vendors | The questions a clinician should ask in a vendor or AI-team meeting. The clinician as the domain expert in the room. |
+| ... | **Capstone** | Take the CDS design brief from Course 12 and produce two artifacts: a 2-minute verbal pitch for a CMO and a one-page visual summary for clinical staff. |
 
 ## What you'll find in this repo
 
@@ -43,7 +43,7 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 ## How to start
 
-Once the content is built: click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) will open in your browser. While the course is still scaffolded, the home.py renders a track list with descriptions so you can see what's coming.
+Click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) opens in a browser tab. Each track folder has a `README.md` that frames the topic and a `notebook.py` that contains the interactive material.
 
 ## License
 
