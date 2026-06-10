@@ -8,7 +8,7 @@ Each track in this course pairs a written introduction with an interactive Marim
 
 Written by **Mario David Felix, MD MHS**.
 
-This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. It is currently **scaffolded only**: the structure, file layout, and short per-track descriptions are in place; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for current progress.
+This course is part of the [clinical-informatics](https://github.com/clinical-informatics/start-here) curriculum. Course 12 is the direct prerequisite: its capstone produced the RA-CDS design brief that every track here deploys. Courses 08, 11, 13, and 15 are referenced where the tracks touch dashboards, health economics, the SDLC, and executive communication.
 
 ---
 
@@ -50,7 +50,7 @@ This course is part of the [clinical-informatics](https://github.com/clinical-in
 
 ## How to start
 
-Once the content is built: click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) will open in your browser. While the course is still scaffolded, the home.py renders a track list with descriptions so you can see what's coming.
+Click the Codespaces badge, wait about ninety seconds, and the course menu (`home.py`) opens in a browser tab. Each track folder has a `README.md` that frames the topic and a `notebook.py` that contains the interactive material.
 
 ## License
 

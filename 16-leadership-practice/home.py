@@ -1,8 +1,8 @@
 """Course 16: informatics leadership and professional practice.
 
-Marimo course menu. The course is currently scaffolded; track content will
-be filled in as the curriculum builds out. The menu below lists the tracks
-and a one-sentence description of what each one will cover.
+Marimo course menu. Eight tracks plus the building capstone that assembles
+the eight track artifacts into the implementation plan for the RA-CDS the
+learner designed in Course 12.
 """
 
 import marimo
@@ -25,11 +25,11 @@ def _(mo):
 
         ## How to actually do the job. The CMIO just handed you the RA-CDS you designed in the Course 12 capstone. Eight tracks teach you the strategic-planning, project-management, change-management, KPI, financial, leadership-communication, and implementation-and-operations moves to deploy it.
 
-        This course is currently scaffolded. The track folders exist with short READMEs describing what each one will cover; the interactive notebooks will be filled in as the curriculum builds out. Check `tasks.md` in the curriculum root for progress.
+        Every track works the same deployment: the RA flare-risk alert approved by the AI Governance Committee, with go-live six months out. Every track produces an artifact; the capstone assembles them into the implementation plan you would hand the CMIO.
 
         ### Tracks
 
-        | # | Track | What it will cover |
+        | # | Track | What it covers |
         |---|---|---|
         | 01 | **The working clinical informaticist: roles, scope, day-to-day** | Roles, org-chart placement, reporting lines, committees, the 'who decides what' matrix for the RA-CDS deployment. |
         | 02 | **Project management for informatics** | PMBOK, Waterfall/Agile/Scrum/Kanban, the five PMI process groups, RACI, Gantt, the SDLC. Build the RA-CDS plan. |
@@ -42,11 +42,11 @@ def _(mo):
 
         ### Capstone
 
-        **Assemble the eight track artifacts plus a post-go-live operations plan and a risk register into the implementation plan for the RA-CDS the learner designed in Course 12. The 'now actually deploy it' capstone.**
+        **Assemble the eight track artifacts plus a risk register into the implementation plan for the RA-CDS the learner designed in Course 12. The 'now actually deploy it' capstone.**
 
         ---
 
-        Each track folder has a `README.md` you can read now. The `notebook.py` files render a placeholder until the track is built.
+        Each track folder has a `README.md` and a `notebook.py`. Open the notebook in Marimo to interact with the material.
         """
     )
     return

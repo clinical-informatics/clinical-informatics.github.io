@@ -1,14 +1,15 @@
 # Track 04: Healthcare quality improvement and operations management
 
-Expanded 2026-06-04 from the original Quality/KPIs framing to give the QI methodology depth its own dedicated coverage. The Model for Improvement and PDSA at depth (three IHI questions; small tests of change at scale). Lean for healthcare (5S, value stream mapping, gemba walks, A3). Six Sigma DMAIC. Run charts and control charts as the QI measurement system. The IHI Triple/Quadruple Aim. Healthcare KPIs informaticists own (HCAHPS, readmissions, mortality, LOS, override rates, time-to-result, structured data capture). Balanced scorecards. The RA-CDS dashboard as the worked artifact.
+Three months after the RA-CDS reached full launch, the CMO asks for one page: how is the flare alert doing? The request is a measurement-design problem. Two decisions determine whether the page earns its two minutes of executive attention: which numbers belong on it, and how the reader can tell whether a number's movement is signal or noise. Track 04 covers the quality-improvement methods behind both decisions; it is the deepest track of the course.
 
-This track is **scaffolded only**. The notebook is a placeholder; full interactive content will arrive as the curriculum builds out.
+The improvement methods come first. The Model for Improvement supplies the three IHI questions and the PDSA cycle, worked in full on the RA-CDS card text: a plan with an explicit prediction, a small-scale test on the five soft-launch rheumatologists, a study of whether the override rate moved, and an adopt-adapt-abandon decision. Lean supplies the operations vocabulary (5S, value-stream mapping, gemba walks, A3 problem-solving) and the eight DOWNTIME wastes, each given its clinical-informatics form. Six Sigma's DMAIC completes the set, with the fit question stated plainly: DMAIC for stable high-volume processes with countable defects, the Model for Improvement for iterative learning under uncertainty, which describes most CDS deployments.
 
+The measurement section carries the track's load-bearing claim: a dashboard number presented without its time series and limits invites tampering, Deming's word for reacting to common-cause noise as if it were signal. An interactive 24-week override-rate series demonstrates the run-chart and control-chart rules (the shift, the trend, the astronomical point, the 3-sigma limits) on a deliberate special-cause event: a card-text revision at week 15. The selection section then assembles the taxonomy a one-pager requires: the Quadruple Aim, the KPIs informaticists own, process vs outcome and leading vs lagging indicators, the balanced scorecard, and the external frameworks (HEDIS, MIPS, eCQMs, hospital inpatient quality reporting). A KPI-selector exercise builds the mix, and the track closes with its artifact: the KPI dashboard mockup with target thresholds, which the course capstone collects as the KPI section of the implementation plan.
 
-**Prerequisites:** None within this course; prerequisites are listed in the course README.
+**Prerequisites:** Tracks 01 to 03 of this course (the roles and committees, the project plan, the change-management frame); Course 12 for the CDS design brief the running scenario continues.
 
-**How to start (once built):** open `notebook.py` from the file tree on the left. Marimo will load it in app mode.
+**How to start:** open `notebook.py`. Marimo loads it in app mode.
 
-**Companion reading (once written):** a reference essay on the track's topic.
+**Companion reading:** `go-deeper.md` in this folder.
 
-**What's next:** Track 05.
+**What's next:** Track 05 (financial management for informaticists).
